@@ -117,22 +117,16 @@ p.titletext {
   object-fit: cover;
   border-radius: 1.4vw;
 }
-/*
 .iconblur {
   z-index: -1;
   width: 4vw;
   height: 4vw;
   object-fit: cover;
-  display: grid;
-  position: relative;
-  bottom: 4.5vw;
+  position: absolute;
   border-radius: 1.4vw;
   filter: blur(0.1vw);
 }
-.iconblurinac {
-  bottom:5vw;
-}
-*/
+
 .Buttons {
   display: grid;
   gap:4vw;
