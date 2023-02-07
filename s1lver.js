@@ -104,17 +104,9 @@ reelImg.forEach((img,i)=>
 
 //grabs custom 'vsrc' url from a string, usually an HTML line
 //parameter should look like vsrc="url"
-function vsrcGrabber(string){
-  array=Array.from(string);
-  let i=0;
-  let start;
-  
-  while (i<=array.length-1){
-    if (array[i]===`v` && array[i+1]===`s` && array[i+2]===`r` && array[i+3]===`c` && array[i+4]===`=` && array[i+5]===`"`){start=i+6};
-    i++;
-  }
-  
-  let end=array.indexOf(`"`,start);
+function vsrcGrabber(string){  
+  let start=string.search(`vsrc="`)+6;
+  let end=string.indexOf(`"`,start);
   
   return string.slice(start,end);
   // console.log(array);console.log(`start is ${start},end is ${end}`);
