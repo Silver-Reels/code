@@ -98,8 +98,14 @@ p.titletext {
   text-shadow: 0 0 0.15vw var(--PrimaryColor);
   text-align: start;
   letter-spacing: 0.98vw;
+  transition: 3s letter-spacing ease-out;
   line-height: 2.2vw;
+  pointer-events:all;
 }
+p.titletext:hover{
+  letter-spacing: 1.08vw;
+}
+
 .titletext {
   padding: 0 4vw 0.6vw 0;
 }
