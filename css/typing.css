@@ -1,0 +1,747 @@
+body{
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    display: grid;
+}
+img{
+    object-fit: cover;
+}
+.charParent{
+    display: flex;
+    align-items: center;
+    margin: 2vw 4vw 4vw 4vw;
+    max-width: 96vw;
+}
+.char{ /*DIV*/
+    display: grid;
+    position: relative;
+    height: 100px;
+    background-color: rgba(165,42,42,0.1);
+    align-items: center;
+    user-select: none;
+    pointer-events: none;
+}
+
+.a_upper_1{position: absolute;                 clip-path:circle(0.0%   at   32%     32%);}
+.a_upper_1_draw{animation: 0.1s a_upper_1_anim;clip-path:circle(47.0%  at   32%     32%);}
+
+.a_upper_2{position: absolute;                 clip-path:circle(0.0%   at    4%     71%);}
+.a_upper_2_draw{animation: 0.1s a_upper_2_anim;clip-path:circle(107.9% at    4%     71%);}
+
+.a_upper_3{position: absolute;                 clip-path:circle(0.0%   at   4%      71%);}
+.a_upper_3_draw{animation: 0.1s a_upper_3_anim;clip-path:circle(107.9% at   4%      71%);}
+
+.a_upper_4{position: absolute;                 clip-path:circle(0.0%   at   4%      71%);}
+.a_upper_4_draw{animation: 0.1s a_upper_4_anim;clip-path:circle(107.9% at   4%      71%);}
+
+.a_upper_5{position: absolute;                 clip-path:circle(0.0%   at   4%      71%);}
+.a_upper_5_draw{animation: 0.1s a_upper_5_anim;clip-path:circle(107.9% at   4%      71%);}
+
+@keyframes a_upper_1_anim{
+0%  {clip-path: circle(0%     at 32% 32%);}
+100%{clip-path: circle(47.0%  at 32% 32%)}}
+@keyframes a_upper_2_anim{
+0%  {clip-path: circle(0%     at 4% 71%);}
+100%{clip-path: circle(107.9% at 4% 71%);}}
+@keyframes a_upper_3_anim{
+0%  {clip-path: circle(0%     at 98% 8%);}
+100%{clip-path: circle(76.8%  at 98% 8%);}}
+@keyframes a_upper_4_anim{
+0%  {clip-path: circle(0%     at 50% 70%);}
+100%{clip-path: circle(35.9%  at 50% 70%);}}
+@keyframes a_upper_5_anim{
+0%  {clip-path: circle(0%     at 81% 50%);}
+100%{clip-path: circle(60.0%  at 81% 50%);}}
+
+.b_upper_1{position: absolute;                 clip-path:circle(0%     at 5%        26%);}
+.b_upper_1_draw{animation: 0.1s b_upper_1_anim;clip-path:circle(95.1%  at 5%        26%);}
+
+.b_upper_2{position: absolute;                 clip-path:circle(0%     at 100%      17%);}
+.b_upper_2_draw{animation: 0.1s b_upper_2_anim;clip-path:circle(71.4%  at 100%      17%);}
+
+.b_upper_3{position: absolute;                 clip-path:circle(0%     at 37%       41%);}
+.b_upper_3_draw{animation: 0.1s b_upper_3_anim;clip-path:circle(44.8%  at 37%       41%);}
+
+.b_upper_4{position: absolute;                 clip-path:circle(0%     at 80%       53%);}
+.b_upper_4_draw{animation: 0.1s b_upper_4_anim;clip-path:circle(65.1%  at 80%       53%);}
+
+.b_upper_5{position: absolute;                 clip-path:circle(0%     at 20%       61%);}
+.b_upper_5_draw{animation: 0.1s b_upper_5_anim;clip-path:circle(59.7%  at 20%       61%);}
+
+.b_upper_6{position: absolute;                 clip-path:circle(0%     at 54%       15%);}
+.b_upper_6_draw{animation: 0.1s b_upper_6_anim;clip-path:circle(77.4%  at 54%       15%);}
+
+@keyframes b_upper_1_anim{
+0%  {clip-path: circle(0%    at 5% 26%);}
+100%{clip-path: circle(95.1% at 5% 26%);}}
+@keyframes b_upper_2_anim{
+0%  {clip-path: circle(0%    at 100% 17%);}
+100%{clip-path: circle(71.4% at 100% 17%);}}
+@keyframes b_upper_3_anim{
+0%  {clip-path: circle(0%    at 37% 41%);}
+100%{clip-path: circle(44.8% at 37% 41%);}}
+@keyframes b_upper_4_anim{
+0%  {clip-path: circle(0%    at 80% 53%);}
+100%{clip-path: circle(65.1% at 80% 53%);}}
+@keyframes b_upper_5_anim{
+0%  {clip-path: circle(0%    at 20% 61%);}
+100%{clip-path: circle(59.7% at 20% 61%);}}
+@keyframes b_upper_6_anim{
+0%  {clip-path: circle(0%    at 54% 15%);}
+100%{clip-path: circle(77.4% at 54% 15%);}}
+
+.c_upper_1{position: absolute;                 clip-path:circle(0%     at 49%       34%);}
+.c_upper_1_draw{animation: 0.1s c_upper_1_anim;clip-path:circle(11.4%  at 49%       34%);}
+
+.c_upper_2{position: absolute;                 clip-path:circle(0%     at 45%       41%);}
+.c_upper_2_draw{animation: 0.1s c_upper_2_anim;clip-path:circle(58.9%  at 45%       41%);}
+
+.c_upper_3{position: absolute;                 clip-path:circle(0%     at 95%        1%);}
+.c_upper_3_draw{animation: 0.1s c_upper_3_anim;clip-path:circle(106.1% at 95%        1%);}
+
+.c_upper_4{position: absolute;                 clip-path:circle(0%     at  4%       59%);}
+.c_upper_4_draw{animation: 0.1s c_upper_4_anim;clip-path:circle(77.5%  at  4%       59%);}
+
+@keyframes c_upper_1_anim{
+0%  {clip-path: circle(0%      at 49%   34%);}
+100%{clip-path: circle(11.4%   at 49%   34%);}}
+@keyframes c_upper_2_anim{
+0%  {clip-path: circle(0%      at 45%  141%);}
+100%{clip-path: circle(58.9%   at 45%   41%);}}
+@keyframes c_upper_3_anim{
+0%  {clip-path: circle(0%      at 95%    1%);}
+100%{clip-path: circle(106.1%  at 95%    1%);}}
+@keyframes c_upper_4_anim{
+0%  {clip-path: circle(0%      at 4%    59%);}
+100%{clip-path: circle(77.5%   at 4%    59%);}}
+
+.d_upper_1{position: absolute;                 clip-path:circle(0%     at 63%       23%);}
+.d_upper_1_draw{animation: 0.1s d_upper_1_anim;clip-path:circle(77.7%  at 63%       23%);}
+
+.d_upper_2{position: absolute;                 clip-path:circle(0%     at  3%       34%);}
+.d_upper_2_draw{animation: 0.1s d_upper_2_anim;clip-path:circle(83.4%  at  3%       34%);}
+
+.d_upper_3{position: absolute;                 clip-path:circle(0%     at  74%      21%);}
+.d_upper_3_draw{animation: 0.1s d_upper_3_anim;clip-path:circle(55.1%  at  74%      21%);}
+
+.d_upper_4{position: absolute;                 clip-path:circle(0%     at  85%      50%);}
+.d_upper_4_draw{animation: 0.1s d_upper_4_anim;clip-path:circle(90%    at  85%      50%);}
+
+@keyframes d_upper_1_anim{
+0%  {clip-path: circle(0%     at 63%   23%);}
+100%{clip-path: circle(77.7%  at 63%   23%);}}
+@keyframes d_upper_2_anim{
+0%  {clip-path: circle(0%     at 3%    34%);}
+100%{clip-path: circle(83.4%  at 3%    34%);}}
+@keyframes d_upper_3_anim{
+0%  {clip-path: circle(0%     at 74%   21%);}
+100%{clip-path: circle(55.1%  at 74%   21%);}}
+@keyframes d_upper_4_anim{
+0%  {clip-path: circle(0%     at 85%   50%);}
+100%{clip-path: circle(90%    at 85%   50%);}}
+
+.e_upper_1{position: absolute;                 clip-path:circle(0%     at 81%        5%);}
+.e_upper_1_draw{animation: 0.1s e_upper_1_anim;clip-path:circle(17.9%  at 81%        5%);}
+
+.e_upper_2{position: absolute;                 clip-path:circle(0%     at  84%      28%);}
+.e_upper_2_draw{animation: 0.1s e_upper_2_anim;clip-path:circle(33.5%  at  84%      28%);}
+
+.e_upper_3{position: absolute;                 clip-path:circle(0%     at  99%       0%);}
+.e_upper_3_draw{animation: 0.1s e_upper_3_anim;clip-path:circle(68.5%  at  99%       0%);}
+
+.e_upper_4{position: absolute;                 clip-path:circle(0%     at  31%      21%);}
+.e_upper_4_draw{animation: 0.1s e_upper_4_anim;clip-path:circle(52.6%  at  31%      21%);}
+
+.e_upper_5{position: absolute;                 clip-path:circle(0%     at  82%     33%);}
+.e_upper_5_draw{animation: 0.1s e_upper_5_anim;clip-path:circle(100%   at  82%      3%);}
+
+.e_upper_6{position: absolute;                 clip-path:circle(0%     at  0%      49%);}
+.e_upper_6_draw{animation: 0.1s e_upper_6_anim;clip-path:circle(86.3%  at  0%      49%);}
+
+@keyframes e_upper_1_anim{
+0%  {clip-path: circle(0%     at 81%    5%);}
+100%{clip-path: circle(17.9%  at 81%    5%);}}
+@keyframes e_upper_2_anim{
+0%  {clip-path: circle(0%     at 84%    28%);}
+100%{clip-path: circle(33.5%  at 84%    28%);}}
+@keyframes e_upper_3_anim{
+0%  {clip-path: circle(0%     at 99%    0%);}
+100%{clip-path: circle(68.5%  at 99%    0%);}}
+@keyframes e_upper_4_anim{
+0%  {clip-path: circle(0%     at 31%   21%);}
+100%{clip-path: circle(52.6%  at 31%   21%);}}
+@keyframes e_upper_5_anim{
+0%  {clip-path: circle(0%     at 82%   33%);}
+100%{clip-path: circle(100%   at 82%   33%);}}
+@keyframes e_upper_6_anim{
+0%  {clip-path: circle(0%     at 0%    49%);}
+100%{clip-path: circle(86.3%  at 0%    49%);}}
+
+.f_upper_1{position: absolute;                 clip-path:circle(0%     at 18%        73%);}
+.f_upper_1_draw{animation: 0.1s f_upper_1_anim;clip-path:circle(104.4% at 18%        73%);}
+
+.f_upper_2{position: absolute;                 clip-path:circle(0%     at 100%      15%);}
+.f_upper_2_draw{animation: 0.1s f_upper_2_anim;clip-path:circle(104.4% at 100%      15%);}
+
+.f_upper_3{position: absolute;                 clip-path:circle(0%     at  0%       21%);}
+.f_upper_3_draw{animation: 0.1s f_upper_3_anim;clip-path:circle(63.9%  at  0%       21%);}
+
+.f_upper_4{position: absolute;                 clip-path:circle(0%     at   0%      41%);}
+.f_upper_4_draw{animation: 0.1s f_upper_4_anim;clip-path:circle(79.9%  at   0%      41%);}
+
+@keyframes f_upper_1_anim{
+0%  {clip-path: circle(0%     at 18%    73%);}
+100%{clip-path: circle(104.3% at 18%    73%);}}
+@keyframes f_upper_2_anim{
+0%  {clip-path: circle(0%     at 100%   15%);}
+100%{clip-path: circle(104.4% at 100%   15%);}}
+@keyframes f_upper_3_anim{
+0%  {clip-path: circle(0%     at  0%   21%);}
+100%{clip-path: circle(63.9%  at  0%   21%);}}
+@keyframes f_upper_4_anim{
+0%  {clip-path: circle(0%     at  0%   41%);}
+100%{clip-path: circle(79.9%  at  0%   41%);}}
+
+.g_upper_1{position: absolute;                 clip-path:circle(0%     at 48%        44%);}
+.g_upper_1_draw{animation: 0.1s g_upper_1_anim;clip-path:circle(58.6%  at 48%        44%);}
+
+.g_upper_2{position: absolute;                 clip-path:circle(0%     at  96%      10%);}
+.g_upper_2_draw{animation: 0.1s g_upper_2_anim;clip-path:circle(108.7% at  96%      10%);}
+
+.g_upper_3{position: absolute;                 clip-path:circle(0%     at  0%       66%);}
+.g_upper_3_draw{animation: 0.1s g_upper_3_anim;clip-path:circle(107.5% at  0%       66%);}
+
+.g_upper_4{position: absolute;                 clip-path:circle(0%     at 100%      28%);}
+.g_upper_4_draw{animation: 0.1s g_upper_4_anim;clip-path:circle(118.8% at 100%      28%);}
+
+@keyframes g_upper_1_anim{
+0%  {clip-path: circle(0%     at 48%    44%);}
+100%{clip-path: circle(58.6%  at 48%    44%);}}
+@keyframes g_upper_2_anim{
+0%  {clip-path: circle(0%     at 96%   10%);}
+100%{clip-path: circle(108.7% at 96%   10%);}}
+@keyframes g_upper_3_anim{
+0%  {clip-path: circle(0%     at  0%   66%);}
+100%{clip-path: circle(107.5% at  0%   66%);}}
+@keyframes g_upper_4_anim{
+0%  {clip-path: circle(0%     at 100%   28%);}
+100%{clip-path: circle(118.8% at 100%  28%);}}
+
+.h_upper_1{position: absolute;                 clip-path:circle(0%     at 11%       26%);}
+.h_upper_1_draw{animation: 0.1s h_upper_1_anim;clip-path:circle(45%    at 11%       26%);}
+
+.h_upper_2{position: absolute;                 clip-path:circle(0%     at  56%      12%);}
+.h_upper_2_draw{animation: 0.1s h_upper_2_anim;clip-path:circle(76.6%  at  56%      12%);}
+
+.h_upper_3{position: absolute;                 clip-path:circle(0%     at 100%       1%);}
+.h_upper_3_draw{animation: 0.1s h_upper_3_anim;clip-path:circle(96.5%  at 100%       1%);}
+
+.h_upper_4{position: absolute;                 clip-path:circle(0%     at  46%      61%);}
+.h_upper_4_draw{animation: 0.1s h_upper_4_anim;clip-path:circle(55.8%  at  46%      61%);}
+
+.h_upper_5{position: absolute;                 clip-path:circle(0%     at  0%       29%);}
+.h_upper_5_draw{animation: 0.1s h_upper_5_anim;clip-path:circle(82.8%  at  0%       29%);}
+
+@keyframes h_upper_1_anim{
+0%  {clip-path: circle(0%     at 11%   26%);}
+100%{clip-path: circle(45%    at 11%   26%);}}
+@keyframes h_upper_2_anim{
+0%  {clip-path: circle(0%     at 56%   12%);}
+100%{clip-path: circle(76.7%  at 56%   12%);}}
+@keyframes h_upper_3_anim{
+0%  {clip-path: circle(0%     at 100%   1%);}
+100%{clip-path: circle(96.5%  at 100%   1%);}}
+@keyframes h_upper_4_anim{
+0%  {clip-path: circle(0%     at 46%   61%);}
+100%{clip-path: circle(55.8%  at 46%   61%);}}
+@keyframes h_upper_5_anim{
+0%  {clip-path: circle(0%     at 0%    29%);}
+100%{clip-path: circle(82.8%  at 0%    29%);}}
+
+.i_upper_1{position: absolute;                 clip-path:circle(0%     at  64%      39%);}
+.i_upper_1_draw{animation: 0.1s i_upper_1_anim;clip-path:circle(37.3%  at  64%      39%);}
+
+.i_upper_2{position: absolute;                 clip-path:circle(0%     at  25%      43%);}
+.i_upper_2_draw{animation: 0.1s i_upper_2_anim;clip-path:circle(81.6%  at  25%      43%);}
+
+.i_upper_3{position: absolute;                 clip-path:circle(0%     at 100%      11%);}
+.i_upper_3_draw{animation: 0.1s i_upper_3_anim;clip-path:circle(104.7% at 100%      11%);}
+
+.i_upper_4{position: absolute;                 clip-path:circle(0%     at  30%      73%);}
+.i_upper_4_draw{animation: 0.1s i_upper_4_anim;clip-path:circle(36.2%  at  30%      73%);}
+
+@keyframes i_upper_1_anim{
+0%  {clip-path: circle(0%     at 64%   39%);}
+100%{clip-path: circle(37.3%  at 64%   39%);}}
+@keyframes i_upper_2_anim{
+0%  {clip-path: circle(0%     at 25%   43%);}
+100%{clip-path: circle(81.6%  at 25%   43%);}}
+@keyframes i_upper_3_anim{
+0%  {clip-path: circle(0%     at 100%  11%);}
+100%{clip-path: circle(104.7% at 100%  11%);}}
+@keyframes i_upper_4_anim{
+0%  {clip-path: circle(0%     at 30%   73%);}
+100%{clip-path: circle(36.2%  at 30%   73%);}}
+
+.j_upper_1{position: absolute;                 clip-path:circle(0%     at  57%      45%);}
+.j_upper_1_draw{animation: 0.1s j_upper_1_anim;clip-path:circle(32.8%  at  57%      45%);}
+
+.j_upper_2{position: absolute;                 clip-path:circle(0%     at  24%      53%);}
+.j_upper_2_draw{animation: 0.1s j_upper_2_anim;clip-path:circle(88.9%  at  24%      53%);}
+
+.j_upper_3{position: absolute;                 clip-path:circle(0%     at 100%       7%);}
+.j_upper_3_draw{animation: 0.1s j_upper_3_anim;clip-path:circle(115%   at 100%       7%);}
+
+.j_upper_4{position: absolute;                 clip-path:circle(0%     at  24%      82%);}
+.j_upper_4_draw{animation: 0.1s j_upper_4_anim;clip-path:circle(26.2%  at  24%      82%);}
+
+@keyframes j_upper_1_anim{
+0%  {clip-path: circle(0%     at 57%   45%);}
+100%{clip-path: circle(88.9%  at 57%   45%);}}
+@keyframes j_upper_2_anim{
+0%  {clip-path: circle(0%     at 24%   53%);}
+100%{clip-path: circle(88.9%  at 24%   53%);}}
+@keyframes j_upper_3_anim{
+0%  {clip-path: circle(0%     at 100%   7%);}
+100%{clip-path: circle(115%   at 100%   7%);}}
+@keyframes j_upper_4_anim{
+0%  {clip-path: circle(0%     at 24%   82%);}
+100%{clip-path: circle(26.2%  at 24%   82%);}}
+
+.k_upper_1{position: absolute;                 clip-path:circle(0%     at  43%     24%);}
+.k_upper_1_draw{animation: 0.1s k_upper_1_anim;clip-path:circle(28.7%  at  43%     24%);}
+
+.k_upper_2{position: absolute;                 clip-path:circle(0%     at  70%     12%);}
+.k_upper_2_draw{animation: 0.1s k_upper_2_anim;clip-path:circle(89.7%  at  70%     12%);}
+
+.k_upper_3{position: absolute;                 clip-path:circle(0%     at  41%     44%);}
+.k_upper_3_draw{animation: 0.1s k_upper_3_anim;clip-path:circle(67.7%  at  41%     44%);}
+
+.k_upper_4{position: absolute;                 clip-path:circle(0%     at  50%     40%);}
+.k_upper_4_draw{animation: 0.1s k_upper_4_anim;clip-path:circle(19.1%  at  50%     40%);}
+
+.k_upper_5{position: absolute;                 clip-path:circle(0%     at  65%     42%);}
+.k_upper_5_draw{animation: 0.1s k_upper_5_anim;clip-path:circle(27.5%  at  65%     42%);}
+
+.k_upper_6{position: absolute;                 clip-path:circle(0%     at  0%      49%);}
+.k_upper_6_draw{animation: 0.1s k_upper_6_anim;clip-path:circle(86.3%  at  0%      49%);}
+
+@keyframes k_upper_1_anim{
+0%  {clip-path: circle(0%     at 43%   24%);}
+100%{clip-path: circle(28.7%  at 43%   24%);}}
+@keyframes k_upper_2_anim{
+0%  {clip-path: circle(0%     at 70%   12%);}
+100%{clip-path: circle(89.7%  at 70%   12%);}}
+@keyframes k_upper_3_anim{
+0%  {clip-path: circle(0%     at 41%   44%);}
+100%{clip-path: circle(67.7%  at 41%   44%);}}
+@keyframes k_upper_4_anim{
+0%  {clip-path: circle(0%     at 50%   40%);}
+100%{clip-path: circle(19.1%  at 50%   40%);}}
+@keyframes k_upper_5_anim{
+0%  {clip-path: circle(0%     at 65%   42%);}
+100%{clip-path: circle(27.5%  at 65%   42%);}}
+@keyframes k_upper_6_anim{
+0%  {clip-path: circle(0%     at 50%   70%);}
+100%{clip-path: circle(27.2%  at 50%   70%);}}
+
+.l_upper_1{position: absolute;                 clip-path:circle(0%     at  81%     45%);}
+.l_upper_1_draw{animation: 0.1s l_upper_1_anim;clip-path:circle(36.9%  at  81%     45%);}
+
+.l_upper_2{position: absolute;                 clip-path:circle(0%     at  95%     10%);}
+.l_upper_2_draw{animation: 0.1s l_upper_2_anim;clip-path:circle(107.1% at  95%     10%);}
+
+.l_upper_3{position: absolute;                 clip-path:circle(0%     at  21%     73%);}
+.l_upper_3_draw{animation: 0.1s l_upper_3_anim;clip-path:circle(26.4%  at  21%     73%);}
+
+.l_upper_4{position: absolute;                 clip-path:circle(0%     at   0%     65%);}
+.l_upper_4_draw{animation: 0.1s l_upper_4_anim;clip-path:circle(90.6%  at   0%     65%);}
+
+@keyframes l_upper_1_anim{
+0%  {clip-path: circle(0%     at 81%   45%);}
+100%{clip-path: circle(36.9%  at 81%   45%);}}
+@keyframes l_upper_2_anim{
+0%  {clip-path: circle(0%     at 95%   10%);}
+100%{clip-path: circle(107.1% at 95%   10%);}}
+@keyframes l_upper_3_anim{
+0%  {clip-path: circle(0%     at 21%   73%);}
+100%{clip-path: circle(26.4%  at 21%   73%);}}
+@keyframes l_upper_4_anim{
+0%  {clip-path: circle(0%     at  0%   65%);}
+100%{clip-path: circle(90.6%  at  0%   65%);}}
+
+.m_upper_1{position: absolute;                 clip-path:circle(0%     at  26%     45%);}
+.m_upper_1_draw{animation: 0.1s m_upper_1_anim;clip-path:circle(40%    at  26%     45%);}
+
+.m_upper_2{position: absolute;                 clip-path:circle(0%     at   0%     76%);}
+.m_upper_2_draw{animation: 0.1s m_upper_2_anim;clip-path:circle(92.1%  at   0%     76%);}
+
+.m_upper_3{position: absolute;                 clip-path:circle(0%     at  66%     15%);}
+.m_upper_3_draw{animation: 0.1s m_upper_3_anim;clip-path:circle(68.7%  at  66%     15%);}
+
+.m_upper_4{position: absolute;                 clip-path:circle(0%     at  29%     78%);}
+.m_upper_4_draw{animation: 0.1s m_upper_4_anim;clip-path:circle(94.4%  at  29%     78%);}
+
+.m_upper_5{position: absolute;                 clip-path:circle(0%     at  98%     13%);}
+.m_upper_5_draw{animation: 0.1s m_upper_5_anim;clip-path:circle(67.9%  at  98%     13%);}
+
+.m_upper_6{position: absolute;                 clip-path:circle(0%     at  58%     71%);}
+.m_upper_6_draw{animation: 0.1s m_upper_6_anim;clip-path:circle(27.7%  at  58%     71%);}
+
+@keyframes m_upper_1_anim{
+0%  {clip-path: circle(0%     at 26%   45%);}
+100%{clip-path: circle(40%    at 26%   45%);}}
+@keyframes m_upper_2_anim{
+0%  {clip-path: circle(0%     at  0%   76%);}
+100%{clip-path: circle(92.1%  at  0%   76%);}}
+@keyframes m_upper_3_anim{
+0%  {clip-path: circle(0%     at 66%   15%);}
+100%{clip-path: circle(68.7%  at 66%   15%);}}
+@keyframes m_upper_4_anim{
+0%  {clip-path: circle(0%     at 29%   78%);}
+100%{clip-path: circle(94.4%  at 29%   78%);}}
+@keyframes m_upper_5_anim{
+0%  {clip-path: circle(0%     at 98%   13%);}
+100%{clip-path: circle(67.9%  at 98%   13%);}}
+@keyframes m_upper_6_anim{
+0%  {clip-path: circle(0%     at 58%   71%);}
+100%{clip-path: circle(27.7%  at 58%   71%);}}
+
+.n_upper_1{position: absolute;                 clip-path:circle(0%     at   6%     41%);}
+.n_upper_1_draw{animation: 0.1s n_upper_1_anim;clip-path:circle(60.4%  at   6%     41%);}
+
+.n_upper_2{position: absolute;                 clip-path:circle(0%     at  64%     15%);}
+.n_upper_2_draw{animation: 0.1s n_upper_2_anim;clip-path:circle(87.1%  at  64%     15%);}
+
+.n_upper_3{position: absolute;                 clip-path:circle(0%     at   0%     76%);}
+.n_upper_3_draw{animation: 0.1s n_upper_3_anim;clip-path:circle(116.6% at   0%     76%);}
+
+.n_upper_4{position: absolute;                 clip-path:circle(0%     at  99%     13%);}
+.n_upper_4_draw{animation: 0.1s n_upper_4_anim;clip-path:circle(76.3%  at  99%     13%);}
+
+.n_upper_5{position: absolute;                 clip-path:circle(0%     at  44%     70%);}
+.n_upper_5_draw{animation: 0.1s n_upper_5_anim;clip-path:circle(33.1%  at  44%     70%);}
+
+@keyframes n_upper_1_anim{
+0%  {clip-path: circle(0%     at  6%   41%);}
+100%{clip-path: circle(60.4%  at  6%   41%);}}
+@keyframes n_upper_2_anim{
+0%  {clip-path: circle(0%     at 64%   15%);}
+100%{clip-path: circle(87.1%  at 64%   15%);}}
+@keyframes n_upper_3_anim{
+0%  {clip-path: circle(0%     at  0%   76%);}
+100%{clip-path: circle(116.6% at  0%   76%);}}
+@keyframes n_upper_4_anim{
+0%  {clip-path: circle(0%     at 99%   13%);}
+100%{clip-path: circle(76.3%  at 99%   13%);}}
+@keyframes n_upper_5_anim{
+0%  {clip-path: circle(0%     at 44%   70%);}
+100%{clip-path: circle(33.1%  at 44%   70%);}}
+
+.o_upper_1{position: absolute;                 clip-path:circle(0%     at  64%      9%);}
+.o_upper_1_draw{animation: 0.1s o_upper_1_anim;clip-path:circle(80.3%  at  64%      9%);}
+
+.o_upper_2{position: absolute;                 clip-path:circle(0%     at  17%     73%);}
+.o_upper_2_draw{animation: 0.1s o_upper_2_anim;clip-path:circle(100.1% at  17%     73%);}
+
+.o_upper_3{position: absolute;                 clip-path:circle(0%     at  94%     12%);}
+.o_upper_3_draw{animation: 0.1s o_upper_3_anim;clip-path:circle(61.7%  at  94%     12%);}
+
+.o_upper_4{position: absolute;                 clip-path:circle(0%     at  38%     44%);}
+.o_upper_4_draw{animation: 0.1s o_upper_4_anim;clip-path:circle(36.8%  at  38%     44%);}
+
+@keyframes o_upper_1_anim{
+0%  {clip-path: circle(0%     at 64%    9%);}
+100%{clip-path: circle(80.3%  at 64%    9%);}}
+@keyframes o_upper_2_anim{
+0%  {clip-path: circle(0%     at 17%   73%);}
+100%{clip-path: circle(100.1% at 17%   73%);}}
+@keyframes o_upper_3_anim{
+0%  {clip-path: circle(0%     at 94%   12%);}
+100%{clip-path: circle(61.7%  at 94%   12%);}}
+@keyframes o_upper_4_anim{
+0%  {clip-path: circle(0%     at 38%   44%);}
+100%{clip-path: circle(36.8%  at 38%   44%);}}
+
+.p_upper_1{position: absolute;                 clip-path:circle(0%     at  64%     15%);}
+.p_upper_1_draw{animation: 0.1s p_upper_1_anim;clip-path:circle(80.1%  at  64%     15%);}
+
+.p_upper_2{position: absolute;                 clip-path:circle(0%     at   8%     31%);}
+.p_upper_2_draw{animation: 0.1s p_upper_2_anim;clip-path:circle(93%    at   8%     31%);}
+
+.p_upper_3{position: absolute;                 clip-path:circle(0%     at 100%     23%);}
+.p_upper_3_draw{animation: 0.1s p_upper_3_anim;clip-path:circle(76.2%  at 100%     23%);}
+
+@keyframes p_upper_1_anim{
+0%  {clip-path: circle(0%     at 64%   15%);}
+100%{clip-path: circle(80.1%  at 64%   15%);}}
+@keyframes p_upper_2_anim{
+0%  {clip-path: circle(0%     at  8%   31%);}
+100%{clip-path: circle(93%    at  8%   31%);}}
+@keyframes p_upper_3_anim{
+0%  {clip-path: circle(0%     at 100%  23%);}
+100%{clip-path: circle(76.2%  at 100%  23%);}}
+
+.q_upper_1{position: absolute;                 clip-path:circle(0%     at  50%      5%);}
+.q_upper_1_draw{animation: 0.1s q_upper_1_anim;clip-path:circle(77.6%  at  59%      5%);}
+
+.q_upper_2{position: absolute;                 clip-path:circle(0%     at   9%     65%);}
+.q_upper_2_draw{animation: 0.1s q_upper_2_anim;clip-path:circle(101.3% at   9%     65%);}
+
+.q_upper_3{position: absolute;                 clip-path:circle(0%     at  95%     15%);}
+.q_upper_3_draw{animation: 0.1s q_upper_3_anim;clip-path:circle(64.8%  at  95%     15%);}
+
+.q_upper_4{position: absolute;                 clip-path:circle(0%     at  10%     48%);}
+.q_upper_4_draw{animation: 0.1s q_upper_4_anim;clip-path:circle(69.4%  at  10%     48%);}
+
+@keyframes q_upper_1_anim{
+0%  {clip-path: circle(0%     at 59%    5%);}
+100%{clip-path: circle(77.6%  at 59%    5%);}}
+@keyframes q_upper_2_anim{
+0%  {clip-path: circle(0%     at  9%   65%);}
+100%{clip-path: circle(101.3% at  9%   65%);}}
+@keyframes q_upper_3_anim{
+0%  {clip-path: circle(0%     at 95%   15%);}
+100%{clip-path: circle(64.8%  at 95%   15%);}}
+@keyframes q_upper_4_anim{
+0%  {clip-path: circle(0%     at 10%   48%);}
+100%{clip-path: circle(69.4%  at 10%   48%);}}
+
+.r_upper_1{position: absolute;                 clip-path:circle(0%     at  64%     12%);}
+.r_upper_1_draw{animation: 0.1s r_upper_1_anim;clip-path:circle(82.3%  at  64%     12%);}
+
+.r_upper_2{position: absolute;                 clip-path:circle(0%     at  13%     26%);}
+.r_upper_2_draw{animation: 0.1s r_upper_2_anim;clip-path:circle(87.1%  at  13%     26%);}
+
+.r_upper_3{position: absolute;                 clip-path:circle(0%     at 100%     17%);}
+.r_upper_3_draw{animation: 0.1s r_upper_3_anim;clip-path:circle(79.7%  at 100%     17%);}
+
+.r_upper_4{position: absolute;                 clip-path:circle(0%     at  26%     40%);}
+.r_upper_4_draw{animation: 0.1s r_upper_4_anim;clip-path:circle(53.9%  at  26%     40%);}
+
+@keyframes r_upper_1_anim{
+0%  {clip-path: circle(0%     at 64%   12%);}
+100%{clip-path: circle(82.3%  at 64%   12%);}}
+@keyframes r_upper_2_anim{
+0%  {clip-path: circle(0%     at 13%   26%);}
+100%{clip-path: circle(87.1%  at 13%   26%);}}
+@keyframes r_upper_3_anim{
+0%  {clip-path: circle(0%     at 100%  17%);}
+100%{clip-path: circle(79.7%  at 100%  17%);}}
+@keyframes r_upper_4_anim{
+0%  {clip-path: circle(0%     at 26%   40%);}
+100%{clip-path: circle(53.9%  at 26%   40%);}}
+
+.s_upper_1{position: absolute;                 clip-path:circle(0%     at  60%     35%);}
+.s_upper_1_draw{animation: 0.1s s_upper_1_anim;clip-path:circle(44.8%  at  60%     35%);}
+
+.s_upper_2{position: absolute;                 clip-path:circle(0%     at 100%     14%);}
+.s_upper_2_draw{animation: 0.1s s_upper_2_anim;clip-path:circle(91.3%  at 100%     14%);}
+
+.s_upper_3{position: absolute;                 clip-path:circle(0%     at   9%     33%);}
+.s_upper_3_draw{animation: 0.1s s_upper_3_anim;clip-path:circle(72.8%  at   9%     33%);}
+
+.s_upper_4{position: absolute;                 clip-path:circle(0%     at  80%     51%);}
+.s_upper_4_draw{animation: 0.1s s_upper_4_anim;clip-path:circle(81.5%  at  80%     51%);}
+
+@keyframes s_upper_1_anim{
+0%  {clip-path: circle(0%     at 60%   35%);}
+100%{clip-path: circle(44.8%  at 60%   35%);}}
+@keyframes s_upper_2_anim{
+0%  {clip-path: circle(0%     at 100%  14%);}
+100%{clip-path: circle(91.3%  at 100%  14%);}}
+@keyframes s_upper_3_anim{
+0%  {clip-path: circle(0%     at   9%  33%);}
+100%{clip-path: circle(72.8%  at   9%  33%);}}
+@keyframes s_upper_4_anim{
+0%  {clip-path: circle(0%     at 80%   51%);}
+100%{clip-path: circle(81.5%  at 80%   51%);}}
+
+.t_upper_1{position: absolute;                 clip-path:circle(0%     at  61%     14%);}
+.t_upper_1_draw{animation: 0.1s t_upper_1_anim;clip-path:circle(73%    at  61%     14%);}
+
+.t_upper_2{position: absolute;                 clip-path:circle(0%     at  49%     25%);}
+.t_upper_2_draw{animation: 0.1s t_upper_2_anim;clip-path:circle(50.4%  at  49%     25%);}
+
+.t_upper_3{position: absolute;                 clip-path:circle(0%     at   0%     12%);}
+.t_upper_3_draw{animation: 0.1s t_upper_3_anim;clip-path:circle(102.7% at   0%     12%);}
+
+@keyframes t_upper_1_anim{
+0%  {clip-path: circle(0%     at 61%   14%);}
+100%{clip-path: circle(73%    at 61%   14%);}}
+@keyframes t_upper_2_anim{
+0%  {clip-path: circle(0%     at  49%  25%);}
+100%{clip-path: circle(50.4%  at  49%  25%);}}
+@keyframes t_upper_3_anim{
+0%  {clip-path: circle(0%     at   0%  12%);}
+100%{clip-path: circle(102.7% at   0%  12%);}}
+
+.u_upper_1{position: absolute;                 clip-path:circle(0%     at   5%     39%);}
+.u_upper_1_draw{animation: 0.1s u_upper_1_anim;clip-path:circle(66.8%  at   5%     39%);}
+
+.u_upper_2{position: absolute;                 clip-path:circle(0%     at  70%     15%);}
+.u_upper_2_draw{animation: 0.1s u_upper_2_anim;clip-path:circle(85.7%  at  70%     15%);}
+
+.u_upper_3{position: absolute;                 clip-path:circle(0%     at   4%     72%);}
+.u_upper_3_draw{animation: 0.1s u_upper_3_anim;clip-path:circle(109.4% at   4%     72%);}
+
+.u_upper_4{position: absolute;                 clip-path:circle(0%     at 100%     16%);}
+.u_upper_4_draw{animation: 0.1s u_upper_4_anim;clip-path:circle(73.6%  at 100%     16%);}
+
+.u_upper_5{position: absolute;                 clip-path:circle(0%     at  46%     70%);}
+.u_upper_5_draw{animation: 0.1s u_upper_5_anim;clip-path:circle(33.9%  at  46%     70%);}
+
+@keyframes u_upper_1_anim{
+0%  {clip-path: circle(0%     at  5%   39%);}
+100%{clip-path: circle(66.8%  at  5%   39%);}}
+@keyframes u_upper_2_anim{
+0%  {clip-path: circle(0%     at 70%   15%);}
+100%{clip-path: circle(85.7%  at 70%   15%);}}
+@keyframes u_upper_3_anim{
+0%  {clip-path: circle(0%     at  4%   72%);}
+100%{clip-path: circle(109.4% at  4%   72%);}}
+@keyframes u_upper_4_anim{
+0%  {clip-path: circle(0%     at 100%  16%);}
+100%{clip-path: circle(73.6%  at 100%  16%);}}
+@keyframes u_upper_5_anim{
+0%  {clip-path: circle(0%     at 46%   70%);}
+100%{clip-path: circle(33.9%  at 46%   70%);}}
+
+.v_upper_1{position: absolute;                 clip-path:circle(0%     at   0%     43%);}
+.v_upper_1_draw{animation: 0.1s v_upper_1_anim;clip-path:circle(55.8%  at   0%     43%);}
+
+.v_upper_2{position: absolute;                 clip-path:circle(0%     at  48%      9%);}
+.v_upper_2_draw{animation: 0.1s v_upper_2_anim;clip-path:circle(74.3%  at  48%      9%);}
+
+.v_upper_3{position: absolute;                 clip-path:circle(0%     at   7%     75%);}
+.v_upper_3_draw{animation: 0.1s v_upper_3_anim;clip-path:circle(113.2% at   7%     75%);}
+
+@keyframes v_upper_1_anim{
+0%  {clip-path: circle(0%     at  0%   43%);}
+100%{clip-path: circle(55.8%  at  0%   43%);}}
+@keyframes v_upper_2_anim{
+0%  {clip-path: circle(0%     at 48%    9%);}
+100%{clip-path: circle(74.3%  at 48%    9%);}}
+@keyframes v_upper_3_anim{
+0%  {clip-path: circle(0%     at  7%   75%);}
+100%{clip-path: circle(113.2% at  7%   75%);}}
+
+.w_upper_1{position: absolute;                 clip-path:circle(0%     at   4%     35%);}
+.w_upper_1_draw{animation: 0.1s w_upper_1_anim;clip-path:circle(51.9%  at   4%     35%);}
+
+.w_upper_2{position: absolute;                 clip-path:circle(0%     at  53%      9%);}
+.w_upper_2_draw{animation: 0.1s w_upper_2_anim;clip-path:circle(78.3%  at  53%      9%);}
+
+.w_upper_3{position: absolute;                 clip-path:circle(0%     at   3%     72%);}
+.w_upper_3_draw{animation: 0.1s w_upper_3_anim;clip-path:circle(87.2%  at   3%     72%);}
+
+.w_upper_4{position: absolute;                 clip-path:circle(0%     at  69%     14%);}
+.w_upper_4_draw{animation: 0.1s w_upper_4_anim;clip-path:circle(64.6%  at  69%     14%);}
+
+.w_upper_5{position: absolute;                 clip-path:circle(0%     at  39%     75%);}
+.w_upper_5_draw{animation: 0.1s w_upper_5_anim;clip-path:circle(89.4%  at  39%     75%);}
+
+@keyframes w_upper_1_anim{
+0%  {clip-path: circle(0%     at  4%   35%);}
+100%{clip-path: circle(51.9%  at  4%   35%);}}
+@keyframes w_upper_2_anim{
+0%  {clip-path: circle(0%     at 53%    9%);}
+100%{clip-path: circle(78.3%  at 53%    9%);}}
+@keyframes w_upper_3_anim{
+0%  {clip-path: circle(0%     at  3%   72%);}
+100%{clip-path: circle(87.2%  at  3%   72%);}}
+@keyframes w_upper_4_anim{
+0%  {clip-path: circle(0%     at  69%  14%);}
+100%{clip-path: circle(64.6%  at  69%  14%);}}
+@keyframes w_upper_5_anim{
+0%  {clip-path: circle(0%     at 39%   75%);}
+100%{clip-path: circle(89.4%  at 39%   75%);}}
+
+.x_upper_1{position: absolute;                 clip-path:circle(0%     at   7%     40%);}
+.x_upper_1_draw{animation: 0.1s x_upper_1_anim;clip-path:circle(57.9%  at   7%     40%);}
+
+.x_upper_2{position: absolute;                 clip-path:circle(0%     at  56%      9%);}
+.x_upper_2_draw{animation: 0.1s x_upper_2_anim;clip-path:circle(63.5%  at  56%      9%);}
+
+.x_upper_3{position: absolute;                 clip-path:circle(0%     at  28%     69%);}
+.x_upper_3_draw{animation: 0.1s x_upper_3_anim;clip-path:circle(35.3%  at  28%     69%);}
+
+.x_upper_4{position: absolute;                 clip-path:circle(0%     at   0%     73%);}
+.x_upper_4_draw{animation: 0.1s x_upper_4_anim;clip-path:circle(120.2% at   0%     73%);}
+
+@keyframes x_upper_1_anim{
+0%  {clip-path: circle(0%     at  5%    40%);}
+100%{clip-path: circle(57.9%  at  5%    40%);}}
+@keyframes x_upper_2_anim{
+0%  {clip-path: circle(0%     at 56%     9%);}
+100%{clip-path: circle(63.5%  at 56%     9%);}}
+@keyframes x_upper_3_anim{
+0%  {clip-path: circle(0%     at  28%   69%);}
+100%{clip-path: circle(35.3%  at  28%   69%);}}
+@keyframes x_upper_4_anim{
+0%  {clip-path: circle(0%     at   0%  73%);}
+100%{clip-path: circle(120.2% at   0%  73%);}}
+
+.y_upper_1{position: absolute;                 clip-path:circle(0%     at   0%     35%);}
+.y_upper_1_draw{animation: 0.1s y_upper_1_anim;clip-path:circle(60.3%  at   0%     35%);}
+
+.y_upper_2{position: absolute;                 clip-path:circle(0%     at  58%     12%);}
+.y_upper_2_draw{animation: 0.1s y_upper_2_anim;clip-path:circle(73.6%  at  58%     12%);}
+
+.y_upper_3{position: absolute;                 clip-path:circle(0%     at   2%     63%);}
+.y_upper_3_draw{animation: 0.1s y_upper_3_anim;clip-path:circle(110.9% at   2%     63%);}
+
+.y_upper_4{position: absolute;                 clip-path:circle(0%     at  96%      7%);}
+.y_upper_4_draw{animation: 0.1s y_upper_4_anim;clip-path:circle(119.8% at  96%      7%);}
+
+@keyframes y_upper_1_anim{
+0%  {clip-path: circle(0%     at  0%    35%);}
+100%{clip-path: circle(60.3%  at  0%    35%);}}
+@keyframes y_upper_2_anim{
+0%  {clip-path: circle(0%     at 58%    12%);}
+100%{clip-path: circle(73.6%  at 58%    12%);}}
+@keyframes y_upper_3_anim{
+0%  {clip-path: circle(0%     at   2%   63%);}
+100%{clip-path: circle(110.9% at   2%   63%);}}
+@keyframes y_upper_4_anim{
+0%  {clip-path: circle(0%     at  96%    7%);}
+100%{clip-path: circle(119.8% at  96%    7%);}}
+
+.z_upper_1{position: absolute;                 clip-path:circle(0%     at  35%     30%);}
+.z_upper_1_draw{animation: 0.1s z_upper_1_anim;clip-path:circle(68.9%  at  35%     30%);}
+
+.z_upper_2{position: absolute;                 clip-path:circle(0%     at 100%      5%);}
+.z_upper_2_draw{animation: 0.1s z_upper_2_anim;clip-path:circle(80.1%  at 100%      5%);}
+
+.z_upper_3{position: absolute;                 clip-path:circle(0%     at  62%     36%);}
+.z_upper_3_draw{animation: 0.1s z_upper_3_anim;clip-path:circle(25.4%  at  62%     36%);}
+
+.z_upper_4{position: absolute;                 clip-path:circle(0%     at  81%     46%);}
+.z_upper_4_draw{animation: 0.1s z_upper_4_anim;clip-path:circle(91.2%  at  81%     46%);}
+
+.z_upper_5{position: absolute;                 clip-path:circle(0%     at   0%     90%);}
+.z_upper_5_draw{animation: 0.1s z_upper_5_anim;clip-path:circle(110%   at   0%     90%);}
+
+@keyframes z_upper_1_anim{
+0%  {clip-path: circle(0%     at 100%  30%);}
+100%{clip-path: circle(68.9%  at 100%  30%);}}
+@keyframes z_upper_2_anim{
+0%  {clip-path: circle(0%     at 100%   5%);}
+100%{clip-path: circle(80.1%  at 100%   5%);}}
+@keyframes z_upper_3_anim{
+0%  {clip-path: circle(0%     at 62%   36%);}
+100%{clip-path: circle(25.4%  at 62%   36%);}}
+@keyframes z_upper_4_anim{
+0%  {clip-path: circle(0%     at  81%  46%);}
+100%{clip-path: circle(91.2%  at  81%  46%);}}
+@keyframes z_upper_5_anim{
+0%  {clip-path: circle(0%     at  0%   90%);}
+100%{clip-path: circle(110%   at  0%   90%);}}
+
+/*Z
+clip-path: circle(68.9% at 35% 30%);
+clip-path: circle(80.1% at 100% 5%);
+clip-path: circle(25.4% at 62% 36%);
+clip-path: circle(91.2% at 81% 46%);
+clip-path: circle(110.0% at 0 90%);
