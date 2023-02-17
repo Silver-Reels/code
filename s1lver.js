@@ -132,7 +132,7 @@ function hideViewer(){viewerDivParent.classList.remove("viewerDivParentVisible")
 
 //INKR
 
-if (window.location.pathname==`/INKR.html`){
+if (window.location.pathname==`/INKR.html` || window.location.pathname==`/inkr`){
   console.log(`Activating external INKR`);
   const inkrForm=document.querySelector(".typeForm");
 
