@@ -39,7 +39,7 @@ function loadingCalc(){ //function that sets the text of loading screen progress
 document.body.onload= ()=> {loadDiv.classList.add("loadingDivGone");           //loadingscreen goes away
 descTextModular.classList.remove("desctextBGone"); //desctext B span swipes in
 descTextModular.style.filter="blur(0)";            //desctext B removes blur while swiping in
-reel.classList.remove("reelMovingIn");             //moves reel in onload
+if (reel){reel.classList.remove("reelMovingIn")};             //moves reel in onload
 loadDiv.style.filter="blur(0.9vw)";                //add "motion" blur when loaddiv is to move away
 
 }
@@ -80,7 +80,7 @@ const viewertext=document.querySelector(".viewertext");
 let lastImgClicked=""; //this is here so the other functions like "hide viewer" can track 'img'
 
 reelImg.forEach((img,i)=>
-  img.onclick=function(){
+img.onclick=function(){
     lastImgClicked=img; //letting 'img' be tracked elsewhere, no need to use this const here tho
 
     //anims for removing clicked thumbnail from view
@@ -100,6 +100,7 @@ reelImg.forEach((img,i)=>
     viewerDivParent.classList.add("viewerDivParentVisible");
   }
 )
+
 
 
 //grabs custom 'vsrc' url from a string, usually an HTML line
@@ -126,4 +127,33 @@ function hideViewer(){viewerDivParent.classList.remove("viewerDivParentVisible")
                       lastImgClicked.parentElement.style.filter="";
                       setTimeout(function(){lastImgClicked.parentElement.style.transform=""},150);
                       setTimeout(function(){lastImgClicked.parentElement.style.zIndex=""},500);
+}
+///////////////////////////////////////////////////////////////////////////////////////
+
+//INKR
+
+if (window.location.pathname==`/INKR.html`){
+  console.log(`Activating external INKR`);
+  const inkrForm=document.querySelector(".typeForm");
+
+  inkrForm.onsubmit=function(e){         
+    e.preventDefault();
+    const inkrTextField=document.querySelector("input[type=text");
+
+    if (inkrTextField.value.length<=40){
+    const iframeDiv=document.getElementsByTagName("iframe")[0];
+    const iframeWindow=iframeDiv.contentWindow;
+    let charDivs=Array.from(iframeWindow.document.querySelectorAll(".char"));
+    let charParent=iframeWindow.document.querySelector(".charParent");
+    let charCount= iframeWindow.document.querySelector(".charParent").children;
+    let charHeight=50;
+
+    iframeWindow.document.body.children[0].innerHTML=iframeWindow.populateHTML(inkrTextField.value);
+    charDivs.forEach(x=>x.style.height=`${charHeight*0.6}px`);
+    iframeWindow.setWidthAll();
+    iframeWindow.setTail(charCount);
+    iframeWindow.animateHTML(charParent);
+    }
+    else alert('Above INKR demo character limit!');
+}
 }

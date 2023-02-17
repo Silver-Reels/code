@@ -1,9 +1,23 @@
+//TEXT INPUT//////////////////////////////////////////////
+const charParent=document.querySelector(".charParent");
+const emHeight=1505; //this should NOT BE CHANGED from 1505!
+let charHeight= 50; //this can be changed, is in px
+//let textToDraw=`Alas, poor Yorick! I knew him, Horatio: a fellow of infinite jest, of most excellent fancy: he hath borne me on his back a thousand times; and now, how abhorred in my imagination it is! My gorge rims at it. Here hung those lips that I have kissed I know not how oft. Where be your gibes now? Your gambols? Your songs? Your flashes of merriment, that were wont to set the table on a roar? Not one now, to mock your own grinning? Quite chap-fallen? Now get you to my lady's chamber, and tell her, let her paint an inch thick, to this favour she must come; make her laugh at that.`;
+let textToDraw=`Io ho detto, parlando in cuor mio: "Ecco io ho acquistato maggior sapienza di tutti quelli che hanno regnato prima di me in Gerusalemme"; si, il mio cuore ha posseduto molta sapienza e molta scienza. Ed ho applicato il cuore a conoscer la sapienza, e a conoscere la follia e la stoltezza, ed ho riconosciuto che anche questo e un correr dietro al vento. Poiche dov'e molta sapienza v'e molto affanno, e chi accresce la sua scienza accresce il suo dolore. -Ecclesiaste 1:16-18`;
+//let textToDraw=`The bad programmer writes messy spaghetti code!`;
+
+
+//////////////////////////////////////////////////////////
+
+//MAKING THE MAPS///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//function to reverse key-value of CharOf//////////////////////////////////////
 function classOf(char){
   return (Array.from(charOf.keys())[Array.from(charOf.values()).indexOf(char)])
 }
 //use: charOf.get("a_upper") --> "A"
 //use: classOf("A")  --> "a_upper"
-
+///////////////////////////////////////////////////////////////////////////////
 const charOf=new Map();
 
 charOf.set("a_upper","A");charOf.set("a_lower","a");charOf.set("zero","0");
@@ -29,102 +43,122 @@ charOf.set("t_upper","T");charOf.set("t_lower","t");charOf.set("slash","/");
 charOf.set("u_upper","U");charOf.set("u_lower","u");charOf.set("colon",":");
 charOf.set("v_upper","V");charOf.set("v_lower","v");charOf.set("semi",";");
 charOf.set("w_upper","W");charOf.set("w_lower","w");charOf.set("quest","?");
-charOf.set("x_upper","X");charOf.set("x_lower","x");
+charOf.set("x_upper","X");charOf.set("x_lower","x");charOf.set("space"," ");
 charOf.set("y_upper","Y");charOf.set("y_lower","y");
 charOf.set("z_upper","Z");charOf.set("z_lower","z");
 
-//img docu height=1505em
 
-//1505---100px
-//1216---(charHeight*(val)/emHeight)
+const charWidth=new Map();                      const advWidth=new Map();                     const lbWidth=new Map();
+//get with charWidth.get("A")                   get with advWidth.get("A")                    get with lbWidth.get("A")
+charWidth.set('A',(charHeight*1216/emHeight));  advWidth.set('A',(charHeight* 975/emHeight)); lbWidth.set('A',(charHeight*  66/emHeight));
+charWidth.set('B',(charHeight*1126/emHeight));  advWidth.set('B',(charHeight*1017/emHeight)); lbWidth.set('B',(charHeight* 122/emHeight));
+charWidth.set('C',(charHeight*1030/emHeight));  advWidth.set('C',(charHeight* 719/emHeight)); lbWidth.set('C',(charHeight* 118/emHeight));
+charWidth.set('D',(charHeight*1042/emHeight));  advWidth.set('D',(charHeight*1017/emHeight)); lbWidth.set('D',(charHeight*  73/emHeight));
+charWidth.set('E',(charHeight*1117/emHeight));  advWidth.set('E',(charHeight* 835/emHeight)); lbWidth.set('E',(charHeight*  69/emHeight));
+charWidth.set('F',(charHeight*1145/emHeight));  advWidth.set('F',(charHeight* 877/emHeight)); lbWidth.set('F',(charHeight* 123/emHeight));
+charWidth.set('G',(charHeight* 981/emHeight));  advWidth.set('G',(charHeight* 899/emHeight)); lbWidth.set('G',(charHeight* 119/emHeight));
+charWidth.set('H',(charHeight*1360/emHeight));  advWidth.set('H',(charHeight* 849/emHeight)); lbWidth.set('H',(charHeight*  69/emHeight));
+charWidth.set('I',(charHeight*1187/emHeight));  advWidth.set('I',(charHeight* 786/emHeight)); lbWidth.set('I',(charHeight*  14/emHeight));
+charWidth.set('J',(charHeight*1508/emHeight));  advWidth.set('J',(charHeight* 745/emHeight)); lbWidth.set('J',(charHeight*-232/emHeight));
+charWidth.set('K',(charHeight*1623/emHeight));  advWidth.set('K',(charHeight*1055/emHeight)); lbWidth.set('K',(charHeight*   3/emHeight));
+charWidth.set('L',(charHeight*1433/emHeight));  advWidth.set('L',(charHeight*1174/emHeight)); lbWidth.set('L',(charHeight*  62/emHeight));
+charWidth.set('M',(charHeight*1654/emHeight));  advWidth.set('M',(charHeight*1289/emHeight)); lbWidth.set('M',(charHeight*  61/emHeight));
+charWidth.set('N',(charHeight*1281/emHeight));  advWidth.set('N',(charHeight* 868/emHeight)); lbWidth.set('N',(charHeight*  59/emHeight));
+charWidth.set('O',(charHeight*1013/emHeight));  advWidth.set('O',(charHeight* 960/emHeight)); lbWidth.set('O',(charHeight* 124/emHeight));
+charWidth.set('P',(charHeight*1130/emHeight));  advWidth.set('P',(charHeight* 906/emHeight)); lbWidth.set('P',(charHeight*  73/emHeight));
+charWidth.set('Q',(charHeight* 969/emHeight));  advWidth.set('Q',(charHeight* 920/emHeight)); lbWidth.set('Q',(charHeight* 129/emHeight));
+charWidth.set('R',(charHeight*1238/emHeight));  advWidth.set('R',(charHeight* 899/emHeight)); lbWidth.set('R',(charHeight*  68/emHeight));
+charWidth.set('S',(charHeight*1220/emHeight));  advWidth.set('S',(charHeight*1075/emHeight)); lbWidth.set('S',(charHeight* 124/emHeight));
+charWidth.set('T',(charHeight*1427/emHeight));  advWidth.set('T',(charHeight* 642/emHeight)); lbWidth.set('T',(charHeight* 125/emHeight));
+charWidth.set('U',(charHeight*1157/emHeight));  advWidth.set('U',(charHeight* 893/emHeight)); lbWidth.set('U',(charHeight* 123/emHeight));
+charWidth.set('V',(charHeight*1341/emHeight));  advWidth.set('V',(charHeight* 700/emHeight)); lbWidth.set('V',(charHeight*  74/emHeight));
+charWidth.set('W',(charHeight*1509/emHeight));  advWidth.set('W',(charHeight*1171/emHeight)); lbWidth.set('W',(charHeight*  72/emHeight));
+charWidth.set('X',(charHeight*1300/emHeight));  advWidth.set('X',(charHeight* 725/emHeight)); lbWidth.set('X',(charHeight* 103/emHeight));
+charWidth.set('Y',(charHeight*1216/emHeight));  advWidth.set('Y',(charHeight* 802/emHeight)); lbWidth.set('Y',(charHeight* 124/emHeight));
+charWidth.set('Z',(charHeight*1389/emHeight));  advWidth.set('Z',(charHeight* 787/emHeight)); lbWidth.set('Z',(charHeight*-260/emHeight));
 
-//"A" val=1216. so width of div "a_upper" class-> ~80.7px
+charWidth.set('a',(charHeight* 580/emHeight));  advWidth.set('a',(charHeight* 505/emHeight)); lbWidth.set('a',(charHeight*  30/emHeight));
+charWidth.set('b',(charHeight* 648/emHeight));  advWidth.set('b',(charHeight* 438/emHeight)); lbWidth.set('b',(charHeight*  50/emHeight));
+charWidth.set('c',(charHeight* 448/emHeight));  advWidth.set('c',(charHeight* 383/emHeight)); lbWidth.set('c',(charHeight*  60/emHeight));
+charWidth.set('d',(charHeight* 889/emHeight));  advWidth.set('d',(charHeight* 528/emHeight)); lbWidth.set('d',(charHeight*  30/emHeight));
+charWidth.set('e',(charHeight* 490/emHeight));  advWidth.set('e',(charHeight* 420/emHeight)); lbWidth.set('e',(charHeight*  50/emHeight));
+charWidth.set('f',(charHeight* 894/emHeight));  advWidth.set('f',(charHeight* 357/emHeight)); lbWidth.set('f',(charHeight*-217/emHeight));
+charWidth.set('g',(charHeight* 910/emHeight));  advWidth.set('g',(charHeight* 508/emHeight)); lbWidth.set('g',(charHeight*-287/emHeight));
+charWidth.set('h',(charHeight* 722/emHeight));  advWidth.set('h',(charHeight* 506/emHeight)); lbWidth.set('h',(charHeight* -19/emHeight));
+charWidth.set('i',(charHeight* 527/emHeight));  advWidth.set('i',(charHeight* 259/emHeight)); lbWidth.set('i',(charHeight*   6/emHeight));
+charWidth.set('j',(charHeight*1087/emHeight));  advWidth.set('j',(charHeight* 267/emHeight)); lbWidth.set('j',(charHeight*-582/emHeight));
+charWidth.set('k',(charHeight* 726/emHeight));  advWidth.set('k',(charHeight* 499/emHeight)); lbWidth.set('k',(charHeight* -19/emHeight));
+charWidth.set('l',(charHeight* 738/emHeight));  advWidth.set('l',(charHeight* 407/emHeight)); lbWidth.set('l',(charHeight*  50/emHeight));
+charWidth.set('m',(charHeight* 828/emHeight));  advWidth.set('m',(charHeight* 695/emHeight)); lbWidth.set('m',(charHeight* -19/emHeight));
+charWidth.set('n',(charHeight* 637/emHeight));  advWidth.set('n',(charHeight* 500/emHeight)); lbWidth.set('n',(charHeight* -30/emHeight));
+charWidth.set('o',(charHeight* 442/emHeight));  advWidth.set('o',(charHeight* 467/emHeight)); lbWidth.set('o',(charHeight*  60/emHeight));
+charWidth.set('p',(charHeight* 802/emHeight));  advWidth.set('p',(charHeight* 502/emHeight)); lbWidth.set('p',(charHeight*-250/emHeight));
+charWidth.set('q',(charHeight* 636/emHeight));  advWidth.set('q',(charHeight* 528/emHeight)); lbWidth.set('q',(charHeight*   7/emHeight));
+charWidth.set('r',(charHeight* 630/emHeight));  advWidth.set('r',(charHeight* 397/emHeight)); lbWidth.set('r',(charHeight*-102/emHeight));
+charWidth.set('s',(charHeight* 432/emHeight));  advWidth.set('s',(charHeight* 374/emHeight)); lbWidth.set('s',(charHeight*  18/emHeight));
+charWidth.set('t',(charHeight* 606/emHeight));  advWidth.set('t',(charHeight* 301/emHeight)); lbWidth.set('t',(charHeight*  20/emHeight));
+charWidth.set('u',(charHeight* 629/emHeight));  advWidth.set('u',(charHeight* 532/emHeight)); lbWidth.set('u',(charHeight*  30/emHeight));
+charWidth.set('v',(charHeight* 579/emHeight));  advWidth.set('v',(charHeight* 444/emHeight)); lbWidth.set('v',(charHeight*  34/emHeight));
+charWidth.set('w',(charHeight* 862/emHeight));  advWidth.set('w',(charHeight* 727/emHeight)); lbWidth.set('w',(charHeight*  34/emHeight));
+charWidth.set('x',(charHeight* 669/emHeight));  advWidth.set('x',(charHeight* 522/emHeight)); lbWidth.set('x',(charHeight*  20/emHeight));
+charWidth.set('y',(charHeight* 949/emHeight));  advWidth.set('y',(charHeight* 532/emHeight)); lbWidth.set('y',(charHeight*-279/emHeight));
+charWidth.set('z',(charHeight* 900/emHeight));  advWidth.set('z',(charHeight* 527/emHeight)); lbWidth.set('z',(charHeight*-270/emHeight));
 
-const emHeight=1505; //this should NOT BE CHANGED!
-let charHeight= 50; //this can be changed, is in px
+charWidth.set('0',(charHeight* 733/emHeight));  advWidth.set('0',(charHeight* 647/emHeight)); lbWidth.set('0',(charHeight* 122/emHeight));
+charWidth.set('1',(charHeight* 649/emHeight));  advWidth.set('1',(charHeight* 400/emHeight)); lbWidth.set('1',(charHeight*  32/emHeight));
+charWidth.set('2',(charHeight* 856/emHeight));  advWidth.set('2',(charHeight* 625/emHeight)); lbWidth.set('2',(charHeight*  21/emHeight));
+charWidth.set('3',(charHeight* 835/emHeight));  advWidth.set('3',(charHeight* 695/emHeight)); lbWidth.set('3',(charHeight*  40/emHeight));
+charWidth.set('4',(charHeight* 744/emHeight));  advWidth.set('4',(charHeight* 686/emHeight)); lbWidth.set('4',(charHeight* 148/emHeight));
+charWidth.set('5',(charHeight* 889/emHeight));  advWidth.set('5',(charHeight* 585/emHeight)); lbWidth.set('5',(charHeight*  44/emHeight));
+charWidth.set('6',(charHeight* 642/emHeight));  advWidth.set('6',(charHeight* 572/emHeight)); lbWidth.set('6',(charHeight*  96/emHeight));
+charWidth.set('7',(charHeight* 720/emHeight));  advWidth.set('7',(charHeight* 543/emHeight)); lbWidth.set('7',(charHeight*  85/emHeight));
+charWidth.set('8',(charHeight* 842/emHeight));  advWidth.set('8',(charHeight* 621/emHeight)); lbWidth.set('8',(charHeight*  89/emHeight));
+charWidth.set('9',(charHeight* 638/emHeight));  advWidth.set('9',(charHeight* 573/emHeight)); lbWidth.set('9',(charHeight* 142/emHeight));
 
-const charWidth=new Map();                      const advWidth=new Map();
-//get with charWidth.get("A")                   get with advWidth.get("A")
-charWidth.set('A',(charHeight*1216/emHeight));  advWidth.set('A',(charHeight*1041/emHeight)); 
-charWidth.set('B',(charHeight*1126/emHeight));  advWidth.set('B',(charHeight*1139/emHeight));
-charWidth.set('C',(charHeight*1030 /emHeight)); advWidth.set('C',(charHeight* 837/emHeight)); 
-charWidth.set('D',(charHeight*1042/emHeight));  advWidth.set('D',(charHeight*1090/emHeight));
-charWidth.set('E',(charHeight*1117/emHeight));  advWidth.set('E',(charHeight* 904/emHeight));
-charWidth.set('F',(charHeight*1145/emHeight));  advWidth.set('F',(charHeight*1000/emHeight));
-charWidth.set('G',(charHeight* 981/emHeight));  advWidth.set('G',(charHeight*1018/emHeight));
-charWidth.set('H',(charHeight*1360/emHeight));  advWidth.set('H',(charHeight* 918/emHeight));
-charWidth.set('I',(charHeight*1187/emHeight));  advWidth.set('I',(charHeight* 800/emHeight));
-charWidth.set('J',(charHeight*1508/emHeight));  advWidth.set('J',(charHeight* 513/emHeight));
-charWidth.set('K',(charHeight*1623/emHeight));  advWidth.set('K',(charHeight*1058/emHeight));
-charWidth.set('L',(charHeight*1433/emHeight));  advWidth.set('L',(charHeight*1236/emHeight));
-charWidth.set('M',(charHeight*1654/emHeight));  advWidth.set('M',(charHeight*1350/emHeight));
-charWidth.set('N',(charHeight*1281/emHeight));  advWidth.set('N',(charHeight* 927/emHeight));
-charWidth.set('O',(charHeight*1013/emHeight));  advWidth.set('O',(charHeight*1084/emHeight));
-charWidth.set('P',(charHeight*1130/emHeight));  advWidth.set('P',(charHeight* 979/emHeight));
-charWidth.set('Q',(charHeight* 969/emHeight));  advWidth.set('Q',(charHeight*1049/emHeight));
-charWidth.set('R',(charHeight*1238/emHeight));  advWidth.set('R',(charHeight* 967/emHeight));
-charWidth.set('S',(charHeight*1220/emHeight));  advWidth.set('S',(charHeight*1199/emHeight));
-charWidth.set('T',(charHeight*1427/emHeight));  advWidth.set('T',(charHeight* 767/emHeight));
-charWidth.set('U',(charHeight*1157/emHeight));  advWidth.set('U',(charHeight*1016/emHeight));
-charWidth.set('V',(charHeight*1341/emHeight));  advWidth.set('V',(charHeight* 774/emHeight));
-charWidth.set('W',(charHeight*1509/emHeight));  advWidth.set('W',(charHeight*1243/emHeight));
-charWidth.set('X',(charHeight*1300/emHeight));  advWidth.set('X',(charHeight* 828/emHeight));
-charWidth.set('Y',(charHeight*1216/emHeight));  advWidth.set('Y',(charHeight* 926/emHeight));
-charWidth.set('Z',(charHeight*1389/emHeight));  advWidth.set('Z',(charHeight* 787/emHeight));
+charWidth.set('!',(charHeight* 694/emHeight));  advWidth.set('!',(charHeight* 601/emHeight)); lbWidth.set('!',(charHeight*  85/emHeight));
+charWidth.set('"',(charHeight* 296/emHeight));  advWidth.set('"',(charHeight* 377/emHeight)); lbWidth.set('"',(charHeight* 274/emHeight));
+charWidth.set('&',(charHeight* 982/emHeight));  advWidth.set('&',(charHeight* 897/emHeight)); lbWidth.set('&',(charHeight* 102/emHeight));
+charWidth.set(`'`,(charHeight* 176/emHeight));  advWidth.set(`'`,(charHeight* 257/emHeight)); lbWidth.set(`'`,(charHeight* 274/emHeight));
+charWidth.set('(',(charHeight* 797/emHeight));  advWidth.set('(',(charHeight* 451/emHeight)); lbWidth.set('(',(charHeight* 139/emHeight));
+charWidth.set(')',(charHeight* 733/emHeight));  advWidth.set(')',(charHeight* 638/emHeight)); lbWidth.set(')',(charHeight* -34/emHeight));
+charWidth.set(',',(charHeight* 215/emHeight));  advWidth.set(',',(charHeight* 268/emHeight)); lbWidth.set(',',(charHeight*  15/emHeight));
+charWidth.set('-',(charHeight* 298/emHeight));  advWidth.set('-',(charHeight* 386/emHeight)); lbWidth.set('-',(charHeight*  56/emHeight));
+charWidth.set('.',(charHeight* 122/emHeight));  advWidth.set('.',(charHeight* 276/emHeight)); lbWidth.set('.',(charHeight*  85/emHeight));
+charWidth.set('/',(charHeight* 645/emHeight));  advWidth.set('/',(charHeight* 491/emHeight)); lbWidth.set('/',(charHeight*  48/emHeight));
+charWidth.set(':',(charHeight* 294/emHeight));  advWidth.set(':',(charHeight* 401/emHeight)); lbWidth.set(':',(charHeight*  85/emHeight));
+charWidth.set(';',(charHeight* 377/emHeight));  advWidth.set(';',(charHeight* 399/emHeight)); lbWidth.set(';',(charHeight*  15/emHeight));
+charWidth.set('?',(charHeight* 672/emHeight));  advWidth.set('?',(charHeight* 657/emHeight)); lbWidth.set('?',(charHeight* 117/emHeight));
+charWidth.set(' ',(charHeight* 300/emHeight));  advWidth.set(' ',(charHeight* 300/emHeight)); lbWidth.set(' ',(charHeight*   0/emHeight));
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-charWidth.set('a',(charHeight* 580/emHeight));  advWidth.set('a',(charHeight* 535/emHeight));
-charWidth.set('b',(charHeight* 648/emHeight));  advWidth.set('b',(charHeight* 488/emHeight));
-charWidth.set('c',(charHeight* 448/emHeight));  advWidth.set('c',(charHeight* 443/emHeight));
-charWidth.set('d',(charHeight* 889/emHeight));  advWidth.set('d',(charHeight* 558/emHeight));
-charWidth.set('e',(charHeight* 490/emHeight));  advWidth.set('e',(charHeight* 470/emHeight));
-charWidth.set('f',(charHeight* 894/emHeight));  advWidth.set('f',(charHeight* 140/emHeight));
-charWidth.set('g',(charHeight* 652/emHeight));  advWidth.set('g',(charHeight* 221/emHeight));
-charWidth.set('h',(charHeight* 722/emHeight));  advWidth.set('h',(charHeight* 487/emHeight));
-charWidth.set('i',(charHeight* 527/emHeight));  advWidth.set('i',(charHeight* 265/emHeight));
-charWidth.set('j',(charHeight*1087/emHeight));  advWidth.set('j',(charHeight* -315/emHeight));
-charWidth.set('k',(charHeight* 726/emHeight));  advWidth.set('k',(charHeight* 480/emHeight));
-charWidth.set('l',(charHeight* 738/emHeight));  advWidth.set('l',(charHeight* 457/emHeight));
-charWidth.set('m',(charHeight* 828/emHeight));  advWidth.set('m',(charHeight* 676/emHeight));
-charWidth.set('n',(charHeight* 637/emHeight));  advWidth.set('n',(charHeight* 470/emHeight));
-charWidth.set('o',(charHeight* 442/emHeight));  advWidth.set('o',(charHeight* 527/emHeight));
-charWidth.set('p',(charHeight* 802/emHeight));  advWidth.set('p',(charHeight* 252/emHeight));
-charWidth.set('q',(charHeight* 636/emHeight));  advWidth.set('q',(charHeight* 535/emHeight));
-charWidth.set('r',(charHeight* 538/emHeight));  advWidth.set('r',(charHeight* 295/emHeight));
-charWidth.set('s',(charHeight* 432/emHeight));  advWidth.set('s',(charHeight* 392/emHeight));
-charWidth.set('t',(charHeight* 606/emHeight));  advWidth.set('t',(charHeight* 321/emHeight));
-charWidth.set('u',(charHeight* 629/emHeight));  advWidth.set('u',(charHeight* 562/emHeight));
-charWidth.set('v',(charHeight* 579/emHeight));  advWidth.set('v',(charHeight* 478/emHeight));
-charWidth.set('w',(charHeight* 862/emHeight));  advWidth.set('w',(charHeight* 761/emHeight));
-charWidth.set('x',(charHeight* 669/emHeight));  advWidth.set('x',(charHeight* 542/emHeight));
-charWidth.set('y',(charHeight* 681/emHeight));  advWidth.set('y',(charHeight* 252/emHeight));
-charWidth.set('z',(charHeight* 900/emHeight));  advWidth.set('z',(charHeight* 257/emHeight));
+//HTML POPULATE///////////////////////////////
 
-charWidth.set('0',(charHeight* 733/emHeight));  advWidth.set('0',(charHeight* 769/emHeight));
-charWidth.set('1',(charHeight* 649/emHeight));  advWidth.set('1',(charHeight* 432/emHeight));
-charWidth.set('2',(charHeight* 856/emHeight));  advWidth.set('2',(charHeight* 646/emHeight));
-charWidth.set('3',(charHeight* 835/emHeight));  advWidth.set('3',(charHeight* 735/emHeight));
-charWidth.set('4',(charHeight* 744/emHeight));  advWidth.set('4',(charHeight* 834/emHeight));
-charWidth.set('5',(charHeight* 889/emHeight));  advWidth.set('5',(charHeight* 629/emHeight));
-charWidth.set('6',(charHeight* 642/emHeight));  advWidth.set('6',(charHeight* 668/emHeight));
-charWidth.set('7',(charHeight* 720/emHeight));  advWidth.set('7',(charHeight* 628/emHeight));
-charWidth.set('8',(charHeight* 842/emHeight));  advWidth.set('8',(charHeight* 710/emHeight));
-charWidth.set('9',(charHeight* 638/emHeight));  advWidth.set('9',(charHeight* 715/emHeight));
+function populateHTML(string){
+  array=Array.from(string);let fin="";
+  array.forEach((x)=>fin+=partSpawn(x));
+ return fin;
+}
 
-charWidth.set('!',(charHeight* 694/emHeight));  advWidth.set('!',(charHeight* 686/emHeight));
-charWidth.set('"',(charHeight* 296/emHeight));  advWidth.set('"',(charHeight* 651/emHeight));
-charWidth.set('&',(charHeight* 982/emHeight));  advWidth.set('&',(charHeight* 999/emHeight));
-charWidth.set(`'`,(charHeight* 176/emHeight));  advWidth.set(`'`,(charHeight* 531/emHeight));
-charWidth.set('(',(charHeight* 797/emHeight));  advWidth.set('(',(charHeight* 590/emHeight));
-charWidth.set(')',(charHeight* 733/emHeight));  advWidth.set(')',(charHeight* 604/emHeight));
-charWidth.set(',',(charHeight* 215/emHeight));  advWidth.set(',',(charHeight* 283/emHeight));
-charWidth.set('-',(charHeight* 298/emHeight));  advWidth.set('-',(charHeight* 442/emHeight));
-charWidth.set('.',(charHeight* 122/emHeight));  advWidth.set('.',(charHeight* 361/emHeight));
-charWidth.set('/',(charHeight* 645/emHeight));  advWidth.set('/',(charHeight* 539/emHeight));
-charWidth.set(':',(charHeight* 294/emHeight));  advWidth.set(':',(charHeight* 486/emHeight));
-charWidth.set(';',(charHeight* 377/emHeight));  advWidth.set(';',(charHeight* 414/emHeight));
-charWidth.set('?',(charHeight* 672/emHeight));  advWidth.set('?',(charHeight* 774/emHeight));
-charWidth.set(' ',(charHeight* 300/emHeight));  advWidth.set(' ',(charHeight* 300/emHeight));
+charParent.innerHTML=populateHTML(textToDraw);
+//////////////////////////////////////////////
 
+//AFTER POPULATE, SET WIDTH & HEIGHT OF DIVS///////////////////////////////////////////
+
+//sets height/////////////////////////////////////////////////
+const charDivs=Array.from(document.querySelectorAll(".char"));
+
+charDivs.forEach(x=>x.style.height=`${charHeight*0.6}px`);
+//currently at 0.5*charHeight
+//does not determine char size
+//////////////////////////////////////////////////////////////
+
+//sets width//////////////////////////////////////////////////////////////////////////////////////
+
+function setWidth(node,char){
+  Array.from(node).forEach((element)=>element.style.width=`${charWidth.get(char)/*.toFixed(1)*/}px`);
+}
+
+function setWidthAll(){
 const a_upper=document.querySelectorAll(".a_upper");    setWidth(a_upper,"A");
 const b_upper=document.querySelectorAll(".b_upper");    setWidth(b_upper,"B");
 const c_upper=document.querySelectorAll(".c_upper");    setWidth(c_upper,"C");
@@ -202,491 +236,158 @@ const slash=document.querySelectorAll  (".slash");      setWidth(slash,"/");
 const colon=document.querySelectorAll  (".colon");      setWidth(colon,":");
 const semi=document.querySelectorAll   (".semi");       setWidth(semi,";");
 const quest=document.querySelectorAll  (".quest");      setWidth(quest,"?");
+const space=document.querySelectorAll  (".space");      setWidth(space," ");
+}
+setWidthAll();
+//////////////////////////////////////////////////////////////////////////////////////////////////
 
-const charParent=document.querySelector(".charParent");
-const charDivs=Array.from(document.querySelectorAll(".char"));
+//AFTER POPULATE & GIVE WIDTH, SET TAIL (CSS 'style.right' OFFSET, ie spaces between each character)////////////////////////////////////////////////////////////////////////////
 
-charDivs.forEach(x=>x.style.height=`${charHeight*0.5}px`);
-//sets height for all items with class .char, so half of charHeight const
-
-const charCount=charParent.children; //array or node idk
-//this should track charCount to be able to apply advanceWidth to each div
-
-function setWidth(node,char){
-Array.from(node).forEach((element)=>element.style.width=`${charWidth.get(char).toFixed(1)}px`);}
-//seems to work
-
-//advWidth.get("A")
-
-
-//this function is responsible for setting all the spaces between character divs//////////////////////////////////
-
-function setTail(array){ //array should be charCount, function to give advWidth to all divs
-  let tailSum=[0];
+function setTail(array){
+  let tailSum=0;
+  
+  let widthTracker=0; //after flex makes a new line, need to track it & need to set 'style.right' back to 0
+  let maxW=Array.from(window.getComputedStyle(charParent).maxWidth);maxW.pop();maxW.pop();maxW=maxW.join("");
+  //maxW='max-width' of the flex div, after which it automatically generates new line
 
   for (let i=0;i<=array.length-1;i++){
-  let currentDiv=array[i]; console.log(`tailSum=[${tailSum}],i=${i}`);//Div we will apply final value to
-  let currentClass=array[i].classList[1]; //this is a STRING! like "a_upper"
-  let currentChar=charOf.get(currentClass); //find char of class
+    let currentDiv=   array[i];
+    let currentClass= currentDiv.classList[1]; //this is a STRING! like "a_upper"
+    let currentChar=  charOf.get(currentClass); //find char of class
+    //console.log(`tailSum=${tailSum},i=${i}`);
 
-  let ownTail=charWidth.get(currentChar)-advWidth.get(currentChar);   //find ownTail of char
-  if (ownTail>charWidth.get(currentChar)*0.12) {ownTail=charWidth.get(currentChar)*0.12;console.log(`kerning "${currentChar}"`)};
-  //kerning so that max char 'style.right' shifting is 12% of previous width
+    let  W= charWidth.get(currentChar);
+    let AW=  advWidth.get(currentChar);
+    let LW=   lbWidth.get(currentChar);
+    
+    widthTracker+=W;
+    
+    //for spaces, not working rn
+    //if (currentChar===" " && widthTracker===W){console.log(`activated`);currentDiv.style.width=`0px`;widthTracker-=W};
 
-  if (ownTail<0){ownTail=charWidth.get(currentChar)*0.05;console.log(`tail of "${currentChar}" was below 0, turned to ${ownTail.toFixed(1)}`)};
-  
+    if (widthTracker>maxW){tailSum=0;widthTracker=W;};//account for new LINES by resetting tailSum
+    
 
-  console.log(`ownTail for ${currentChar} = ${ownTail.toFixed(1)}px,applying (tailSum) right=${tailSum.reduce((prev,curr)=>prev+curr).toFixed(1)}px`);
 
-  currentDiv.style.right=`${tailSum.reduce((prev,curr)=>prev+curr)}px`;  //apply final tail from tailSum
-  tailSum.push(ownTail); //add ownTail to tailSum for next calc
+    let ownTail= W-(AW/*+LW*/);   //find ownTail of char
+    if (LW<0){ownTail+= LW;tailSum+=-LW}; //if LB is negative, need to account for it
+    if (LW>0){ownTail+=-LW};
+
+    //if (ownTail>W){console.log(`"${currentChar}" ownTail=${ownTail} greater than width=${W}!`)}
+    //kerning
+
+    if (ownTail<0){ownTail=0;/*console.log(`"${currentChar}" ownTail was below 0! turned to ${ownTail}`)*/};
+    //kerning for ownTail below 0
+     
+    currentDiv.style.right=`${tailSum}px`;  //apply final tail from tailSum
+    if (currentChar==="'"){currentDiv.style.right=`${tailSum-LW}px`}; //edge case for character 'apos'
+    if (currentChar===`"`){currentDiv.style.right=`${tailSum-LW}px`};
+    tailSum+=ownTail; //add ownTail to tailSum for next calc
   }
-  } 
-
-/* ownTail=0
-[0] ownTail=16  finalTail=0
-[1] ownTail=7   finalTail=16
-[2] ownTail=20  finalTail= 16+7=23
-[3] ownTail=12  finalTail= 16+7+20 = 43
-
-tail at any stage: sum all PRIOR ownTail, set that, add ownTail to sum for next
-
-*/
+} 
+const charCount=charParent.children;
 setTail(charCount); //initializing tails
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//ANIMATING THE HTML AFTER DOING EVERYTHING ELSE/////////////////////////////////////////////////////////////////
+
+//spawns the appropriate count of SVG segments for each char
+function partSpawn(char){
+  let partCounter;
+  let partClass=classOf(char);
+  switch (char){
+    case "A" : partCounter=5;break; case "a" : partCounter=6;break; case "0" : partCounter=2;break;
+    case "B" : partCounter=6;break; case "b" : partCounter=4;break; case "1" : partCounter=2;break;
+    case "C" : partCounter=4;break; case "c" : partCounter=3;break; case "2" : partCounter=4;break;
+    case "D" : partCounter=4;break; case "d" : partCounter=6;break; case "3" : partCounter=5;break;
+    case "E" : partCounter=6;break; case "e" : partCounter=3;break; case "4" : partCounter=3;break;
+    case "F" : partCounter=4;break; case "f" : partCounter=4;break; case "5" : partCounter=4;break;
+    case "G" : partCounter=4;break; case "g" : partCounter=6;break; case "6" : partCounter=3;break;
+    case "H" : partCounter=5;break; case "h" : partCounter=4;break; case "7" : partCounter=2;break;
+    case "I" : partCounter=4;break; case "i" : partCounter=4;break; case "8" : partCounter=3;break;
+    case "J" : partCounter=4;break; case "j" : partCounter=4;break; case "9" : partCounter=3;break;
+    case "K" : partCounter=6;break; case "k" : partCounter=5;break; case "!" : partCounter=3;break;
+    case "L" : partCounter=4;break; case "l" : partCounter=3;break; case `"` : partCounter=2;break;
+    case "M" : partCounter=6;break; case "m" : partCounter=7;break; case "&" : partCounter=7;break;
+    case "N" : partCounter=5;break; case "n" : partCounter=5;break; case "'" : partCounter=1;break;
+    case "O" : partCounter=4;break; case "o" : partCounter=3;break; case "(" : partCounter=1;break;
+    case "P" : partCounter=3;break; case "p" : partCounter=4;break; case ")" : partCounter=1;break;
+    case "Q" : partCounter=4;break; case "q" : partCounter=6;break; case "," : partCounter=1;break;
+    case "R" : partCounter=4;break; case "r" : partCounter=4;break; case "-" : partCounter=1;break;
+    case "S" : partCounter=4;break; case "s" : partCounter=3;break; case "." : partCounter=1;break;
+    case "T" : partCounter=3;break; case "t" : partCounter=4;break; case "/" : partCounter=1;break;
+    case "U" : partCounter=5;break; case "u" : partCounter=5;break; case ":" : partCounter=2;break;
+    case "V" : partCounter=3;break; case "v" : partCounter=5;break; case ";" : partCounter=2;break;
+    case "W" : partCounter=5;break; case "w" : partCounter=6;break; case "?" : partCounter=5;break;
+    case "X" : partCounter=4;break; case "x" : partCounter=4;break; case " " : partCounter=0;break;
+    case "Y" : partCounter=4;break; case "y" : partCounter=5;break;
+    case "Z" : partCounter=5;break; case "z" : partCounter=5;break;
+  }
+  let stringOpen=`<div class="char ${partClass}">`;
+  let stringClose=`</div>`;
+
+  if (partCounter===0){return `${stringOpen}${stringClose}`}; //if space
+  if (typeof partCounter===undefined){return};                //if unsupported char
+
+  let i=1; let stringMiddle=""; //normal behavior
+  while (i<=partCounter){stringMiddle+=`<img class="${partClass}_${i}" src="/typing/${partClass}_${i}.svg">`;i++};
+
+  return `${stringOpen}${stringMiddle}${stringClose}`;
+}
+
+/* FUNCTION partSpawn(char) will return something like this for each char:
+`<div class="char a_lower">
+<img class="a_lower_1" src="/typing/a_lower_1.svg">
+<img class="a_lower_2" src="/typing/a_lower_2.svg">
+<img class="a_lower_3" src="/typing/a_lower_3.svg">
+<img class="a_lower_4" src="/typing/a_lower_4.svg">
+<img class="a_lower_5" src="/typing/a_lower_5.svg">
+<img class="a_lower_6" src="/typing/a_lower_6.svg">
+</div>`
+*/
+
+//ANIMATION TIMINGS FOR EACH SEGMENT//////////////////////////////////////////////////////////////////////
+let animationSpeed=1; //change this to draw segments faster. does not work accurately but w/e
+
+async function animateHTML(parent){
+  array=Array.from(parent.children);
+  let time=0; //initializes time for animDelay() to 0
+  let fraction=(1/animationSpeed);
+
+  function animDelay() {return new Promise(resolve => {setTimeout(() => {resolve('resolved');}, time*fraction);});}
+
+  for (let child of array){
+    for(i=0;i<=child.children.length-1;i++){
+      await animDelay();
+      let read=child.children[i].classList[0];
+      read+=`_draw`;
+      child.children[i].classList.add(read);
+      //console.log(`Added ${read}.`);
+      
+      //SYNCING ANIMATION
+      //finding animation length and setting 'time' to it. 'time' is used for 'await animDelay()', which uses 'animDelay()'
+      let element=document.querySelector(`.${child.children[i].classList[1]}`); //query selects latest '_draw' CSS class
+      let timeString=Array.from(window.getComputedStyle(element).getPropertyValue("animation-duration")); //gets its animation length
+      timeString.pop();//removes 's' from time
+      time=timeString.join("")*1000; //converts to milliseconds
+    }
+  }
+}
+
+animateHTML(charParent);
+
 
 //NEED TO DO
-//take input from a <form>, compare string[i] to database and return a letter 'char' div, such as: if string[i]=A->'char a_lower'
-//take the string length & based on it, determine setTimeout delays for each character(index * 100ms orlower
-
-
-const a_upper_1=document.querySelector(".a_upper_1");
-const a_upper_2=document.querySelector(".a_upper_2");
-const a_upper_3=document.querySelector(".a_upper_3");
-const a_upper_4=document.querySelector(".a_upper_4");
-const a_upper_5=document.querySelector(".a_upper_5");
-
-const b_upper_1=document.querySelector(".b_upper_1");
-const b_upper_2=document.querySelector(".b_upper_2");
-const b_upper_3=document.querySelector(".b_upper_3");
-const b_upper_4=document.querySelector(".b_upper_4");
-const b_upper_5=document.querySelector(".b_upper_5");
-const b_upper_6=document.querySelector(".b_upper_6");
-
-const c_upper_1=document.querySelector(".c_upper_1");
-const c_upper_2=document.querySelector(".c_upper_2");
-const c_upper_3=document.querySelector(".c_upper_3");
-const c_upper_4=document.querySelector(".c_upper_4");
-
-const d_upper_1=document.querySelector(".d_upper_1");
-const d_upper_2=document.querySelector(".d_upper_2");
-const d_upper_3=document.querySelector(".d_upper_3");
-const d_upper_4=document.querySelector(".d_upper_4");
-
-const e_upper_1=document.querySelector(".e_upper_1");
-const e_upper_2=document.querySelector(".e_upper_2");
-const e_upper_3=document.querySelector(".e_upper_3");
-const e_upper_4=document.querySelector(".e_upper_4");
-const e_upper_5=document.querySelector(".e_upper_5");
-const e_upper_6=document.querySelector(".e_upper_6");
-
-const f_upper_1=document.querySelector(".f_upper_1");
-const f_upper_2=document.querySelector(".f_upper_2");
-const f_upper_3=document.querySelector(".f_upper_3");
-const f_upper_4=document.querySelector(".f_upper_4");
-
-const g_upper_1=document.querySelector(".g_upper_1");
-const g_upper_2=document.querySelector(".g_upper_2");
-const g_upper_3=document.querySelector(".g_upper_3");
-const g_upper_4=document.querySelector(".g_upper_4");
-
-const h_upper_1=document.querySelector(".h_upper_1");
-const h_upper_2=document.querySelector(".h_upper_2");
-const h_upper_3=document.querySelector(".h_upper_3");
-const h_upper_4=document.querySelector(".h_upper_4");
-const h_upper_5=document.querySelector(".h_upper_5");
-
-const i_upper_1=document.querySelector(".i_upper_1");
-const i_upper_2=document.querySelector(".i_upper_2");
-const i_upper_3=document.querySelector(".i_upper_3");
-const i_upper_4=document.querySelector(".i_upper_4");
-
-const j_upper_1=document.querySelector(".j_upper_1");
-const j_upper_2=document.querySelector(".j_upper_2");
-const j_upper_3=document.querySelector(".j_upper_3");
-const j_upper_4=document.querySelector(".j_upper_4");
-
-const k_upper_1=document.querySelector(".k_upper_1");
-const k_upper_2=document.querySelector(".k_upper_2");
-const k_upper_3=document.querySelector(".k_upper_3");
-const k_upper_4=document.querySelector(".k_upper_4");
-const k_upper_5=document.querySelector(".k_upper_5");
-const k_upper_6=document.querySelector(".k_upper_6");
-
-const l_upper_1=document.querySelector(".l_upper_1");
-const l_upper_2=document.querySelector(".l_upper_2");
-const l_upper_3=document.querySelector(".l_upper_3");
-const l_upper_4=document.querySelector(".l_upper_4");
-
-const m_upper_1=document.querySelector(".m_upper_1");
-const m_upper_2=document.querySelector(".m_upper_2");
-const m_upper_3=document.querySelector(".m_upper_3");
-const m_upper_4=document.querySelector(".m_upper_4");
-const m_upper_5=document.querySelector(".m_upper_5");
-const m_upper_6=document.querySelector(".m_upper_6");
-
-const n_upper_1=document.querySelector(".n_upper_1");
-const n_upper_2=document.querySelector(".n_upper_2");
-const n_upper_3=document.querySelector(".n_upper_3");
-const n_upper_4=document.querySelector(".n_upper_4");
-const n_upper_5=document.querySelector(".n_upper_5");
-
-const o_upper_1=document.querySelector(".o_upper_1");
-const o_upper_2=document.querySelector(".o_upper_2");
-const o_upper_3=document.querySelector(".o_upper_3");
-const o_upper_4=document.querySelector(".o_upper_4");
-
-const p_upper_1=document.querySelector(".p_upper_1");
-const p_upper_2=document.querySelector(".p_upper_2");
-const p_upper_3=document.querySelector(".p_upper_3");
-
-const q_upper_1=document.querySelector(".q_upper_1");
-const q_upper_2=document.querySelector(".q_upper_2");
-const q_upper_3=document.querySelector(".q_upper_3");
-const q_upper_4=document.querySelector(".q_upper_4");
-
-const r_upper_1=document.querySelector(".r_upper_1");
-const r_upper_2=document.querySelector(".r_upper_2");
-const r_upper_3=document.querySelector(".r_upper_3");
-const r_upper_4=document.querySelector(".r_upper_4");
-
-const s_upper_1=document.querySelector(".s_upper_1");
-const s_upper_2=document.querySelector(".s_upper_2");
-const s_upper_3=document.querySelector(".s_upper_3");
-const s_upper_4=document.querySelector(".s_upper_4");
-
-const t_upper_1=document.querySelector(".t_upper_1");
-const t_upper_2=document.querySelector(".t_upper_2");
-const t_upper_3=document.querySelector(".t_upper_3");
-
-const u_upper_1=document.querySelector(".u_upper_1");
-const u_upper_2=document.querySelector(".u_upper_2");
-const u_upper_3=document.querySelector(".u_upper_3");
-const u_upper_4=document.querySelector(".u_upper_4");
-const u_upper_5=document.querySelector(".u_upper_5");
-
-const v_upper_1=document.querySelector(".v_upper_1");
-const v_upper_2=document.querySelector(".v_upper_2");
-const v_upper_3=document.querySelector(".v_upper_3");
-
-const w_upper_1=document.querySelector(".w_upper_1");
-const w_upper_2=document.querySelector(".w_upper_2");
-const w_upper_3=document.querySelector(".w_upper_3");
-const w_upper_4=document.querySelector(".w_upper_4");
-const w_upper_5=document.querySelector(".w_upper_5");
-
-const x_upper_1=document.querySelector(".x_upper_1");
-const x_upper_2=document.querySelector(".x_upper_2");
-const x_upper_3=document.querySelector(".x_upper_3");
-const x_upper_4=document.querySelector(".x_upper_4");
-
-const y_upper_1=document.querySelector(".y_upper_1");
-const y_upper_2=document.querySelector(".y_upper_2");
-const y_upper_3=document.querySelector(".y_upper_3");
-const y_upper_4=document.querySelector(".y_upper_4");
-
-const z_upper_1=document.querySelector(".z_upper_1");
-const z_upper_2=document.querySelector(".z_upper_2");
-const z_upper_3=document.querySelector(".z_upper_3");
-const z_upper_4=document.querySelector(".z_upper_4");
-const z_upper_5=document.querySelector(".z_upper_5");
-
-const a_lower_1=document.querySelector(".a_lower_1");
-const a_lower_2=document.querySelector(".a_lower_2");
-const a_lower_3=document.querySelector(".a_lower_3");
-const a_lower_4=document.querySelector(".a_lower_4");
-const a_lower_5=document.querySelector(".a_lower_5");
-const a_lower_6=document.querySelector(".a_lower_6");
-
-const b_lower_1=document.querySelector(".b_lower_1");
-const b_lower_2=document.querySelector(".b_lower_2");
-const b_lower_3=document.querySelector(".b_lower_3");
-const b_lower_4=document.querySelector(".b_lower_4");
-
-const c_lower_1=document.querySelector(".c_lower_1");
-const c_lower_2=document.querySelector(".c_lower_2");
-const c_lower_3=document.querySelector(".c_lower_3");
-
-const d_lower_1=document.querySelector(".d_lower_1");
-const d_lower_2=document.querySelector(".d_lower_2");
-const d_lower_3=document.querySelector(".d_lower_3");
-const d_lower_4=document.querySelector(".d_lower_4");
-const d_lower_5=document.querySelector(".d_lower_5");
-const d_lower_6=document.querySelector(".d_lower_6");
-
-const e_lower_1=document.querySelector(".e_lower_1");
-const e_lower_2=document.querySelector(".e_lower_2");
-const e_lower_3=document.querySelector(".e_lower_3");
-
-const f_lower_1=document.querySelector(".f_lower_1");
-const f_lower_2=document.querySelector(".f_lower_2");
-const f_lower_3=document.querySelector(".f_lower_3");
-const f_lower_4=document.querySelector(".f_lower_4");
-
-const g_lower_1=document.querySelector(".g_lower_1");
-const g_lower_2=document.querySelector(".g_lower_2");
-const g_lower_3=document.querySelector(".g_lower_3");
-const g_lower_4=document.querySelector(".g_lower_4");
-const g_lower_5=document.querySelector(".g_lower_5");
-const g_lower_6=document.querySelector(".g_lower_6");
-
-const h_lower_1=document.querySelector(".h_lower_1");
-const h_lower_2=document.querySelector(".h_lower_2");
-const h_lower_3=document.querySelector(".h_lower_3");
-const h_lower_4=document.querySelector(".h_lower_4");
-
-const i_lower_1=document.querySelector(".i_lower_1");
-const i_lower_2=document.querySelector(".i_lower_2");
-const i_lower_3=document.querySelector(".i_lower_3");
-const i_lower_4=document.querySelector(".i_lower_4");
-
-const j_lower_1=document.querySelector(".j_lower_1");
-const j_lower_2=document.querySelector(".j_lower_2");
-const j_lower_3=document.querySelector(".j_lower_3");
-const j_lower_4=document.querySelector(".j_lower_4");
-
-const k_lower_1=document.querySelector(".k_lower_1");
-const k_lower_2=document.querySelector(".k_lower_2");
-const k_lower_3=document.querySelector(".k_lower_3");
-const k_lower_4=document.querySelector(".k_lower_4");
-const k_lower_5=document.querySelector(".k_lower_5");
-
-const l_lower_1=document.querySelector(".l_lower_1");
-const l_lower_2=document.querySelector(".l_lower_2");
-const l_lower_3=document.querySelector(".l_lower_3");
-
-const m_lower_1=document.querySelector(".m_lower_1");
-const m_lower_2=document.querySelector(".m_lower_2");
-const m_lower_3=document.querySelector(".m_lower_3");
-const m_lower_4=document.querySelector(".m_lower_4");
-const m_lower_5=document.querySelector(".m_lower_5");
-const m_lower_6=document.querySelector(".m_lower_6");
-const m_lower_7=document.querySelector(".m_lower_7");
-
-const n_lower_1=document.querySelector(".n_lower_1");
-const n_lower_2=document.querySelector(".n_lower_2");
-const n_lower_3=document.querySelector(".n_lower_3");
-const n_lower_4=document.querySelector(".n_lower_4");
-const n_lower_5=document.querySelector(".n_lower_5");
-
-const o_lower_1=document.querySelector(".o_lower_1");
-const o_lower_2=document.querySelector(".o_lower_2");
-const o_lower_3=document.querySelector(".o_lower_3");
-
-const p_lower_1=document.querySelector(".p_lower_1");
-const p_lower_2=document.querySelector(".p_lower_2");
-const p_lower_3=document.querySelector(".p_lower_3");
-const p_lower_4=document.querySelector(".p_lower_4");
-
-const q_lower_1=document.querySelector(".q_lower_1");
-const q_lower_2=document.querySelector(".q_lower_2");
-const q_lower_3=document.querySelector(".q_lower_3");
-const q_lower_4=document.querySelector(".q_lower_4");
-const q_lower_5=document.querySelector(".q_lower_5");
-const q_lower_6=document.querySelector(".q_lower_6");
-
-const r_lower_1=document.querySelector(".r_lower_1");
-const r_lower_2=document.querySelector(".r_lower_2");
-const r_lower_3=document.querySelector(".r_lower_3");
-const r_lower_4=document.querySelector(".r_lower_4");
-
-const s_lower_1=document.querySelector(".s_lower_1");
-const s_lower_2=document.querySelector(".s_lower_2");
-const s_lower_3=document.querySelector(".s_lower_3");
-
-const t_lower_1=document.querySelector(".t_lower_1");
-const t_lower_2=document.querySelector(".t_lower_2");
-const t_lower_3=document.querySelector(".t_lower_3");
-const t_lower_4=document.querySelector(".t_lower_4");
-
-const u_lower_1=document.querySelector(".u_lower_1");
-const u_lower_2=document.querySelector(".u_lower_2");
-const u_lower_3=document.querySelector(".u_lower_3");
-const u_lower_4=document.querySelector(".u_lower_4");
-const u_lower_5=document.querySelector(".u_lower_5");
-
-const v_lower_1=document.querySelector(".v_lower_1");
-const v_lower_2=document.querySelector(".v_lower_2");
-const v_lower_3=document.querySelector(".v_lower_3");
-const v_lower_4=document.querySelector(".v_lower_4");
-const v_lower_5=document.querySelector(".v_lower_5");
-
-const w_lower_1=document.querySelector(".w_lower_1");
-const w_lower_2=document.querySelector(".w_lower_2");
-const w_lower_3=document.querySelector(".w_lower_3");
-const w_lower_4=document.querySelector(".w_lower_4");
-const w_lower_5=document.querySelector(".w_lower_5");
-const w_lower_6=document.querySelector(".w_lower_6");
-
-const x_lower_1=document.querySelector(".x_lower_1");
-const x_lower_2=document.querySelector(".x_lower_2");
-const x_lower_3=document.querySelector(".x_lower_3");
-const x_lower_4=document.querySelector(".x_lower_4");
-
-const y_lower_1=document.querySelector(".y_lower_1");
-const y_lower_2=document.querySelector(".y_lower_2");
-const y_lower_3=document.querySelector(".y_lower_3");
-const y_lower_4=document.querySelector(".y_lower_4");
-const y_lower_5=document.querySelector(".y_lower_5");
-
-const z_lower_1=document.querySelector(".z_lower_1");
-const z_lower_2=document.querySelector(".z_lower_2");
-const z_lower_3=document.querySelector(".z_lower_3");
-const z_lower_4=document.querySelector(".z_lower_4");
-const z_lower_5=document.querySelector(".z_lower_5");
-
-
-
-
-document.body.onclick=function(){
-    setTimeout(function(){a_upper_1.classList.toggle("a_upper_1_draw")},0);
-    setTimeout(function(){a_upper_2.classList.toggle("a_upper_2_draw")},100);
-    setTimeout(function(){a_upper_3.classList.toggle("a_upper_3_draw")},200);
-    setTimeout(function(){a_upper_4.classList.toggle("a_upper_4_draw")},300);
-    setTimeout(function(){a_upper_5.classList.toggle("a_upper_5_draw")},400);
-
-    setTimeout(function(){b_upper_1.classList.toggle("b_upper_1_draw")},500);
-    setTimeout(function(){b_upper_2.classList.toggle("b_upper_2_draw")},600);
-    setTimeout(function(){b_upper_3.classList.toggle("b_upper_3_draw")},700);
-    setTimeout(function(){b_upper_4.classList.toggle("b_upper_4_draw")},800);
-    setTimeout(function(){b_upper_5.classList.toggle("b_upper_5_draw")},900);
-    setTimeout(function(){b_upper_6.classList.toggle("b_upper_6_draw")},1000);
-
-    setTimeout(function(){c_upper_1.classList.toggle("c_upper_1_draw")},1100);
-    setTimeout(function(){c_upper_2.classList.toggle("c_upper_2_draw")},1200);
-    setTimeout(function(){c_upper_3.classList.toggle("c_upper_3_draw")},1300);
-    setTimeout(function(){c_upper_4.classList.toggle("c_upper_4_draw")},1400);
-
-    setTimeout(function(){d_upper_1.classList.toggle("d_upper_1_draw")},1500);
-    setTimeout(function(){d_upper_2.classList.toggle("d_upper_2_draw")},1600);
-    setTimeout(function(){d_upper_3.classList.toggle("d_upper_3_draw")},1700);
-    setTimeout(function(){d_upper_4.classList.toggle("d_upper_4_draw")},1800);
-
-    setTimeout(function(){e_upper_1.classList.toggle("e_upper_1_draw")},1900);
-    setTimeout(function(){e_upper_2.classList.toggle("e_upper_2_draw")},2000);
-    setTimeout(function(){e_upper_3.classList.toggle("e_upper_3_draw")},2100);
-    setTimeout(function(){e_upper_4.classList.toggle("e_upper_4_draw")},2200);
-    setTimeout(function(){e_upper_5.classList.toggle("e_upper_5_draw")},2300);
-    setTimeout(function(){e_upper_6.classList.toggle("e_upper_6_draw")},2400);
-
-    setTimeout(function(){f_upper_1.classList.toggle("f_upper_1_draw")},2500);
-    setTimeout(function(){f_upper_2.classList.toggle("f_upper_2_draw")},2600);
-    setTimeout(function(){f_upper_3.classList.toggle("f_upper_3_draw")},2700);
-    setTimeout(function(){f_upper_4.classList.toggle("f_upper_4_draw")},2800);
-
-    setTimeout(function(){g_upper_1.classList.toggle("g_upper_1_draw")},2900);
-    setTimeout(function(){g_upper_2.classList.toggle("g_upper_2_draw")},3000);
-    setTimeout(function(){g_upper_3.classList.toggle("g_upper_3_draw")},3100);
-    setTimeout(function(){g_upper_4.classList.toggle("g_upper_4_draw")},3200);
-
-    setTimeout(function(){h_upper_1.classList.toggle("h_upper_1_draw")},3300);
-    setTimeout(function(){h_upper_2.classList.toggle("h_upper_2_draw")},3400);
-    setTimeout(function(){h_upper_3.classList.toggle("h_upper_3_draw")},3500);
-    setTimeout(function(){h_upper_4.classList.toggle("h_upper_4_draw")},3600);
-    setTimeout(function(){h_upper_5.classList.toggle("h_upper_5_draw")},3700);
-
-    setTimeout(function(){i_upper_1.classList.toggle("i_upper_1_draw")},3800);
-    setTimeout(function(){i_upper_2.classList.toggle("i_upper_2_draw")},3900);
-    setTimeout(function(){i_upper_3.classList.toggle("i_upper_3_draw")},4000);
-    setTimeout(function(){i_upper_4.classList.toggle("i_upper_4_draw")},4100);
-
-    setTimeout(function(){j_upper_1.classList.toggle("j_upper_1_draw")},4200);
-    setTimeout(function(){j_upper_2.classList.toggle("j_upper_2_draw")},4300);
-    setTimeout(function(){j_upper_3.classList.toggle("j_upper_3_draw")},4400);
-    setTimeout(function(){j_upper_4.classList.toggle("j_upper_4_draw")},4500);
-
-    setTimeout(function(){k_upper_1.classList.toggle("k_upper_1_draw")},4600);
-    setTimeout(function(){k_upper_2.classList.toggle("k_upper_2_draw")},4700);
-    setTimeout(function(){k_upper_3.classList.toggle("k_upper_3_draw")},4800);
-    setTimeout(function(){k_upper_4.classList.toggle("k_upper_4_draw")},4900);
-    setTimeout(function(){k_upper_5.classList.toggle("k_upper_5_draw")},5000);
-    setTimeout(function(){k_upper_6.classList.toggle("k_upper_6_draw")},5100);
-
-    setTimeout(function(){l_upper_1.classList.toggle("l_upper_1_draw")},5200);
-    setTimeout(function(){l_upper_2.classList.toggle("l_upper_2_draw")},5300);
-    setTimeout(function(){l_upper_3.classList.toggle("l_upper_3_draw")},5400);
-    setTimeout(function(){l_upper_4.classList.toggle("l_upper_4_draw")},5500);
-
-    setTimeout(function(){m_upper_1.classList.toggle("m_upper_1_draw")},5600);
-    setTimeout(function(){m_upper_2.classList.toggle("m_upper_2_draw")},5700);
-    setTimeout(function(){m_upper_3.classList.toggle("m_upper_3_draw")},5800);
-    setTimeout(function(){m_upper_4.classList.toggle("m_upper_4_draw")},5900);
-    setTimeout(function(){m_upper_5.classList.toggle("m_upper_5_draw")},6000);
-    setTimeout(function(){m_upper_6.classList.toggle("m_upper_6_draw")},6100);
-
-    setTimeout(function(){n_upper_1.classList.toggle("n_upper_1_draw")},6200);
-    setTimeout(function(){n_upper_2.classList.toggle("n_upper_2_draw")},6300);
-    setTimeout(function(){n_upper_3.classList.toggle("n_upper_3_draw")},6400);
-    setTimeout(function(){n_upper_4.classList.toggle("n_upper_4_draw")},6500);
-    setTimeout(function(){n_upper_5.classList.toggle("n_upper_5_draw")},6600);
-
-    setTimeout(function(){o_upper_1.classList.toggle("o_upper_1_draw")},6700);
-    setTimeout(function(){o_upper_2.classList.toggle("o_upper_2_draw")},6800);
-    setTimeout(function(){o_upper_3.classList.toggle("o_upper_3_draw")},6900);
-    setTimeout(function(){o_upper_4.classList.toggle("o_upper_4_draw")},7000);
-
-    setTimeout(function(){p_upper_1.classList.toggle("p_upper_1_draw")},7100);
-    setTimeout(function(){p_upper_2.classList.toggle("p_upper_2_draw")},7200);
-    setTimeout(function(){p_upper_3.classList.toggle("p_upper_3_draw")},7300);
-
-    setTimeout(function(){q_upper_1.classList.toggle("q_upper_1_draw")},7400);
-    setTimeout(function(){q_upper_2.classList.toggle("q_upper_2_draw")},7500);
-    setTimeout(function(){q_upper_3.classList.toggle("q_upper_3_draw")},7600);
-    setTimeout(function(){q_upper_4.classList.toggle("q_upper_4_draw")},7700);
-
-    setTimeout(function(){r_upper_1.classList.toggle("r_upper_1_draw")},7800);
-    setTimeout(function(){r_upper_2.classList.toggle("r_upper_2_draw")},7900);
-    setTimeout(function(){r_upper_3.classList.toggle("r_upper_3_draw")},8000);
-    setTimeout(function(){r_upper_4.classList.toggle("r_upper_4_draw")},8100);
-
-    setTimeout(function(){s_upper_1.classList.toggle("s_upper_1_draw")},8200);
-    setTimeout(function(){s_upper_2.classList.toggle("s_upper_2_draw")},8300);
-    setTimeout(function(){s_upper_3.classList.toggle("s_upper_3_draw")},8400);
-    setTimeout(function(){s_upper_4.classList.toggle("s_upper_4_draw")},8500);
-
-    setTimeout(function(){t_upper_1.classList.toggle("t_upper_1_draw")},8600);
-    setTimeout(function(){t_upper_2.classList.toggle("t_upper_2_draw")},8700);
-    setTimeout(function(){t_upper_3.classList.toggle("t_upper_3_draw")},8800);
-
-    setTimeout(function(){u_upper_1.classList.toggle("u_upper_1_draw")},8900);
-    setTimeout(function(){u_upper_2.classList.toggle("u_upper_2_draw")},9000);
-    setTimeout(function(){u_upper_3.classList.toggle("u_upper_3_draw")},9100);
-    setTimeout(function(){u_upper_4.classList.toggle("u_upper_4_draw")},9200);
-    setTimeout(function(){u_upper_5.classList.toggle("u_upper_5_draw")},9300);
-
-    setTimeout(function(){v_upper_1.classList.toggle("v_upper_1_draw")},9400);
-    setTimeout(function(){v_upper_2.classList.toggle("v_upper_2_draw")},9500);
-    setTimeout(function(){v_upper_3.classList.toggle("v_upper_3_draw")},9600);
-
-    setTimeout(function(){w_upper_1.classList.toggle("w_upper_1_draw")},9700);
-    setTimeout(function(){w_upper_2.classList.toggle("w_upper_2_draw")},9800);
-    setTimeout(function(){w_upper_3.classList.toggle("w_upper_3_draw")},9900);
-    setTimeout(function(){w_upper_4.classList.toggle("w_upper_4_draw")},10000);
-    setTimeout(function(){w_upper_5.classList.toggle("w_upper_5_draw")},10100);
-
-    setTimeout(function(){x_upper_1.classList.toggle("x_upper_1_draw")},10200);
-    setTimeout(function(){x_upper_2.classList.toggle("x_upper_2_draw")},10300);
-    setTimeout(function(){x_upper_3.classList.toggle("x_upper_3_draw")},10400);
-    setTimeout(function(){x_upper_4.classList.toggle("x_upper_4_draw")},10500);
-  
-    setTimeout(function(){y_upper_1.classList.toggle("y_upper_1_draw")},10600);
-    setTimeout(function(){y_upper_2.classList.toggle("y_upper_2_draw")},10700);
-    setTimeout(function(){y_upper_3.classList.toggle("y_upper_3_draw")},10800);
-    setTimeout(function(){y_upper_4.classList.toggle("y_upper_4_draw")},10900);
-    
-    setTimeout(function(){z_upper_1.classList.toggle("z_upper_1_draw")},11000);
-    setTimeout(function(){z_upper_2.classList.toggle("z_upper_2_draw")},11100);
-    setTimeout(function(){z_upper_3.classList.toggle("z_upper_3_draw")},11200);
-    setTimeout(function(){z_upper_4.classList.toggle("z_upper_4_draw")},11300);
-    setTimeout(function(){z_upper_5.classList.toggle("z_upper_5_draw")},11400);
-}
+//implement \n
+//tweak some animation segment lengths
+
+//ORDER OF EXECUTIONS:
+
+/*
+charParent.innerHTML=populateHTML(textToDraw);
+charDivs.forEach(x=>x.style.height=`${charHeight*0.6}px`);
+setWidthAll();
+setTail(charCount);
+animateHTML(charParent);
+*/

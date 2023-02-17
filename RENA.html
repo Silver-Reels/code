@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="S1lver Reels are a design and webdev experiment.">
+  <title>S1LVER REELS</title>
+
+<!---
+  <link rel="prefetch"   href="font/silverFuturaN.woff2" as="font"  crossorigin>
+  <link rel="prefetch"   href="icons/reel.svg"           as="image" crossorigin>
+  <link rel="preload"    href="font/silverFuturaN.woff2" as="font"  crossorigin>
+  <link rel="preload"    href="icons/reel.svg"           as="image" crossorigin>
+  <link rel="prefetch"   href="css/s1lver.css"           as="style" crossorigin>
+  <link rel="preload"    href="css/s1lver.css"           as="style" crossorigin>
+-->
+  <link rel="icon"       href="icons/reel.svg">
+  <link rel="stylesheet" href="css/s1lver.css">
+</head>
+
+<body>
+  <div class="loadingDiv">
+    <p>[THIS SPACE INTENTIONALLY LEFT BLANK]</p>
+    <p>[THIS SPACE INTENTIONALLY LEFT BLANK]</p>
+    <p>[THIS SPACE INTENTIONALLY LEFT BLANK]</p>
+    <p>[THIS SPACE INTENTIONALLY LEFT BLANK]</p>
+    <div class="loadingDivCenter">
+      <img class="spinreel" id="spinreel" src="/icons/reel.svg">
+      <p class="loadingMessage1">REEL IS LOADING</p>
+      <p class="loadingMessage2">0%<p>
+        <div class="loadingBarBG"></div>
+        <div class="loadingBar"></div>
+    </div>
+    <p>[THIS SPACE INTENTIONALLY LEFT BLANK]</p>
+    <p>[THIS SPACE INTENTIONALLY LEFT BLANK]</p>
+    <p>[THIS SPACE INTENTIONALLY LEFT BLANK]</p>
+    <p>[THIS SPACE INTENTIONALLY LEFT BLANK]</p>
+  </div>
+
+  <div class="desc">
+    <p class="titletext">S1LVER<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REELS</p>
+    <div class="Buttons">
+      <a class="Button1 ButtonInac">                                     <img class="icon" src="/icons/eye.webp"><img class="iconblur" src="/icons/eyeBlur.webp"></a>
+      <a class="Button2 ButtonAc" href="javascript:delay('CARTEL.html')"><img class="icon" src="/icons/Hand.webp"><img class="iconblur" src="/icons/HandBlur.webp"></a>
+      <a class="Button3 ButtonAc" href="javascript:delay('RDR2.html')">  <img class="icon" src="/icons/RedDead.webp"><img class="iconblur" src="/icons/RedDeadBlur.webp"></a>
+      <a class="Button4 ButtonAc" href="javascript:delay('INKR.html')">  <img class="icon" src="/icons/inkr.webp"><img class="iconblur" src="/icons/inkrBlur.webp"></a>
+      <a class="Button5 ButtonAc" href="javascript:delay('MISC.html')">  <img class="icon" src="/icons/pyramid.webp"><img class="iconblur" src="/icons/pyramidBlur.webp"></a>
+      <a class="Button6 ButtonAc" href="javascript:delay('index.html')"> <img class="icon" src="/icons/nani.webp"><img class="iconblur" src="/icons/naniBlur.webp"></a>
+    </div>
+    <p class="desctext"><span style="letter-spacing: 0.4vw;">VIEWING REEL:</span><br>
+    <span class="desctextB desctextBGone">'Rena character'</span>
+    </p>
+  </div>
+
+  <div class="arrowcontain">
+    <img class="arrow arrowpos1" src="/icons/triangle30down.svg">
+  </div>
+  <div class="tapart">
+    <img class="tapartarrow" src="/icons/triangle30down.svg">
+    <p>TAP TO VIEW</p>
+    <img class="tapartarrow" src="/icons/triangle30down.svg">
+  </div>
+
+  <div class="reel reelMovingIn" id="reel">
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/AquariumThumb.webp" vsrc="imag/Aquarium.jpg">
+      <div class="reeltitlelimiter"><p class="reeltitle">AQUARIUM</p></div>
+      <img class="reelblur" src="/imag/AquariumBlur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/BedThumb.webp" vsrc="imag/Bed.gif">
+      <div class="reeltitlelimiter"><p class="reeltitle">IN BED (GIF)</p></div>
+      <img class="reelblur" src="/imag/BedBlur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/Waves2Thumb.webp" vsrc="imag/Waves2.png">
+      <div class="reeltitlelimiter"><p class="reeltitle">WAVES</p></div>
+      <img class="reelblur" src="/imag/Waves2Blur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/NoirCroppedThumb.webp" vsrc="imag/NoirCropped.png">
+      <div class="reeltitlelimiter"><p class="reeltitle">FEMME</p></div>
+      <img class="reelblur" src="/imag/NoirCroppedBlur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/Anon.png" vsrc="imag/Anon.png">
+      <div class="reeltitlelimiter"><p class="reeltitle">ANONYMOUS</p></div>
+      <img class="reelblur" src="/imag/AnonBlur.webp">
+    </div>
+    
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/DoorThumb.webp" vsrc="imag/Door.jpg">
+      <div class="reeltitlelimiter"><p class="reeltitle">CHASED</p></div>
+      <img class="reelblur" src="/imag/DoorBlur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/poolThumb.webp" vsrc="imag/pool.png">
+      <div class="reeltitlelimiter"><p class="reeltitle">POOL</p></div>
+      <img class="reelblur" src="/imag/poolBlur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/tanThumb.webp" vsrc="imag/tan.png">
+      <div class="reeltitlelimiter"><p class="reeltitle">HEAT</p></div>
+      <img class="reelblur" src="/imag/tanBlur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/SpaAssThumb.webp" vsrc="imag/SpaAss.jpg">
+      <div class="reeltitlelimiter"><p class="reeltitle">SPA DAY</p></div>
+      <img class="reelblur" src="/imag/SpaAssBlur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/Ethumb.webp" vsrc="imag/E.jpg">
+      <div class="reeltitlelimiter"><p class="reeltitle">VARIETY SHOW</p></div>
+      <img class="reelblur" src="/imag/Eblur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/SanitizedThumb.webp" vsrc="imag/Sanitized.png">
+      <div class="reeltitlelimiter"><p class="reeltitle">SANITIZED</p></div>
+      <img class="reelblur" src="/imag/SanitizedBlur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/CrimeLoThumb.webp" vsrc="imag/CrimeLo.jpg">
+      <div class="reeltitlelimiter"><p class="reeltitle">CRIME SCENE</p></div>
+      <img class="reelblur" src="/imag/CrimeLoBlur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/AnimePortraitThumb.webp" vsrc="imag/AnimePortrait.jpg">
+      <div class="reeltitlelimiter"><p class="reeltitle">SORRY, BABE</p></div>
+      <img class="reelblur" src="/imag/AnimePortraitBlur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/DisdainThumb.webp" vsrc="imag/Disdain.png">
+      <div class="reeltitlelimiter"><p class="reeltitle">DISDAIN FOR PLEBS</p></div>
+      <img class="reelblur" src="/imag/DisdainBlur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/JoJo1Thumb.webp" vsrc="imag/JoJo1.png">
+      <div class="reeltitlelimiter"><p class="reeltitle">JOJO REFERENCE</p></div>
+      <img class="reelblur" src="/imag/JoJo1Blur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/comicThumb.webp" vsrc="imag/comic.png">
+      <div class="reeltitlelimiter"><p class="reeltitle">HALLOWEEN COMIC</p></div>
+      <img class="reelblur" src="/imag/comicBlur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/jungleThumb.webp" vsrc="imag/jungle.png">
+      <div class="reeltitlelimiter"><p class="reeltitle">JUNGLE</p></div>
+      <img class="reelblur" src="/imag/jungleBlur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/OnceThumb.webp" vsrc="imag/Once.png">
+      <div class="reeltitlelimiter"><p class="reeltitle">HAZE</p></div>
+      <img class="reelblur" src="/imag/OnceBlur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/VoidThumb.webp" vsrc="imag/Void.jpg">
+      <div class="reeltitlelimiter"><p class="reeltitle">RED VOID</p></div>
+      <img class="reelblur" src="/imag/VoidBlur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/AmericanApparelThumb.webp" vsrc="imag/AmericanApparel.png">
+      <div class="reeltitlelimiter"><p class="reeltitle">AMERICAN APPAREL</p></div>
+      <img class="reelblur" src="/imag/AmericanApparelBlur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/PC98Thumb.webp" vsrc="imag/PC98.jpg">
+      <div class="reeltitlelimiter"><p class="reeltitle">PC-98</p></div>
+      <img class="reelblur" src="/imag/PC98Blur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/FishnetsFullThumb.webp" vsrc="imag/FishnetsFull.png">
+      <div class="reeltitlelimiter"><p class="reeltitle">FISHNETS</p></div>
+      <img class="reelblur" src="/imag/FishnetsFullBlur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/EmojisThumb.webp" vsrc="imag/Emojis.png">
+      <div class="reeltitlelimiter"><p class="reeltitle">EMOJIS</p></div>
+      <img class="reelblur" src="/imag/EmojisBlur.webp">
+    </div>
+
+    <div class="reelcontent">
+      <img class="reelimg" src="imag/monoThumb.webp" vsrc="imag/mono.png">
+      <div class="reeltitlelimiter"><p class="reeltitle">RIBBON</p></div>
+      <img class="reelblur" src="/imag/monoBlur.webp">
+    </div>
+
+
+  </div>
+
+  <div class="TopButton">
+    <a href="#"><img class="TopButtonArrow" src="/icons/triangle30down.svg"></a>
+    <a href="#" class="TopButtonText">BACK</a>
+  </div>
+
+  <div class="viewerDivParent">
+    <div class="viewerDiv">
+      <img class="viewer" src="">
+      <p class="viewertext">PHOTO #00:TEXT</p>
+    </div>
+  </div>
+
+  <script src="/s1lver.js"></script>
+</body>
+</html>

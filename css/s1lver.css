@@ -58,6 +58,17 @@ body {
   height: fit-content;
   overflow-x: hidden;
 }
+.aboutContainer{
+  min-height: 100vh;
+  padding: 2vw 4vw 2vw 4vw;
+}
+.aboutText{
+  font-size: 1.5vw;
+  line-height: 2vw;
+  font-family: "silverFuturaM";
+  pointer-events: all;
+}
+
 .desc {
   z-index: 6;
   background: rgba(255,255,255,0.05);
@@ -373,6 +384,10 @@ a:link,a:visited,::selection {
   align-self: center;
   padding: 0.2vw 0 0 0;
 }
+.tapartarrow2{ /*for index.html ie about/intro page*/
+  transform: rotate(180deg);
+}
+
 .TopButtonArrow {
   display: grid;
   width: 1vw;
@@ -667,4 +682,49 @@ padding:1vw 0 0 2vw;
 }
 input .bookmarkTop{
   padding-left: 2vw;
+}
+
+.typingIframe{
+  position: relative;
+  left: 2vw;
+  border-radius: 1.4vw;
+  border: none;
+  justify-self: center;
+  display: grid;
+  width: 96vw;
+}
+
+.typeForm{
+  padding: 2vw 0 18vw 0;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 2vw;
+  grid-template-rows: 4vw 4vw;
+}
+
+.typeInput{
+  display: grid;
+  width: 42vw;
+  padding-left: 2vw;
+  height: 4vw;
+  font-size: 2vw;
+}
+.typeButton{
+  width: 12vw;
+  height: 4vw;
+  align-items: center;
+  font-size: 2vw;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  align-self: end;
+}
+textarea:focus, input:focus{
+  outline: none;
+}
+.typeButton:active{
+  height: 3.8vw;
+  background-color: #AAAAAA;
+  font-size: 1.9vw;
+  /*transform: skew(-45 deg, 20 deg);*/
 }
