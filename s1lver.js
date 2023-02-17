@@ -132,9 +132,11 @@ function hideViewer(){viewerDivParent.classList.remove("viewerDivParentVisible")
 
 //INKR
 
-if (window.location.pathname==`/INKR.html` || window.location.pathname==`/inkr`){
+if (window.location.pathname==`/INKR.html` || window.location.pathname==`/inkr`){ //only run if we're on the correct HTML page
   console.log(`Activating external INKR`);
+  
   const inkrForm=document.querySelector(".typeForm");
+  const counter=document.querySelector(".typeCounter");
 
   inkrForm.onsubmit=function(e){         
     e.preventDefault();
@@ -155,5 +157,10 @@ if (window.location.pathname==`/INKR.html` || window.location.pathname==`/inkr`)
     iframeWindow.animateHTML(charParent);
     }
     else alert('Above INKR demo character limit!');
-}
+  }
+  //character counter visuals
+  window.onkeyup=function(){
+    const inkrTextField=document.querySelector("input[type=text");
+    counter.innerHTML=`<p>${40-inkrTextField.value.length}/40</p>`;
+  }
 }

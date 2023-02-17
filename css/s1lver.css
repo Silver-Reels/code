@@ -728,3 +728,8 @@ textarea:focus, input:focus{
   font-size: 1.9vw;
   /*transform: skew(-45 deg, 20 deg);*/
 }
+.typeCounter{
+  position: relative;
+  bottom:23vw;
+  left:48vw;
+}
