@@ -713,12 +713,12 @@ input .bookmarkTop{
 
 .typeInput{
   display: grid;
-  width: 42vw;
+  width: 26vw;
   padding-left: 2vw;
   height: 4vw;
   font-size: 2vw;
   position: relative;
-
+  transition: all 0.25s ease-in-out;
 }
 .typeButton{
   width: 12vw;

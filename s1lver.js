@@ -44,7 +44,7 @@ reel.classList.remove("reelMovingIn");             //moves reel in onload
 nonreel.classList.remove("reelMovingIn");
 loadDiv.style.filter="blur(0.9vw)";                //add "motion" blur when loaddiv is to move away
 
-console.log(`body loaded`);
+//console.log(`body loaded`);
 }
 
 
@@ -167,4 +167,10 @@ if (window.location.pathname==`/INKR.html` || window.location.pathname==`/inkr`)
     const inkrTextField=document.querySelector("input[type=text");
     counter.innerHTML=`<p>${40-inkrTextField.value.length}/40</p>`;
   }
+
+  const typeInput=document.querySelector(".typeInput");
+  let focused=false;
+  typeInput.onclick=function(){typeInput.style.width=`42vw`;focused=true};
+     window.onclick=function(){if (focused==true){focused=false} else {typeInput.style.width=`26vw`}};
+
 }
