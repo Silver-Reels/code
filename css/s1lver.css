@@ -718,7 +718,7 @@ input .bookmarkTop{
   height: 4vw;
   font-size: 2vw;
   position: relative;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 .typeButton{
   width: 12vw;
