@@ -701,6 +701,8 @@ input .bookmarkTop{
   align-items: center;
   gap: 2vw;
   grid-template-rows: 4vw 4vw;
+  position: relative;
+  left: 0.3vw;
 }
 
 .typeInput{
@@ -709,6 +711,8 @@ input .bookmarkTop{
   padding-left: 2vw;
   height: 4vw;
   font-size: 2vw;
+  position: relative;
+
 }
 .typeButton{
   width: 12vw;
@@ -731,5 +735,12 @@ textarea:focus, input:focus{
 .typeCounter{
   position: relative;
   bottom:23vw;
-  left:48vw;
+  left:48.5vw;
+}
+.inkrDesc{
+  position: relative;
+  line-height: normal;
+  bottom: 27.6vw;
+  left: 76vw;
+  
 }
