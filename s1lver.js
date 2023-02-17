@@ -21,6 +21,7 @@ const navArrow= document.querySelector(".arrow");                         //navb
 const descText=document.querySelector(".desctext");                       //all description text
 const descTextModular=document.querySelector(".desctextB");               //description text part we want to swipe away
 const reel=document.querySelector(".reel");                               //reel
+const nonreel=document.querySelector(".nonreel");                         //reel alts
 const inacButton=document.querySelector(".ButtonInac")                    //inactive button
 
 //we determine load progress based on how many images the browser has loaded
@@ -39,9 +40,11 @@ function loadingCalc(){ //function that sets the text of loading screen progress
 document.body.onload= ()=> {loadDiv.classList.add("loadingDivGone");           //loadingscreen goes away
 descTextModular.classList.remove("desctextBGone"); //desctext B span swipes in
 descTextModular.style.filter="blur(0)";            //desctext B removes blur while swiping in
-if (reel){reel.classList.remove("reelMovingIn")};             //moves reel in onload
+reel.classList.remove("reelMovingIn");             //moves reel in onload
+nonreel.classList.remove("reelMovingIn");
 loadDiv.style.filter="blur(0.9vw)";                //add "motion" blur when loaddiv is to move away
 
+console.log(`body loaded`);
 }
 
 
@@ -65,6 +68,7 @@ button.onclick=function(){
   descTextModular.classList.add("desctextBGone");          //swipes away description text
   descTextModular.style.filter="blur(0.3vw)";
   reel.classList.add("reelMovingAway");                    //moves reel away
+  nonreel.classList.add("reelMovingAway");
   inacButton.classList.remove("ButtonInac");               //moves the navbar button back down
 }
 )
@@ -134,7 +138,7 @@ function hideViewer(){viewerDivParent.classList.remove("viewerDivParentVisible")
 
 if (window.location.pathname==`/INKR.html` || window.location.pathname==`/inkr`){ //only run if we're on the correct HTML page
   console.log(`Activating external INKR`);
-  
+
   const inkrForm=document.querySelector(".typeForm");
   const counter=document.querySelector(".typeCounter");
 
