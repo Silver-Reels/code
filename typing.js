@@ -135,7 +135,7 @@ charWidth.set(' ',(charHeight* 300/emHeight));  advWidth.set(' ',(charHeight* 30
 
 function populateHTML(string){
   array=Array.from(string);let fin="";
-  array.forEach((x)=>fin+=partSpawn(x));
+  array.forEach((x)=>fin+=partSpawn(x)); //uses partSpawn()
  return fin;
 }
 

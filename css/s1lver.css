@@ -229,6 +229,7 @@ transition: right 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bez
   transition: all 0.25s;
   filter: contrast(98%);
   justify-self: center;
+  cursor: pointer;
 }
 .reeltitlelimiter {
   pointer-events: none;
@@ -297,6 +298,7 @@ transition: right 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bez
 }
 .viewerDivParentVisible{
   left: 0;
+  cursor: pointer;
 }
 .viewerDiv{
   background: rgba(255,255,255,0.15);
@@ -747,6 +749,10 @@ textarea:focus, input:focus{
   position: relative;
   line-height: normal;
   bottom: 27.6vw;
-  left: 76vw;
-  
+  left: 76vw; 
+}
+
+.introicon{
+  width: 2vw;
+  object-fit: cover;
 }
