@@ -174,3 +174,26 @@ if (window.location.pathname==`/INKR.html` || window.location.pathname==`/inkr`)
      window.onclick=function(){if (focused==true){focused=false} else {typeInput.style.width=`26vw`}};
 
 }
+// INTRO PAGE ICONS///////////////////////////////////////////////////////
+let softwareIcon1=Array.from(document.querySelectorAll(".softwareIcon1"));
+let softwareIcon2=Array.from(document.querySelectorAll(".softwareIcon2"));
+let aboutTextInsert1=document.getElementById("aboutTextInsert1");
+let aboutTextInsert2=document.getElementById("aboutTextInsert2");
+
+softwareIcon1.forEach((icon)=>{
+  icon.onmouseenter=function(){
+    aboutTextInsert1.innerText=icon.id;
+    let desiredColor=icon.attributes.getNamedItem("x-color").value;
+    aboutTextInsert1.style.color     =desiredColor;
+    aboutTextInsert1.style.textShadow=`0 0 0.15vw ${desiredColor}`;
+  }
+})
+softwareIcon2.forEach((icon)=>{
+  icon.onmouseenter=function(){
+    aboutTextInsert2.innerText=icon.id;
+    let desiredColor=icon.attributes.getNamedItem("x-color").value;
+    aboutTextInsert2.style.color     =desiredColor;
+    aboutTextInsert2.style.textShadow=`0 0 0.15vw ${desiredColor}`;
+  }
+})
+//////////////////////////////////////////////////////////////////////////

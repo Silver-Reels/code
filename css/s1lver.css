@@ -69,6 +69,15 @@ body {
   pointer-events: all;
 }
 
+.softwareIcon1{
+  height: 3vw;
+  object-fit: cover;
+}
+.softwareIcon2{
+  height: 3vw;
+  object-fit: cover;
+}
+
 .desc {
   z-index: 6;
   background: rgba(255,255,255,0.05);
@@ -753,6 +762,6 @@ textarea:focus, input:focus{
 }
 
 .introicon{
-  width: 2vw;
+  height: 2vw;
   object-fit: cover;
 }
