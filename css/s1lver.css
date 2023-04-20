@@ -801,3 +801,37 @@ line-height: 1vw;
   transform: rotate(2deg);
   pointer-events: none;
 }
+
+@media (orientation:portrait){
+  .aboutText{font-size: 4vw;line-height: 4vw;}
+  .softwareIcon1,.softwareIcon2{height: 6vw;}
+  .tapart{font-size:3vw;grid-template-columns:6vw 24vw 6vw;grid-template-rows:3vw;line-height:5vw;padding-bottom:2vw;padding-left: 48.5vw;gap:1vw}
+  .tapart p{padding:0 0 0 0vw;}
+  .tapartarrow{width: 3vw;}
+  .introicon{height: 4vw;}
+  .country-icon{width: 18vw;left: 60vw;}
+  .TopButton{padding: 0vw 1vw 2vw 2vw;left: -4vw;}
+  .TopButtonText{font-size: 3vw;}
+  .TopButtonArrow{width: 2.8vw;position: relative;bottom:3vw;right:0.3vw;}
+  .TopButtonActive{left: 0vw;}
+  .desc{height: 18vw;grid-template-rows: 18vw;grid-template-columns: 24vw 44vw 44vw;}
+  p.titletext{font-size: 4.5vw;line-height: 6vw;align-items: end;letter-spacing: 0.6vw;}
+  .desctext{font-size: 2vw;position:relative;right: 40vw;line-height: 2vw;}
+  .desctextB{left: 22vw;bottom:4vw;}
+  .Buttons{grid-template-columns: repeat(4,12vw);grid-template-rows:12vw}
+  .icon{width: 12vw;height:12vw;}
+  .ButtonInac{padding: 0 0 4vw 0;}
+  .Button1:hover,.Button2:hover,.Button3:hover,.Button4:hover,.Button5:hover,.Button6:hover,
+  .Button1:focus,.Button2:focus,.Button3:focus,.Button4:focus,.Button5:focus,.Button6:focus,
+  .Button1:active,.Button2:active,.Button3:active,.Button4:active,.Button5:active,.Button6:active{
+    padding: 0 0 4vw 0;}
+  .arrowpos2{left: 41vw;}
+  .arrowpos3{left: 57vw;}
+  .arrowpos4{left: 73vw;}
+  .arrowpos5{left: 89vw;}
+  .loadingDiv{letter-spacing: 0.1vw;font-size: 1.4vw;}
+  .spinreel{width: 28vw;}
+  .loadingMessage1{bottom:-5vw;font-size: 3vw;}
+  .loadingBar,.loadingBarBG{top:7vw;height: 0.3vw;}
+  .loadingMessage2{top:10vw;font-size: 3vw;}
+}
