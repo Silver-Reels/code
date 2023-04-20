@@ -180,20 +180,40 @@ let softwareIcon2=Array.from(document.querySelectorAll(".softwareIcon2"));
 let aboutTextInsert1=document.getElementById("aboutTextInsert1");
 let aboutTextInsert2=document.getElementById("aboutTextInsert2");
 
-softwareIcon1.forEach((icon)=>{
-  icon.onmouseenter=function(){
-    aboutTextInsert1.innerText=icon.id;
-    let desiredColor=icon.attributes.getNamedItem("x-color").value;
-    aboutTextInsert1.style.color     =desiredColor;
-    aboutTextInsert1.style.textShadow=`0 0 0.15vw ${desiredColor}`;
-  }
-})
-softwareIcon2.forEach((icon)=>{
-  icon.onmouseenter=function(){
-    aboutTextInsert2.innerText=icon.id;
-    let desiredColor=icon.attributes.getNamedItem("x-color").value;
-    aboutTextInsert2.style.color     =desiredColor;
-    aboutTextInsert2.style.textShadow=`0 0 0.15vw ${desiredColor}`;
-  }
-})
+function iconNameDisplay(iconArray,field){
+  iconArray.forEach((icon)=>{
+    icon.onmouseenter=function(){
+      field.innerText=icon.id;
+      let desiredColor=icon.attributes.getNamedItem("x-color").value;
+      field.style.color=desiredColor;
+      field.style.textShadow=`0 0 0.15vw ${desiredColor}`;
+    }
+  })
+}
+iconNameDisplay(softwareIcon1,aboutTextInsert1);
+iconNameDisplay(softwareIcon2,aboutTextInsert2);
 //////////////////////////////////////////////////////////////////////////
+
+//INTRO TOOLTIP///////////////////////////////////////////////////////
+/*
+let tooltipIcon=Array.from(document.querySelectorAll(".tooltipIcon"));
+let tooltipBox=document.querySelector(".tooltipBox");
+
+tooltipIcon.forEach((tooltip)=>{
+  tooltip.onmouseenter=function(e){
+    //console.log(`FIRING TOOLTIP`)
+    console.log(e);
+    //console.log(`X=${e.clientX} | Y=${e.clientY}`);
+    tooltipBox.style.left =`${e.pageX+20}px`;
+    tooltipBox.style.top =`${e.pageY-150}px`;
+    tooltipBox.style.opacity=1;
+  }
+  tooltip.onmouseleave=function(e){
+    tooltipBox.style.opacity=0;
+  }
+})
+*/
+//////////////////////////////////////////////////////////////////////
+
+
+
