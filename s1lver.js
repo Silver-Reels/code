@@ -194,26 +194,5 @@ iconNameDisplay(softwareIcon1,aboutTextInsert1);
 iconNameDisplay(softwareIcon2,aboutTextInsert2);
 //////////////////////////////////////////////////////////////////////////
 
-//INTRO TOOLTIP///////////////////////////////////////////////////////
-/*
-let tooltipIcon=Array.from(document.querySelectorAll(".tooltipIcon"));
-let tooltipBox=document.querySelector(".tooltipBox");
-
-tooltipIcon.forEach((tooltip)=>{
-  tooltip.onmouseenter=function(e){
-    //console.log(`FIRING TOOLTIP`)
-    console.log(e);
-    //console.log(`X=${e.clientX} | Y=${e.clientY}`);
-    tooltipBox.style.left =`${e.pageX+20}px`;
-    tooltipBox.style.top =`${e.pageY-150}px`;
-    tooltipBox.style.opacity=1;
-  }
-  tooltip.onmouseleave=function(e){
-    tooltipBox.style.opacity=0;
-  }
-})
-*/
-//////////////////////////////////////////////////////////////////////
-
 
 
