@@ -185,7 +185,7 @@ iconNameDisplay(softwareIcon1,aboutTextInsert1);
 iconNameDisplay(softwareIcon2,aboutTextInsert2);
 //////////////////////////////////////////////////////////////////////////
 
-//INTRO TOOLTIP///////////////////////////////////////////////////////
+//INTRO TOOLTIP///////////////////////////////////////////////////////gi
 /*
 let tooltipIcon=Array.from(document.querySelectorAll(".tooltipIcon"));
 let tooltipBox=document.querySelector(".tooltipBox");

@@ -50,7 +50,7 @@ html {
 body {
   background-color: var(--SecondaryColor);
   background-blend-mode: lighten;
-  background: url(/imag/grain.webp), linear-gradient(315deg, rgba(18,18,18,1) 84%, rgba(48,48,48,1) 100%);
+  background: url(/bg.webp), linear-gradient(315deg, rgba(18,18,18,1) 84%, rgba(48,48,48,1) 100%);
   line-height: 0;
   margin-block-start: 0;margin-block-end: 0;
   margin: 0;
