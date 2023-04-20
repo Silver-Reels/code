@@ -59,7 +59,7 @@ body {
   overflow-x: hidden;
 }
 .aboutContainer{
-  min-height: 100vh;
+  /*min-height: 100vh;*/
   padding: 2vw 4vw 2vw 4vw;
 }
 .aboutText{
@@ -73,6 +73,7 @@ body {
   height: 2vw;
   object-fit: cover;
   position: relative;
+  left: 4vw;
   top:1vw;
 }
 
@@ -155,12 +156,12 @@ p.titletext:hover{
   display: grid;
   gap:4vw;
   grid-template-rows: 4vw;
-  grid-template-columns: repeat(6,4vw);
+  grid-template-columns: repeat(4,4vw);
   z-index: 1;
   align-items: center;
   width: 4vw;
   border-radius: 1.4vw;
-  padding: 0 0 1vw 0;
+  padding: 0 0 1vw 8vw;
 }
 .Button1,.Button2,.Button3,.Button4,.Button5,.Button6 {
   display: grid;
@@ -199,24 +200,24 @@ a {
   filter: blur(0);
   transition: right 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92); /*for motion blur*/
 }
-.nonreel{
+.non-reel{
 position: relative;
 right:0vw;
 filter: blur(0);
 transition: right 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92);
 }
-.reelMovingAway{
+.reel-moving-away{
   right:100vw;
   filter: blur(0.9vw);
 }
-.reelMovingIn{
+.reel-moving-in{
   right: -100vw;
   filter: blur(0.9vw);
 }
 .icon:hover .reel{
   gap: 2vw 8vw;
 }
-.reelcontent {
+.reel-content {
   position: relative;
   display: grid;
   justify-content: center;
@@ -226,7 +227,7 @@ transition: right 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bez
   transform: none;
   filter: none;
 }
-.reelimg,.reelvid {
+.reel-img,.reel-vid {
   z-index: 1;
   display: grid;
   width: 28vw;
@@ -238,7 +239,7 @@ transition: right 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bez
   justify-self: center;
   cursor: pointer;
 }
-.reeltitlelimiter {
+.reel-title-limiter {
   pointer-events: none;
   user-select: none;
   display: grid;
@@ -250,7 +251,7 @@ transition: right 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bez
   overflow: hidden;
   align-items: end;
 }
-.reeltitle {
+.reel-title {
   z-index: 1;
   width: 29vw;
   height: 2vw;
@@ -268,15 +269,15 @@ transition: right 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bez
   overflow-inline: hidden;
   transition: opacity 0.25s, bottom 0.25s;
 }
-.reelimg:hover,.reelvid:hover {
+.reel-img:hover,.reel-vid:hover {
   width: 29vw;
   filter: contrast(100%);
 }
-.reelcontent:hover .reeltitle {
+.reel-content:hover .reel-title {
   opacity:100%;
   bottom: 0vw;
 }
-.reelblur {
+.reel-blur {
   z-index: 0;
   display: grid;
   object-fit: cover;
@@ -289,7 +290,7 @@ transition: right 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bez
   filter: blur(0.3vw);
   transition: all 0.25s;
 }
-.reelcontent:hover .reelblur {
+.reel-content:hover .reel-blur {
   width:29vw;
   left: 0vw;
   filter: blur(0vw);
@@ -787,4 +788,16 @@ height: 2vw;
 }
 .tooltipText{
 line-height: 1vw;
+}
+.country-div{
+  display: grid;
+ justify-content: center;
+}
+.country-icon{
+  position: relative;
+  left: 24vw;
+  width: 8vw;
+  object-fit: cover;
+  transform: rotate(2deg);
+  pointer-events: none;
 }
