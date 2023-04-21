@@ -728,6 +728,7 @@ input .bookmarkTop{
   height: 4vw;
   font-size: 2vw;
   position: relative;
+  top:0.1vw;
   transition: all 0.15s ease-in-out;
 }
 .typeButton{
@@ -756,7 +757,8 @@ textarea:focus, input:focus{
 .inkrDesc{
   position: relative;
   line-height: normal;
-  bottom: 27.6vw;
+  width: 22vw;
+  bottom: 28vw;
   left: 76vw; 
 }
 
