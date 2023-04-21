@@ -188,7 +188,7 @@ iconNameDisplay(softwareIcon1,aboutTextInsert1);
 iconNameDisplay(softwareIcon2,aboutTextInsert2);
 //////////////////////////////////////////////////////////////////////////
 
-//INTRO TOOLTIP///////////////////////////////////////////////////////gi
+//INTRO TOOLTIP///////////////////////////////////////////////////////
 /*
 let tooltipIcon=Array.from(document.querySelectorAll(".tooltipIcon"));
 let tooltipBox=document.querySelector(".tooltipBox");
@@ -209,5 +209,7 @@ tooltipIcon.forEach((tooltip)=>{
 */
 //////////////////////////////////////////////////////////////////////
 
-
-
+//INTRO page fixing bs with vestigial reel class
+if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathname.toLocaleLowerCase()==`/index.html`){
+  if (reel){reel.style.pointerEvents="none";}
+}
