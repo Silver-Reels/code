@@ -857,7 +857,8 @@ line-height: 1vw;
   .loadingDiv{letter-spacing: 0.1vw;font-size: 1.4vw;}
   .spinreel{width: 28vw;}
   .loadingMessage1{bottom:-5vw;font-size: 3vw;}
-  .loadingBar,.loadingBarBG{top:7vw;height: 0.3vw;}
+  .loadingBarBG{top:7vw;height: 0.3vw;}
+  .loadingBar{top:6.7vw;height: 0.3vw;}
   .loadingMessage2{top:10vw;font-size: 3vw;}
   .grain{width: 100vh;height: 100%;}
 }
