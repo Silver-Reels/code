@@ -130,6 +130,9 @@ function hideViewer(){viewerDivParent.classList.remove("viewerDivParentVisible")
 
 if (window.location.pathname.toLowerCase()==`/inkr.html` || window.location.pathname.toLowerCase()==`/inkr`){ //only run if we're on the correct HTML page
   console.log(`Activating external INKR`);
+  if (reel){reel.style.height=0;reel.style.width=0;reel.style.padding=0;reel.style.margin=0};
+  if (reelImg){reelImg[0].style.height=0;reelImg[0].style.width=0};
+  if (viewerDivParent){viewerDivParent.style.width=0;viewerDivParent.style.height=0};
 
   const inkrForm=     document.querySelector(".typeForm");
   const counter=      document.querySelector(".typeCounter");
