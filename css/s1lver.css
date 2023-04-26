@@ -326,7 +326,8 @@ transition: right 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bez
   align-items: center;
 }
 .viewer{
-  height: 90vh;
+  max-height: 90vh;
+  max-width: 90vw;
   object-fit: cover;
   justify-self: center;
   align-self: center;
@@ -861,4 +862,7 @@ line-height: 1vw;
   .loadingBar{top:6.7vw;height: 0.3vw;}
   .loadingMessage2{top:10vw;font-size: 3vw;}
   .grain{width: 100vh;height: 100%;}
+  .viewertext{writing-mode: horizontal-tb;grid-area: 1/2/2/2;justify-self:end;font-size:  5vw;align-self: self-end;line-height: 5.2vw;}
+  .viewer{max-height: 83vh;align-self: stretch;}
+  .viewerDiv{grid-template-rows: 6vh 90vh 1vh;}
 }
