@@ -164,8 +164,8 @@ if (window.location.pathname.toLowerCase()==`/inkr.html` || window.location.path
 
   const typeInput=document.querySelector(".typeInput");
   let focused=false;
-  typeInput.onclick=function(){typeInput.style.width=`42vw`;focused=true};
-     window.onclick=function(){if (focused==true){focused=false} else {typeInput.style.width=`26vw`}};
+  typeInput.onclick=function(){typeInput.style.width=`42vw`;typeInput.style.boxShadow=`0 0 0.15vw #D7D7D7`;focused=true};
+     window.onclick=function(){if (focused==true){focused=false} else {typeInput.style.width=`26vw`;typeInput.style.boxShadow=`0 0 0.4vw #D7D7D7`}};
 
 }
 // INTRO PAGE ICONS///////////////////////////////////////////////////////
@@ -212,4 +212,15 @@ tooltipIcon.forEach((tooltip)=>{
 //INTRO page fixing bs with vestigial reel class
 if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathname.toLocaleLowerCase()==`/index.html`){
   if (reel){reel.style.pointerEvents="none";}
+}
+////////////////////////////////////////////////////////////////////
+
+//MOUSE GLOW
+let mouseGlow=document.querySelector(".mouse-glow");
+//function mousePosition(e){}
+document.onmousemove=function(e){
+  mouseGlow.style.opacity=`0.1`;
+  mouseGlow.style.top=`${e.clientY-5}px`;
+  mouseGlow.style.left=`${e.clientX-10005}px`;
+  //console.log(e);
 }

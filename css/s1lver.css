@@ -711,6 +711,7 @@ input .bookmarkTop{
   justify-self: center;
   display: grid;
   width: 96vw;
+  box-shadow: 0 0 0.4vw #D7D7D7;
 }
 
 .typeForm{
@@ -733,6 +734,7 @@ input .bookmarkTop{
   position: relative;
   top:0.1vw;
   transition: all 0.15s ease-in-out;
+  box-shadow: 0 0 0.4vw #D7D7D7;
 }
 .typeButton{
   width: 12vw;
@@ -742,6 +744,8 @@ input .bookmarkTop{
   cursor: pointer;
   transition: all 0.25s ease-in-out;
   align-self: end;
+  border-bottom: 5px solid #333333;
+  /*line-height is 1.15*/
 }
 textarea:focus, input:focus{
   outline: none;
@@ -750,6 +754,8 @@ textarea:focus, input:focus{
   height: 3.8vw;
   background-color: #AAAAAA;
   font-size: 1.9vw;
+  border-bottom: 1px solid #333333;
+  /*line-height: 2;*/
   /*transform: skew(-45 deg, 20 deg);*/
 }
 .typeCounter{
@@ -826,6 +832,19 @@ line-height: 1vw;
   25%{transform: rotate(90deg)}
   50%{transform: rotate(180deg)}
   75%{transform: rotate(270deg)}
+}
+
+.mouse-glow{
+  pointer-events: none;
+  position:fixed;
+  width: 15px;
+  height: 15px;
+  left:0px;
+  top:0px;
+  box-shadow: 10000px 0 20px #D7D7D7;
+  border-radius: 2vw;
+  background-color: #D7D7D7;
+  opacity:0;
 }
 
 @media (orientation:portrait){
