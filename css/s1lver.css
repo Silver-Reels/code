@@ -745,6 +745,9 @@ input .bookmarkTop{
   transition: all 0.25s ease-in-out;
   align-self: end;
   border-bottom: 5px solid #333333;
+  background-image: url("/dither.webp");
+  background-blend-mode: hard-light;
+  user-select: none;
   /*line-height is 1.15*/
 }
 textarea:focus, input:focus{
