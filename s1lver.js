@@ -84,7 +84,7 @@ const viewer=           document.querySelector(".viewer");                //view
 const viewertext=       document.querySelector(".viewertext");
 
 let lastImgClicked=""; //this is here so the other functions like "hide viewer" can track 'img'
-
+if (reelImg){
 reelImg.forEach((img,i)=>
 img.onclick=function(){
     lastImgClicked=img; //letting 'img' be tracked elsewhere, no need to use this const here tho
@@ -109,6 +109,7 @@ img.onclick=function(){
     viewerDivParent.classList.add("viewerDivParentVisible");
   }
 )
+}
 
 //hide viewer
 viewerDivParent.onclick=function(){hideViewer()};
