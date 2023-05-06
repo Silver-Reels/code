@@ -213,6 +213,19 @@ tooltipIcon.forEach((tooltip)=>{
 //INTRO page fixing bs with vestigial reel class
 if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathname.toLocaleLowerCase()==`/index.html`){
   if (reel){reel.style.pointerEvents="none";}
+  
+  //INTRO page fetching LeetCode data
+  const leetcodeIcon=Array.from(document.getElementsByClassName("introicon"));
+  //console.log(`made leetcodeIcon ${leetcodeIcon}`);
+  
+  leetcodeIcon[1].onmouseenter = async () => {
+    console.log(`calling...`);
+    const response = await fetch("/.netlify/functions/fetchLeetCode").catch(e=>console.warn(`${e}`));
+    
+  
+    //responseText.innerText = response
+  }
+  
 }
 ////////////////////////////////////////////////////////////////////
 
@@ -238,6 +251,7 @@ function gradientShift(value){
 //setInterval();
 
 /////////////////////////////////////////////////////////////////
+/*
 let leetcodeURL=`https://leetcode.com/graphql/`;
 let leetcodeQuery=
 {
@@ -257,5 +271,19 @@ async function fetchLeetCode(){
   .catch(e=>console.warn(`Could not get data from LeetCode. ${e}`));
   return response;
 }
-
 console.log(fetchLeetCode());
+*/
+
+/*
+request with console:
+
+curl --request POST \
+  --url https://leetcode.com/graphql \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "query": "\n    query skillStats($username: String!) {\n  matchedUser(username: $username) {\n    tagProblemCounts {\n      advanced {\n        tagName\n        problemsSolved\n      }\n      intermediate {\n        tagName\n        problemsSolved\n      }\n      fundamental {\n        tagName\n        problemsSolved\n      }\n    }\n  }\n}\n    ",
+    "variables":{"username": "Silver-Reels"},
+    "operationName": "skillStats"
+  }'
+*/
+
