@@ -225,3 +225,37 @@ document.onmousemove=function(e){
   mouseGlow.style.left=`${e.clientX-10005}px`;
   //console.log(e);
 }
+
+//315 to 370
+let bg=document.getElementsByTagName("body");
+let gradientAngle=315;
+function gradientShift(value){
+  let newValue;
+  if (value===315){newValue=370}
+  if (value===370){newValue=315}
+  bg.style.backgroundImage=`url(/bg.webp), linear-gradient(${newValue}deg, rgba(18,18,18,1) 84%, rgba(48,48,48,1) 100%)`
+}
+//setInterval();
+
+/////////////////////////////////////////////////////////////////
+let leetcodeURL=`https://leetcode.com/graphql/`;
+let leetcodeQuery=
+{
+  "query": "\n    query skillStats($username: String!) {\n  matchedUser(username: $username) {\n    tagProblemCounts {\n      advanced {\n        tagName\n        problemsSolved\n      }\n      intermediate {\n        tagName\n        problemsSolved\n      }\n      fundamental {\n        tagName\n        problemsSolved\n      }\n    }\n  }\n}\n    ",
+  "variables":{"username": "Silver-Reels"},
+  "operationName": "skillStats"
+};
+
+async function fetchLeetCode(){
+  const init={
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(leetcodeQuery)
+  };
+  const response=await fetch(leetcodeURL,init)
+  .then(rawResponse=>rawResponse.json())
+  .catch(e=>console.warn(`Could not get data from LeetCode. ${e}`));
+  return response;
+}
+
+console.log(fetchLeetCode());
