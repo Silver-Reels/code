@@ -235,7 +235,7 @@ if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathnam
     try{
       console.log(`calling...`);
       const response = await fetch("/.netlify/functions/fetchLeetCode", init)
-      .then(rawResponse=>rawResponse.json())
+      //.then(rawResponse=>rawResponse.json())
       console.log(response);
     }
     catch(e){

@@ -18,10 +18,11 @@ export const handler= async (event,context)=>{
   try{
     
     let eventBody=event.body;
-    const response = await fetch(`https://leetcode.com/graphql/`,{method:"PUT",headers:{'Content-Type':'application/json'},body:eventBody});
-    const data = await response.json();
+    //const response = await fetch(`https://leetcode.com/graphql/`,{method:"PUT",headers:{'Content-Type':'application/json'},body:eventBody});
+    //const data = await response.json();
 
-    return { statusCode: 200, body: JSON.stringify({data}) };
+    return { statusCode: 200, body: JSON.stringify({event}) };
+    //return { statusCode: 200, body: JSON.stringify({data}) };
   }
   catch (e){
     console.warn(`Could not get data from Leetcode. ${e}`);
