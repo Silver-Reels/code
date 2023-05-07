@@ -16,12 +16,11 @@ let leetcodeQuery=
 
 export const handler= async (event,context)=>{
   try{
-      console.log(`fetchLeetCode.js handler method called!`);
 
     const response = await fetch(`https://leetcode.com/graphql/`);
-    //const data = await response.json();
+    const data = await response.json();
 
-    return { statusCode: 200, body: JSON.stringify({ response }) };
+    return { statusCode: 200, body: JSON.stringify({data}) };
   }
   catch (e){
     console.warn(`Could not get data from Leetcode. ${e}`);
