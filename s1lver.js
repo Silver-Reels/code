@@ -215,12 +215,33 @@ if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathnam
   if (reel){reel.style.pointerEvents="none";}
   
   //INTRO page fetching LeetCode data
-  const leetcodeIcon=Array.from(document.getElementsByClassName("introicon"));
+  const introicons=Array.from(document.getElementsByClassName("introicon"));
   //console.log(`made leetcodeIcon ${leetcodeIcon}`);
   
-  leetcodeIcon[1].onmouseenter = async () => {
+  let leetcodeURL=`https://leetcode.com/graphql/`;
+  let leetcodeQuery=
+{
+ "query": "\n    query skillStats($username: String!) {\n  matchedUser(username: $username) {\n    tagProblemCounts {\n      advanced {\n        tagName\n        problemsSolved\n      }\n      intermediate {\n        tagName\n        problemsSolved\n      }\n      fundamental {\n        tagName\n        problemsSolved\n      }\n    }\n  }\n}\n    ",
+  "variables":{"username": "Silver-Reels"},
+  "operationName": "skillStats"
+};
+
+  const init={
+  method:"POST",
+  headers:{"Content-Type":"application/json"},
+  body:JSON.stringify(leetcodeQuery)
+  };
+
+  introicons[1].onmouseenter = async () => {
+    try{
     console.log(`calling...`);
-    const response = await fetch("/.netlify/functions/fetchLeetCode").catch(e=>console.warn(`${e}`));
+    const response = await fetch("/.netlify/functions/fetchLeetCode",init)
+    }
+    catch(e){
+    console.warn(`${e}`);
+    //console.log(response);
+    }
+
     
   
     //responseText.innerText = response

@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "node-fetch": "^3.3.1"
-  }
+  },
+  "name": "silverreels",
+  "version": "1.0.0",
+  "main": "s1lver.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Silver-Reels/code.git"
+  },
+  "author": "Mikhail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Silver-Reels/code/issues"
+  },
+  "homepage": "https://github.com/Silver-Reels/code#readme",
+  "description": ""
 }
