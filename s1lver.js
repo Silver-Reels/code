@@ -234,12 +234,13 @@ if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathnam
 
   introicons[1].onmouseenter = async () => {
     try{
-    console.log(`calling...`);
-    const response = await fetch("/.netlify/functions/fetchLeetCode",init)
+      console.log(`calling...`);
+      const response = await fetch("/.netlify/functions/fetchLeetCode",init)
+      .then(rawResponse=>rawResponse.json())
+      //console.log(response);
     }
     catch(e){
-    console.warn(`${e}`);
-    //console.log(response);
+      console.warn(`${e}`);
     }
 
     
