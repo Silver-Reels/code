@@ -243,6 +243,11 @@ if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathnam
       console.warn(`${e}`);
     }
 
+    introicons[0].onmouseenter= async ()=>{
+      let response=await fetch("/.netlify/functions/hi").then(rawResponse=>rawResponse.json());
+      console.log(response);
+    }
+
     
   
     //responseText.innerText = response
