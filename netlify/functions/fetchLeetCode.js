@@ -16,8 +16,9 @@ let leetcodeQuery=
 
 export const handler= async (event,context)=>{
   try{
-    let eventBody=event.body
-    const response = await fetch(`https://leetcode.com/graphql/`,eventBody);
+    
+    let eventBody=event.body;
+    const response = await fetch(`https://leetcode.com/graphql/`,{method:"PUT",headers:{'Content-Type':'application/json'},body:eventBody});
     const data = await response.json();
 
     return { statusCode: 200, body: JSON.stringify({data}) };
