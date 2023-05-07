@@ -219,12 +219,11 @@ if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathnam
   //console.log(`made leetcodeIcon ${leetcodeIcon}`);
   
   let leetcodeURL=`https://leetcode.com/graphql/`;
-  let leetcodeQuery=
-{
- "query": "\n    query skillStats($username: String!) {\n  matchedUser(username: $username) {\n    tagProblemCounts {\n      advanced {\n        tagName\n        problemsSolved\n      }\n      intermediate {\n        tagName\n        problemsSolved\n      }\n      fundamental {\n        tagName\n        problemsSolved\n      }\n    }\n  }\n}\n    ",
-  "variables":{"username": "Silver-Reels"},
-  "operationName": "skillStats"
-};
+  let leetcodeQuery={
+    "query":"query skillStats($username: String!) {matchedUser(username: $username) {tagProblemCounts {advanced {tagName problemsSolved} intermediate {tagName problemsSolved} fundamental { tagName problemsSolved } } } }",
+    "variables":{"username": "Silver-Reels"},
+    "operationName": "skillStats"
+  };
 
   const init={
   method:"POST",
@@ -235,7 +234,7 @@ if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathnam
   introicons[1].onmouseenter = async () => {
     try{
       console.log(`calling...`);
-      const response = await fetch("/.netlify/functions/fetchLeetCode",init)
+      const response = await fetch("/.netlify/functions/fetchLeetCode", init)
       .then(rawResponse=>rawResponse.json())
       console.log(response);
     }
@@ -244,7 +243,8 @@ if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathnam
     }
 
     introicons[0].onmouseenter= async ()=>{
-      let response=await fetch("/.netlify/functions/hi").then(rawResponse=>rawResponse.json());
+      let response=await fetch("/.netlify/functions/hi",{method:"GET",headers:{"Content-Type":"application/json"},body:'{"gay":1}'})
+      .then(rawResponse=>rawResponse.json());
       console.log(response);
     }
 
