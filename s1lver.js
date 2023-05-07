@@ -236,17 +236,12 @@ if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathnam
       console.log(`calling...`);
       const response = await fetch("/.netlify/functions/fetchLeetCode")
       .then(rawResponse=>rawResponse.json())
-      console.log(response);
+      console.log(response.data.data);
     }
     catch(e){
       console.warn(`${e}`);
     }
 
-    introicons[0].onmouseenter= async ()=>{
-      let response=await fetch("/.netlify/functions/hi",{method:"GET",headers:{"Content-Type":"application/json"},body:'{"gay":1}'})
-      .then(rawResponse=>rawResponse.json());
-      console.log(response);
-    }
 
     
   
