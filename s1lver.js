@@ -272,7 +272,7 @@ curl --request POST \
         leetTextFun.innerText=funS;
 
         //effect to uncover <p>
-        leetClass.classList.add("leet-stats-shown");  
+        leetClass[0].classList.add("leet-stats-shown");  
       }
       catch(e){console.warn(`${e}`)}
     }
