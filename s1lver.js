@@ -219,22 +219,30 @@ if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathnam
   const leetTextAdv=document.getElementById("leet-adv");
   const leetTextInt=document.getElementById("leet-int");
   const leetTextFun=document.getElementById("leet-fun");
-  const leetClass=document.getElementsByClassName("leet-stats");
-  //console.log(`made leetcodeIcon ${leetcodeIcon}`);
-  
+  const leetClass=Array.from(document.getElementsByClassName("leet-stats"));
+
+/*  
   let leetcodeURL=`https://leetcode.com/graphql/`;
   let leetcodeQuery={
     "query":"query skillStats($username: String!) {matchedUser(username: $username) {tagProblemCounts {advanced {tagName problemsSolved} intermediate {tagName problemsSolved} fundamental { tagName problemsSolved } } } }",
     "variables":{"username": "Silver-Reels"},
     "operationName": "skillStats"
   };
+  const init={method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(leetcodeQuery)};
 
-  const init={
-  method:"POST",
-  headers:{"Content-Type":"application/json"},
-  body:JSON.stringify(leetcodeQuery)
-  };
+  WE ARE USING THESE IN THE SERVERLESS FUNCTION
 
+  REQUEST WITH CONSOLE:
+curl --request POST \
+  --url https://leetcode.com/graphql \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "query": "\n    query skillStats($username: String!) {\n  matchedUser(username: $username) {\n    tagProblemCounts {\n      advanced {\n        tagName\n        problemsSolved\n      }\n      intermediate {\n        tagName\n        problemsSolved\n      }\n      fundamental {\n        tagName\n        problemsSolved\n      }\n    }\n  }\n}\n    ",
+    "variables":{"username": "Silver-Reels"},
+    "operationName": "skillStats"
+  }'
+
+*/
   let leetcodeStats={};
   let leetFetched=false;
 
@@ -295,39 +303,5 @@ function gradientShift(value){
 //setInterval();
 
 /////////////////////////////////////////////////////////////////
-/*
-let leetcodeURL=`https://leetcode.com/graphql/`;
-let leetcodeQuery=
-{
-  "query": "\n    query skillStats($username: String!) {\n  matchedUser(username: $username) {\n    tagProblemCounts {\n      advanced {\n        tagName\n        problemsSolved\n      }\n      intermediate {\n        tagName\n        problemsSolved\n      }\n      fundamental {\n        tagName\n        problemsSolved\n      }\n    }\n  }\n}\n    ",
-  "variables":{"username": "Silver-Reels"},
-  "operationName": "skillStats"
-};
 
-async function fetchLeetCode(){
-  const init={
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify(leetcodeQuery)
-  };
-  const response=await fetch(leetcodeURL,init)
-  .then(rawResponse=>rawResponse.json())
-  .catch(e=>console.warn(`Could not get data from LeetCode. ${e}`));
-  return response;
-}
-console.log(fetchLeetCode());
-*/
-
-/*
-request with console:
-
-curl --request POST \
-  --url https://leetcode.com/graphql \
-  --header 'Content-Type: application/json' \
-  --data '{
-    "query": "\n    query skillStats($username: String!) {\n  matchedUser(username: $username) {\n    tagProblemCounts {\n      advanced {\n        tagName\n        problemsSolved\n      }\n      intermediate {\n        tagName\n        problemsSolved\n      }\n      fundamental {\n        tagName\n        problemsSolved\n      }\n    }\n  }\n}\n    ",
-    "variables":{"username": "Silver-Reels"},
-    "operationName": "skillStats"
-  }'
-*/
 
