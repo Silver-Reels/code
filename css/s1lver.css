@@ -905,6 +905,6 @@ line-height: 1vw;
   .viewertext{writing-mode: horizontal-tb;grid-area: 1/2/2/2;justify-self:end;font-size:  5vw;align-self: self-end;line-height: 5.2vw;}
   .viewer{max-height: 83vh;align-self: stretch;}
   .viewerDiv{grid-template-rows: 6vh 90vh 1vh;}
-  .leet-div{position: relative;max-width: fit-content;display: flex;left: 20vw;top:10vh}
+  .leet-div{position: relative;max-width: fit-content;display: flex;left: 5vw;top:20vh}
   .leet-stats{font-size: 4vw;line-height: 4vw;}
 }
