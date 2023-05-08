@@ -214,8 +214,12 @@ tooltipIcon.forEach((tooltip)=>{
 if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathname.toLocaleLowerCase()==`/index.html`){
   if (reel){reel.style.pointerEvents="none";}
   
-  //INTRO page fetching LeetCode data
+  //INTRO page fetching LeetCode data/////////////////////////////////////////////////////////////////////////////////////
   const introicons=Array.from(document.getElementsByClassName("introicon"));
+  const leetTextAdv=document.getElementById("leet-adv");
+  const leetTextInt=document.getElementById("leet-int");
+  const leetTextFun=document.getElementById("leet-fun");
+  const leetClass=document.getElementsByClassName("leet-stats");
   //console.log(`made leetcodeIcon ${leetcodeIcon}`);
   
   let leetcodeURL=`https://leetcode.com/graphql/`;
@@ -231,23 +235,41 @@ if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathnam
   body:JSON.stringify(leetcodeQuery)
   };
 
+  let leetcodeStats={};
+  let leetFetched=false;
+
   introicons[1].onmouseenter = async () => {
-    try{
-      console.log(`calling...`);
-      const response = await fetch("/.netlify/functions/fetchLeetCode")
-      .then(rawResponse=>rawResponse.json())
-      console.log(response.data.data);
-    }
-    catch(e){
-      console.warn(`${e}`);
-    }
+    if (!leetFetched){
+      leetFetched=true;
+      try{
+        //console.log(`calling...`);
+        const response = await fetch("/.netlify/functions/fetchLeetCode") //netlify serverless function
+        .then(rawResponse=>rawResponse.json())
 
+        leetcodeStats=response.data.data.matchedUser.tagProblemCounts;
+        
+        //strings
+        let advS=``;
+        let intS=``;
+        let funS=``;
 
-    
-  
-    //responseText.innerText = response
+        //arrays
+        leetcodeStats.advanced.forEach(obj=>advS+=`${obj.tagName} x${obj.problemsSolved}\n`);
+        leetcodeStats.intermediate.forEach(obj=>intS+=`${obj.tagName} x${obj.problemsSolved}\n`);
+        leetcodeStats.fundamental.forEach(obj=>funS+=`${obj.tagName} x${obj.problemsSolved}\n`);
+
+        //<p>'s
+        leetTextAdv.innerText=advS;
+        leetTextInt.innerText=intS;
+        leetTextFun.innerText=funS;
+
+        //effect to uncover <p>
+        leetClass.classList.add("leet-stats-shown");  
+      }
+      catch(e){console.warn(`${e}`)}
+    }
   }
-  
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
 ////////////////////////////////////////////////////////////////////
 

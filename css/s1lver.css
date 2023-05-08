@@ -849,6 +849,23 @@ line-height: 1vw;
   background-color: #D7D7D7;
   opacity:0;
 }
+.leet-div{
+  position: absolute;
+  top:11.5vw;
+  right:4vw;
+  max-width: 19vw;
+}
+
+.leet-stats{
+  filter: blur(2vw) opacity(0);
+  font-size: 1.4vw;
+  line-height: 1.4vw;
+  transition: all 0.5s;
+}
+.leet-stats-shown{
+  filter: blur(0) opacity(1);
+}
+
 
 @media (orientation:portrait){
   .aboutText{font-size: 4vw;line-height: 4vw;}
