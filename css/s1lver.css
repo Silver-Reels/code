@@ -825,7 +825,7 @@ line-height: 1vw;
   position: fixed;
   object-fit: cover;
   mix-blend-mode: multiply;
-  opacity: 0.04;
+  opacity: 0.05;
   background-image: url(/grain-filter.webp);
   background-repeat: repeat;
   animation: grain 0.166s step-end infinite;
@@ -872,7 +872,7 @@ line-height: 1vw;
   .softwareIcon1,.softwareIcon2{height: 6vw;}
   .tapart{font-size:3vw;grid-template-columns:6vw 24vw 6vw;grid-template-rows:3vw;line-height:5vw;padding-bottom:2vw;padding-left: 48.5vw;gap:1vw}
   .tapart p{padding:0 0 0 0vw;}
-  .tapartarrow{width: 3vw;}
+  .tapartarrow{width: 3vw;position: relative;top:0.8vw}
   .introicon{height: 4vw;}
   .country-icon{width: 18vw;left: 60vw;}
   .TopButton{padding: 0vw 1vw 2vw 2vw;left: -4vw;}
@@ -890,6 +890,7 @@ line-height: 1vw;
   .Button1:focus,.Button2:focus,.Button3:focus,.Button4:focus,.Button5:focus,.Button6:focus,
   .Button1:active,.Button2:active,.Button3:active,.Button4:active,.Button5:active,.Button6:active{
     padding: 0 0 4vw 0;}
+  .arrow{width: 6vw;bottom: 2vw;}
   .arrowpos2{left: 41vw;}
   .arrowpos3{left: 57vw;}
   .arrowpos4{left: 73vw;}
@@ -904,4 +905,6 @@ line-height: 1vw;
   .viewertext{writing-mode: horizontal-tb;grid-area: 1/2/2/2;justify-self:end;font-size:  5vw;align-self: self-end;line-height: 5.2vw;}
   .viewer{max-height: 83vh;align-self: stretch;}
   .viewerDiv{grid-template-rows: 6vh 90vh 1vh;}
+  .leet-div{position: relative;max-width: fit-content;display: flex;left: 20vw;top:10vh}
+  .leet-stats{font-size: 4vw;line-height: 4vw;}
 }

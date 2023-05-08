@@ -133,7 +133,7 @@ if (window.location.pathname.toLowerCase()==`/inkr.html` || window.location.path
   console.log(`Activating external INKR`);
   if (reel){reel.style.height=0;reel.style.width=0;reel.style.padding=0;reel.style.margin=0};
   if (reelImg){reelImg[0].style.height=0;reelImg[0].style.width=0};
-  if (viewerDivParent){viewerDivParent.style.width=0;viewerDivParent.style.height=0};
+  if (viewerDivParent){viewerDivParent.style.width=0;viewerDivParent.style.height=0;viewerDivParent.style.display="none"};
 
   const inkrForm=     document.querySelector(".typeForm");
   const counter=      document.querySelector(".typeCounter");
@@ -212,7 +212,8 @@ tooltipIcon.forEach((tooltip)=>{
 
 //INTRO page fixing bs with vestigial reel class
 if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathname.toLocaleLowerCase()==`/index.html`){
-  if (reel){reel.style.pointerEvents="none";}
+  if (reel){reel.style.pointerEvents="none"};
+  if (viewerDivParent){viewerDivParent.style.display=`none`};
   
   //INTRO page fetching LeetCode data/////////////////////////////////////////////////////////////////////////////////////
   const introicons=Array.from(document.getElementsByClassName("introicon"));
@@ -285,9 +286,9 @@ curl --request POST \
 let mouseGlow=document.querySelector(".mouse-glow");
 //function mousePosition(e){}
 document.onmousemove=function(e){
-  mouseGlow.style.opacity=`0.1`;
-  mouseGlow.style.top=`${e.clientY-5}px`;
-  mouseGlow.style.left=`${e.clientX-10005}px`;
+  mouseGlow.style.opacity=`0.2`;
+  mouseGlow.style.top=`${e.clientY-4}px`;
+  mouseGlow.style.left=`${e.clientX-10004}px`;
   //console.log(e);
 }
 
