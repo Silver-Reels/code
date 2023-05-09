@@ -89,6 +89,8 @@ reelImg.forEach((img,i)=>
 img.onclick=function(){
     lastImgClicked=img; //letting 'img' be tracked elsewhere, no need to use this const here tho
 
+    document.body.style.overflowY="hidden"; //no scrolling
+    
     //anims for removing clicked thumbnail from view
     let styleAddress=img.parentElement.style;
     styleAddress.left="98vw";
@@ -104,11 +106,11 @@ img.onclick=function(){
     viewertext.innerText=          //grabs reeltitle text and puts it in viewertext
     `FILE #${i+1>9? i+1 : "0"+(i+1)}: ${img.parentElement.getElementsByClassName("reel-title")[0].innerText}`;
     viewer.style.filter="blur(0)"; //for motion blur
-
+    
     //adds visibility to viewerDivParent (do this last)
     viewerDivParent.classList.add("viewerDivParentVisible");
   }
-)
+  )
 }
 
 //hide viewer
@@ -117,11 +119,12 @@ viewerDivParent.onclick=function(){hideViewer()};
 document.onkeydown=function(e){
   if(e.key=="Escape" && viewerDivParent.className=="viewerDivParent viewerDivParentVisible"){
     hideViewer()}};
-
-function hideViewer(){viewerDivParent.classList.remove("viewerDivParentVisible");
+    
+    function hideViewer(){viewerDivParent.classList.remove("viewerDivParentVisible");
                       viewer.style.filter="blur(0.9vw)"; //viewer "motion" blur
                       lastImgClicked.parentElement.style.left="0"; //animations for the thumbnail
                       lastImgClicked.parentElement.style.filter="";
+                      document.body.style.overflowY="auto"; //scrolling is back
                       setTimeout(function(){lastImgClicked.parentElement.style.transform=""},150);
                       setTimeout(function(){lastImgClicked.parentElement.style.zIndex=""},500);
 }
@@ -286,8 +289,8 @@ curl --request POST \
 let mouseGlow=document.querySelector(".mouse-glow");
 //function mousePosition(e){}
 document.onmousemove=function(e){
-  mouseGlow.style.opacity=`0.2`;
-  mouseGlow.style.top=`${e.clientY-4}px`;
+  mouseGlow.style.opacity=`0.25`;
+  mouseGlow.style.top=`${e.clientY-3}px`;
   mouseGlow.style.left=`${e.clientX-10004}px`;
   //console.log(e);
 }
@@ -304,5 +307,4 @@ function gradientShift(value){
 //setInterval();
 
 /////////////////////////////////////////////////////////////////
-
 

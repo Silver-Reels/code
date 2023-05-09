@@ -744,7 +744,7 @@ input .bookmarkTop{
   cursor: pointer;
   transition: all 0.25s ease-in-out;
   align-self: end;
-  border-bottom: 5px solid #333333;
+  border-bottom: 5px solid #888888;
   background-image: url("/dither.webp");
   background-blend-mode: hard-light;
   user-select: none;
@@ -825,7 +825,7 @@ line-height: 1vw;
   position: fixed;
   object-fit: cover;
   mix-blend-mode: multiply;
-  opacity: 0.05;
+  opacity: 0.06;
   background-image: url(/grain-filter.webp);
   background-repeat: repeat;
   animation: grain 0.166s step-end infinite;
@@ -865,6 +865,37 @@ line-height: 1vw;
 .leet-stats-shown{
   filter: blur(0) opacity(1);
 }
+
+::-webkit-scrollbar,
+::-webkit-scrollbar:horizontal,
+::-webkit-scrollbar:vertical{
+  width: 8px !important;
+  height: 8px !important;
+  background-color: rgb(18, 18, 18) !important;
+}
+::-webkit-scrollbar-corner {
+  background-color: rgb(222, 222, 222) !important;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(222, 222, 222) !important;
+  box-shadow: rgb(18, 18, 18) 0px 0px 0px inset !important;
+  border-radius: 2px !important;
+  border-width: 0px !important;
+  border-style: solid !important;
+  border-color: rgb(18, 18, 18) !important;
+  border-image: initial !important;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: rgb(18, 18, 18) !important;
+  box-shadow: rgb(18, 18, 18) 0px 0px 0px inset !important;
+  border-width: 0px !important;
+  border-style: solid !important;
+  border-color: rgb(18, 18, 18) !important;
+  border-image: initial !important;
+  border-radius: 0px !important;
+}
+
+
 
 
 @media (orientation:portrait){
