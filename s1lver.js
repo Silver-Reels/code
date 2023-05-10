@@ -46,6 +46,7 @@ document.body.onload=()=>{
   if (nonreel){nonreel.classList.remove("reel-moving-in")};
   loadDiv.style.filter="blur(0.9vw)";                                     //add "motion" blur when loaddiv is to move away
 
+
 //console.log(`body loaded`);
 }
 
@@ -124,7 +125,7 @@ document.onkeydown=function(e){
                       viewer.style.filter="blur(0.9vw)"; //viewer "motion" blur
                       lastImgClicked.parentElement.style.left="0"; //animations for the thumbnail
                       lastImgClicked.parentElement.style.filter="";
-                      document.body.style.overflowY="auto"; //scrolling is back
+                      document.body.style.overflowY="auto"; //scrolling is backaaaaa
                       setTimeout(function(){lastImgClicked.parentElement.style.transform=""},150);
                       setTimeout(function(){lastImgClicked.parentElement.style.zIndex=""},500);
 }
@@ -137,6 +138,7 @@ if (window.location.pathname.toLowerCase()==`/inkr.html` || window.location.path
   if (reel){reel.style.height=0;reel.style.width=0;reel.style.padding=0;reel.style.margin=0};
   if (reelImg){reelImg[0].style.height=0;reelImg[0].style.width=0};
   if (viewerDivParent){viewerDivParent.style.width=0;viewerDivParent.style.height=0;viewerDivParent.style.display="none"};
+  if (nonreel){nonreel.style.display="block"};
 
   const inkrForm=     document.querySelector(".typeForm");
   const counter=      document.querySelector(".typeCounter");
@@ -224,6 +226,7 @@ if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathnam
   const leetTextInt=document.getElementById("leet-int");
   const leetTextFun=document.getElementById("leet-fun");
   const leetClass=Array.from(document.getElementsByClassName("leet-stats"));
+  const aboutTextQuery=document.querySelector(".aboutTextQuery");
 
 /*  
   let leetcodeURL=`https://leetcode.com/graphql/`;
@@ -250,10 +253,11 @@ curl --request POST \
   let leetcodeStats={};
   let leetFetched=false;
 
-  introicons[1].onmouseenter = async () => {
+  introicons[1].onclick = async () => {
     if (!leetFetched){
       leetFetched=true;
       try{
+        aboutTextQuery.style.filter=`blur(2vw) opacity(0)`;
         //console.log(`calling...`);
         const response = await fetch("/.netlify/functions/fetchLeetCode") //netlify serverless function
         .then(rawResponse=>rawResponse.json())
@@ -270,6 +274,7 @@ curl --request POST \
         leetcodeStats.intermediate.forEach(obj=>intS+=`${obj.tagName} x${obj.problemsSolved}\n`);
         leetcodeStats.fundamental.forEach(obj=>funS+=`${obj.tagName} x${obj.problemsSolved}\n`);
 
+
         //<p>'s
         leetTextAdv.innerText=advS;
         leetTextInt.innerText=intS;
@@ -282,6 +287,44 @@ curl --request POST \
     }
   }
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  //INTRO PARALLAX
+
+  let layer1=document.querySelector(".parallax-layer-1"); //moves most, on top
+  let layer2=document.querySelector(".parallax-layer-2");
+  let layer3=document.querySelector(".parallax-layer-3");
+  let layer4=document.querySelector(".parallax-layer-4");
+  let layer5=document.querySelector(".parallax-layer-5"); //moves least, on bottom
+  //layer1.style.transform=`translate(10%,20%)`;
+
+  function parallax(e){ //e.clientX, e.clientY....       center: (document.body.clientWidth/2,document.body.clientHeight/2)
+
+    let x=e.clientX;
+    let y=e.clientY;
+    let maxX=document.body.clientWidth;
+    let maxY=document.body.clientHeight;
+    let centerX=maxX/2;
+    let centerY=maxY/2;
+
+    let modX1=13;let modY1=13;
+    let modX2=8;let modY2=8;
+    let modX3=5;let modY3=5;
+    let modX4=3;let modY4=3;
+    let modX5=2;let modY5=2;
+    //
+
+    //centerX to right border=centerX+
+
+    layer1.style.transform=`translate(${((centerX-x)/maxX)*modX1}%,${((centerY-y)/maxY)*modY1}%)`;
+    layer2.style.transform=`translate(${((centerX-x)/maxX)*modX2}%,${((centerY-y)/maxY)*modY2}%)`;
+    layer3.style.transform=`translate(${((centerX-x)/maxX)*modX3}%,${((centerY-y)/maxY)*modY3}%)`;
+    layer4.style.transform=`translate(${((centerX-x)/maxX)*modX4}%,${((centerY-y)/maxY)*modY4}%)`;
+    layer5.style.transform=`translate(${((centerX-x)/maxX)*modX5}%,${((centerY-y)/maxY)*modY5}%)`;
+  }
+
+
+
+
 }
 ////////////////////////////////////////////////////////////////////
 
@@ -293,6 +336,9 @@ document.onmousemove=function(e){
   mouseGlow.style.top=`${e.clientY-3}px`;
   mouseGlow.style.left=`${e.clientX-10004}px`;
   //console.log(e);
+  if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathname.toLocaleLowerCase()==`/index.html`){
+    parallax(e);
+  }
 }
 
 //315 to 370

@@ -60,14 +60,18 @@ body {
   overflow-x: hidden;
 }
 .aboutContainer{
-  /*min-height: 100vh;*/
-  padding: 2vw 4vw 2vw 4vw;
+  width: 28vw;
+  padding: 2vw 0vw 2vw 4vw;
 }
 .aboutText{
   font-size: 1.5vw;
   line-height: 2vw;
   font-family: "silverFuturaM";
   pointer-events: all;
+}
+.aboutTextQuery{
+  filter: blur(0vw) opacity(1);
+  transition: all 0.5s;
 }
 
 .softwareIcon1,.softwareIcon2{
@@ -203,6 +207,7 @@ a {
 }
 .non-reel{
 position: relative;
+display: flex;
 right:0vw;
 height: 50vh;
 filter: blur(0);
@@ -809,7 +814,7 @@ line-height: 1vw;
 }
 .country-icon{
   position: relative;
-  left: 24vw;
+  left: 20vw;
   width: 8vw;
   object-fit: cover;
   transform: rotate(2deg);
@@ -894,8 +899,20 @@ line-height: 1vw;
   border-image: initial !important;
   border-radius: 0px !important;
 }
+.parallax-div{
+  width: 36vw;
+}
 
-
+.parallax{
+  position: absolute;
+  width: 36vw;
+  height: 36vw;
+  object-fit: cover;
+}
+.parallax-layer-1,.parallax-layer-2,.parallax-layer-3,.parallax-layer-4,.parallax-layer-5{
+  transform: translate(0,0);
+  transition: transform 0.25s cubic-bezier(0.19,0.69,0.57,0.87);
+}
 
 
 @media (orientation:portrait){
