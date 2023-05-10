@@ -290,41 +290,31 @@ curl --request POST \
 
   //INTRO PARALLAX
 
-  let layer1=document.querySelector(".parallax-layer-1"); //moves most, on top
-  let layer2=document.querySelector(".parallax-layer-2");
-  let layer3=document.querySelector(".parallax-layer-3");
-  let layer4=document.querySelector(".parallax-layer-4");
-  let layer5=document.querySelector(".parallax-layer-5"); //moves least, on bottom
-  //layer1.style.transform=`translate(10%,20%)`;
+  let layer1=document.querySelector(".parallax-layer-1").style; //moves most, on top
+  let layer2=document.querySelector(".parallax-layer-2").style;
+  let layer3=document.querySelector(".parallax-layer-3").style;
+  let layer4=document.querySelector(".parallax-layer-4").style;
+  let layer5=document.querySelector(".parallax-layer-5").style; //moves least, on bottom
 
-  function parallax(e){ //e.clientX, e.clientY....       center: (document.body.clientWidth/2,document.body.clientHeight/2)
+  let mod1=13;let mod2= 8;let mod3= 5;let mod4= 3;let mod5= 2;  //fibonacci. could do modX & modY too
 
-    let x=e.clientX;
-    let y=e.clientY;
-    let maxX=document.body.clientWidth;
-    let maxY=document.body.clientHeight;
-    let centerX=maxX/2;
-    let centerY=maxY/2;
-
-    let modX1=13;let modY1=13;
-    let modX2=8;let modY2=8;
-    let modX3=5;let modY3=5;
-    let modX4=3;let modY4=3;
-    let modX5=2;let modY5=2;
-    //
-
-    //centerX to right border=centerX+
-
-    layer1.style.transform=`translate(${((centerX-x)/maxX)*modX1}%,${((centerY-y)/maxY)*modY1}%)`;
-    layer2.style.transform=`translate(${((centerX-x)/maxX)*modX2}%,${((centerY-y)/maxY)*modY2}%)`;
-    layer3.style.transform=`translate(${((centerX-x)/maxX)*modX3}%,${((centerY-y)/maxY)*modY3}%)`;
-    layer4.style.transform=`translate(${((centerX-x)/maxX)*modX4}%,${((centerY-y)/maxY)*modY4}%)`;
-    layer5.style.transform=`translate(${((centerX-x)/maxX)*modX5}%,${((centerY-y)/maxY)*modY5}%)`;
-  }
-
-
-
-
+  function parallax(x,y){ //mousemove event; e.clientX, e.clientY
+    //let maxX= document.body.clientWidth; let centerX=maxX/2;
+    //let maxY=document.body.clientHeight; let centerY=maxY/2;
+   
+    //(center - currentMouse) / totalScreen = offset from center as % of total screen
+    //this value * modifier = how much to translate(x%,y%)
+    //layer1.transform=`translate(${((centerX-x)/maxX)*modX1}%,${((centerY-y)/maxY)*modY1}%)`;
+    //math optimize: (center-current)/2*center = 0.5-(current/max)
+    let calcX=0.5-(x/document.body.clientWidth);
+    let calcY=0.5-(y/document.body.clientHeight);
+    
+    layer1.transform=`translate(${calcX*mod1}%,${calcY*mod1}%)`;
+    layer2.transform=`translate(${calcX*mod2}%,${calcY*mod2}%)`;
+    layer3.transform=`translate(${calcX*mod3}%,${calcY*mod3}%)`;
+    layer4.transform=`translate(${calcX*mod4}%,${calcY*mod4}%)`;
+    layer5.transform=`translate(${calcX*mod5}%,${calcY*mod5}%)`;
+  };
 }
 ////////////////////////////////////////////////////////////////////
 
@@ -337,7 +327,7 @@ document.onmousemove=function(e){
   mouseGlow.style.left=`${e.clientX-10004}px`;
   //console.log(e);
   if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathname.toLocaleLowerCase()==`/index.html`){
-    parallax(e);
+    parallax(e.clientX,e.clientY);
   }
 }
 
