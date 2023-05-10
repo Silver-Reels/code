@@ -59,22 +59,22 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
-.aboutContainer{
+.about-container{
   width: 28vw;
   padding: 2vw 0vw 2vw 4vw;
 }
-.aboutText{
+.about-text{
   font-size: 1.5vw;
   line-height: 2vw;
   font-family: "silverFuturaM";
   pointer-events: all;
 }
-.aboutTextQuery{
+.about-text-query{
   filter: blur(0vw) opacity(1);
   transition: all 0.5s;
 }
 
-.softwareIcon1,.softwareIcon2{
+.software-icon-1,.software-icon-2{
   height: 2vw;
   object-fit: cover;
   position: relative;
@@ -96,7 +96,7 @@ body {
   grid-template-rows: 6vw;
   grid-template-columns: 24vw 44vw 24vw;
 }
-.desctext {
+.desc-text {
   display: grid;
   padding: 0.8vw 0 1vw 4vw;
   text-align: left;
@@ -105,17 +105,17 @@ body {
   font-size: 1.2vw;
   line-height: 1.56vw;
 }
-.desctextB{
+.desc-text-b{
   font-family: "silverFuturaBXI";
   position: relative;
   transition: left 0.3s cubic-bezier(0.38,-0.34,0.49,1.20),filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92);
   left: 0;
   filter: blur(0.3vw);
 }
-.desctextBGone{
+.desc-text-b-gone{
   left: 26vw;
 }
-p.titletext {
+p.title-text {
   display: grid;
   font-family: "silverFuturaM";
   font-size: 2.2vw;
@@ -126,19 +126,12 @@ p.titletext {
   line-height: 2.2vw;
   pointer-events:all;
 }
-p.titletext:hover{
+p.title-text:hover{
   letter-spacing: 1.08vw;
 }
 
-.titletext {
+.title-text {
   padding: 0 4vw 0.6vw 0;
-}
-.iconbox {
-  display: grid;
-  width: 4vw;
-  height: 4vw;
-  align-self: end;
-  align-items: end;
 }
 .icon {
   display: grid;
@@ -147,7 +140,7 @@ p.titletext:hover{
   object-fit: cover;
   border-radius: 1.2vw;
 }
-.iconblur {
+.icon-blur {
   z-index: -1;
   width: 4vw;
   height: 4vw;
@@ -206,12 +199,12 @@ a {
   transition: right 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92); /*for motion blur*/
 }
 .non-reel{
-position: relative;
-display: flex;
-right:0vw;
-height: 50vh;
-filter: blur(0);
-transition: right 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92);
+  position: relative;
+  display: flex;
+  right:0vw;
+  height: 50vh;
+  filter: blur(0);
+  transition: right 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92);
 }
 .reel-moving-away{
   right:100vw;
@@ -411,7 +404,6 @@ a:link,a:visited,::selection {
 .tapartarrow2{ /*for index.html ie about/intro page*/
   transform: rotate(180deg);
 }
-
 .TopButtonArrow {
   display: grid;
   width: 1vw;
@@ -450,12 +442,6 @@ a:link,a:visited,::selection {
   align-self: center;
   justify-self: center;
 }
-.dogs {
-  display: grid;
-  grid-template-columns: 12vw 12vw;
-  grid-template-rows: 20vh;
-  padding: 2vw 4vw 2vw 4vw;
-}
 .buttonDiv {
   display: grid;
   padding: 0 4vw;
@@ -463,67 +449,11 @@ a:link,a:visited,::selection {
   align-items: center;
   gap: 2vw;
 }
-.nativeButton {
-  font-family: "silverFuturaN";
-  border-radius: 1.4vw;
-  background-color: var(--PrimaryColor);
-  color:var(--SecondaryColor);
-  border-top-color: #282828;
-  border-right-color: #282828;
-  border-bottom-color: #282828;
-  border-left-color: #282828;
-  height: 4vw;
-  font-size: 1.4vw;
-  border-width: 0vw;
-  transition: all 0.3s;
-  cursor: pointer;
-  align-items: center;
-}
-.nativeButton:active {
-  font-size: 1.35vw;
-  background-color: rgba(255,140,0);
-}
-.priceCalc {
-  display: grid;
-  border-radius: 1.4vw;
-  background-color: #AAAAAA;
-  padding: 1vw 2vw 3vw 2vw;
-  grid-template-columns: 16vw;
-  grid-template-rows: 2vw 4vw 4vw 4vw;
-  height: 11vw;
-  width: 16vw;
-  justify-items: center;
-  align-items: center;
-}
-.priceDiv {
-  justify-items:center;
-}
 button, input {
   border-radius: 1.4vw;
   border-width: 0;
   font-family: "silverFuturaN";
   display:grid;
-}
-.priceButton {
-  font-size: 1.5vw;
-  width: 6vw;
-  padding-left: 1vw;
-  justify-content: center;
-  display: flex;
-}
-label {
-  font-family: "silverFuturaN";
-  line-height: 1;
-  margin: 0 0 1vw 1vw;
-  
-}
-.pricetext {
-  color:var(--SecondaryColor);
-  font-size: 2vw;
-}
-.priceResult {
-  color: var(--SecondaryColor);
-  font-size: 2vw;
 }
 .loadingDiv {
   display: grid;
@@ -543,7 +473,6 @@ label {
 .loadingDivGone {
   bottom: 100vh;
 }
-
 .loadingDivCenter {
   display: grid;
   justify-items: center;
@@ -590,124 +519,7 @@ label {
   box-shadow: 0 0 0.15vw var(--PrimaryColor);
   justify-self: left;
   transition: width 0.1s linear;
-
 }
-.divA {
-  display: grid;
-  grid-template-columns: 33vw 33vw 33vw;
-  grid-template-rows: 16vw;
-  margin: 2vw 4vw 2vw 4vw;
-  justify-items: stretch;
-}
-.stopwatch{
-  border-radius: 1.4vw;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  background-color: #AAAAAA;
-  width: 16vw;
-  height: 16vw;
-}
-.stopwatchNums{
-  width: 8vw;
-  justify-self: center;
-  color: var(--SecondaryColor);
-  text-shadow: none;
-  font-size: 2vw;
-}
-.accordion{
-  position: relative;
-  display: grid;
-  width: 28vw;
-  height: 16vw;
-  background:#282828;
-  border-radius: 1.4vw;
-  grid-template-rows: repeat(99,1fr);
-}
-.accordionicon{
-  position: relative;
-  width: 1.5vw;
-  right:0vw;
-  top:1.5vw;
-  display: flex;
-  transform: rotate(90deg);
-  transition: all 0.3s;
-}
-.accordion1A{
-  position: relative;
-  margin: 0 1vw 0 1vw;
-  display: grid;
-  grid-template-columns:max-content auto;
-  gap: 1vw;
-  height: 4vw;
-  justify-items: left;
-  border-bottom: var(--PrimaryColor);
-  border-style: solid;
-  border-width: 0;
-  border-bottom-width: 0.1vw;
-  cursor: pointer;
-  z-index: 2;
-  background: #282828;
-}
-.accordionAtext{
-color: #D7D7D7;
-text-shadow: none;
-font-size: 2vw;
-line-height: 2vw;
-padding:1vw 0 0 2vw;
-}
-.accordion1B{
-  display: grid;
-  position: relative;
-  align-items: start;
-  width: 28vw;
-  z-index: 0;
-
-}
-.accordionBtext{
-  position: relative;
-  bottom:4vw;
-  width: 28vw;
-  font-size: 1vw;
-  text-shadow: none;
-  line-height: 1.2vw;
-  padding: 0 0 0 2vw;
-  border-bottom: var(--PrimaryColor);
-  border-style: solid;
-  border-width: 0;
-  border-bottom-width: 0.1vw;
-  overflow: hidden;
-  overflow-wrap: break-word;
-  transition: all 0.3s;
-  width: 24vw;
-  margin:0 1vw 0 1vw;
-}
-.invisible{
-  z-index: -5;
-}
-.accordionplaced{
-  bottom:0;
-  transition: all 0.3s;
-}
-.accordioniconanim{
-  transform: rotate(0);
-}
-.bookmark{
-  display: grid;
-  justify-items: center;
-  gap:1vw;
-}
-.bookmarkTop {
-  display: grid;
-  position: relative;
-  width: 33vw;
-  height: 4vw;
-  padding: 0 0 0 0;
-  font-size: 1.2vw;
-}
-input .bookmarkTop{
-  padding-left: 2vw;
-}
-
 .typingIframe{
   position: relative;
   left: 2vw;
@@ -718,7 +530,6 @@ input .bookmarkTop{
   width: 96vw;
   box-shadow: 0 0 0.4vw #D7D7D7;
 }
-
 .typeForm{
   padding: 2vw 0 18vw 0;
   display: grid;
@@ -729,7 +540,6 @@ input .bookmarkTop{
   position: relative;
   left: 0.3vw;
 }
-
 .typeInput{
   display: grid;
   width: 26vw;
@@ -778,35 +588,32 @@ textarea:focus, input:focus{
   bottom: 28vw;
   left: 76vw; 
 }
-
 .introicon{
   height: 2vw;
   object-fit: cover;
 }
-
 .tooltipIcon{
   width: 1.5vw;
   position: relative;
   bottom: 0.5vw;
 }
-
 .tooltipBox{
   pointer-events: none;
-display:grid;
-border: 1vw #D7D7D7;
-position: absolute;
-background-color: rgba(68,68,68,1);
-padding: 0.4vw 0.2vw 0.3vw 0.2vw;
-border-radius: 0.2vw;
-left:0px;
-bottom:0px;
-opacity: 0;
-transition: opacity 0.2s;
-height: 2vw;
+  display:grid;
+  border: 1vw #D7D7D7;
+  position: absolute;
+  background-color: rgba(68,68,68,1);
+  padding: 0.4vw 0.2vw 0.3vw 0.2vw;
+  border-radius: 0.2vw;
+  left:0px;
+  bottom:0px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  height: 2vw;
 
 }
 .tooltipText{
-line-height: 1vw;
+  line-height: 1vw;
 }
 .country-div{
   display: grid;
@@ -836,12 +643,11 @@ line-height: 1vw;
   animation: grain 0.166s step-end infinite;
 }
 @keyframes grain {
-   0%{transform: rotate(0deg);}
+   0%{transform: rotate(0deg)}
   25%{transform: rotate(90deg)}
   50%{transform: rotate(180deg)}
   75%{transform: rotate(270deg)}
 }
-
 .mouse-glow{
   pointer-events: none;
   position:fixed;
@@ -860,7 +666,6 @@ line-height: 1vw;
   right:4vw;
   max-width: 19vw;
 }
-
 .leet-stats{
   filter: blur(2vw) opacity(0);
   font-size: 1.4vw;
@@ -902,7 +707,6 @@ line-height: 1vw;
 .parallax-div{
   width: 36vw;
 }
-
 .parallax{
   position: absolute;
   width: 36vw;
@@ -916,8 +720,8 @@ line-height: 1vw;
 
 
 @media (orientation:portrait){
-  .aboutText{font-size: 4vw;line-height: 4vw;}
-  .softwareIcon1,.softwareIcon2{height: 6vw;}
+  .about-text{font-size: 4vw;line-height: 4vw;}
+  .software-icon-1,.software-icon-2{height: 6vw;}
   .tapart{font-size:3vw;grid-template-columns:6vw 24vw 6vw;grid-template-rows:3vw;line-height:5vw;padding-bottom:2vw;padding-left: 48.5vw;gap:1vw}
   .tapart p{padding:0 0 0 0vw;}
   .tapartarrow{width: 3vw;position: relative;top:0.8vw}
@@ -928,9 +732,9 @@ line-height: 1vw;
   .TopButtonArrow{width: 2.8vw;position: relative;bottom:3vw;right:0.3vw;}
   .TopButtonActive{left: 0vw;}
   .desc{height: 18vw;grid-template-rows: 18vw;grid-template-columns: 24vw 44vw 44vw;}
-  p.titletext{font-size: 4.5vw;line-height: 6vw;align-items: end;letter-spacing: 0.6vw;}
-  .desctext{font-size: 2vw;position:relative;right: 40vw;line-height: 2vw;}
-  .desctextB{left: 22vw;bottom:4vw;}
+  p.title-text{font-size: 4.5vw;line-height: 6vw;align-items: end;letter-spacing: 0.6vw;}
+  .desc-text{font-size: 2vw;position:relative;right: 40vw;line-height: 2vw;}
+  .desc-text-b{left: 22vw;bottom:4vw;}
   .Buttons{grid-template-columns: repeat(4,12vw);grid-template-rows:12vw}
   .icon{width: 12vw;height:12vw;}
   .ButtonInac{padding: 0 0 4vw 0;}

@@ -18,8 +18,8 @@ const loadDiv=   document.querySelector(".loadingDiv");                   //load
 const loadBar=   document.querySelector(".loadingBar");                   //loading progress bar graphic
 const navButtons=Array.from(document.getElementsByClassName("ButtonAc")); //all navbar buttons that are active
 const navArrow= document.querySelector(".arrow");                         //navbar arrow
-const descText=document.querySelector(".desctext");                       //all description text
-const descTextModular=document.querySelector(".desctextB");               //description text part we want to swipe away
+const descText=document.querySelector(".desc-text");                       //all description text
+const descTextModular=document.querySelector(".desc-text-b");               //description text part we want to swipe away
 const reel=document.querySelector(".reel");                               //reel
 const nonreel=document.querySelector(".non-reel");                        //reel alts
 const inacButton=document.querySelector(".ButtonInac")                    //inactive button
@@ -40,8 +40,8 @@ function loadingCalc(){ //function that sets the text of loading screen progress
 //once <body> i.e. entire page is fully loaded
 document.body.onload=()=>{
   loadDiv.classList.add("loadingDivGone");                                //loadingscreen goes away
-  descTextModular.classList.remove("desctextBGone");                      //desctext B span swipes in
-  descTextModular.style.filter="blur(0)";                                 //desctext B removes blur while swiping in
+  descTextModular.classList.remove("desc-text-b-gone");                      //desc-text-b span swipes in
+  descTextModular.style.filter="blur(0)";                                 //desc-text-b removes blur while swiping in
   if (reel){reel.classList.remove("reel-moving-in")};                     //moves reel in onload
   if (nonreel){nonreel.classList.remove("reel-moving-in")};
   loadDiv.style.filter="blur(0.9vw)";                                     //add "motion" blur when loaddiv is to move away
@@ -68,7 +68,7 @@ button.onclick=function(){
     case button.className.includes("Button5") : navArrow.className="arrow arrowpos5";break;
     case button.className.includes("Button6") : navArrow.className="arrow arrowpos6";break;
   }
-  descTextModular.classList.add("desctextBGone");                         //swipes away description text
+  descTextModular.classList.add("desc-text-b-gone");                         //swipes away description text
   descTextModular.style.filter="blur(0.3vw)";
   if (reel){reel.classList.add("reel-moving-away");}                      //moves reel style page away
   if (nonreel){nonreel.classList.add("reel-moving-away")};                //moves nonreel style page away
@@ -175,8 +175,8 @@ if (window.location.pathname.toLowerCase()==`/inkr.html` || window.location.path
 
 }
 // INTRO PAGE ICONS///////////////////////////////////////////////////////
-let softwareIcon1=   Array.from(document.querySelectorAll(".softwareIcon1"));
-let softwareIcon2=   Array.from(document.querySelectorAll(".softwareIcon2"));
+let softwareIcon1=   Array.from(document.querySelectorAll(".software-icon-1"));
+let softwareIcon2=   Array.from(document.querySelectorAll(".software-icon-2"));
 let aboutTextInsert1=document.getElementById("aboutTextInsert1");
 let aboutTextInsert2=document.getElementById("aboutTextInsert2");
 
@@ -226,7 +226,7 @@ if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathnam
   const leetTextInt=document.getElementById("leet-int");
   const leetTextFun=document.getElementById("leet-fun");
   const leetClass=Array.from(document.getElementsByClassName("leet-stats"));
-  const aboutTextQuery=document.querySelector(".aboutTextQuery");
+  const aboutTextQuery=document.querySelector(".about-text-query");
 
 /*  
   let leetcodeURL=`https://leetcode.com/graphql/`;
