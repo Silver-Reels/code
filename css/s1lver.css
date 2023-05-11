@@ -707,15 +707,14 @@ textarea:focus, input:focus{
 .parallax-div{
   width: 36vw;
 }
-.parallax{
+.parallax-layer-1,.parallax-layer-2,.parallax-layer-3,.parallax-layer-4,.parallax-layer-5{
   position: absolute;
   width: 36vw;
   height: 36vw;
   object-fit: cover;
-}
-.parallax-layer-1,.parallax-layer-2,.parallax-layer-3,.parallax-layer-4,.parallax-layer-5{
   transform: translate(0,0);
   transition: transform 0.25s cubic-bezier(0.19,0.69,0.57,0.87);
+  pointer-events: none;
 }
 
 

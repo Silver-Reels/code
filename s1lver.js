@@ -270,9 +270,9 @@ curl --request POST \
         let funS=``;
 
         //arrays
-        leetcodeStats.advanced.forEach(obj=>advS+=`${obj.tagName} x${obj.problemsSolved}\n`);
-        leetcodeStats.intermediate.forEach(obj=>intS+=`${obj.tagName} x${obj.problemsSolved}\n`);
-        leetcodeStats.fundamental.forEach(obj=>funS+=`${obj.tagName} x${obj.problemsSolved}\n`);
+        leetcodeStats.advanced.forEach(obj=>advS+=`x${obj.problemsSolved} ${obj.tagName}\t\n`);
+        leetcodeStats.intermediate.forEach(obj=>intS+=`x${obj.problemsSolved} ${obj.tagName}\t\n`);
+        leetcodeStats.fundamental.forEach(obj=>funS+=`x${obj.problemsSolved} ${obj.tagName}\t\n`);
 
 
         //<p>'s
@@ -304,6 +304,7 @@ curl --request POST \
    
     //(center - currentMouse) / totalScreen = offset from center as % of total screen
     //this value * modifier = how much to translate(x%,y%)
+    
     //layer1.transform=`translate(${((centerX-x)/maxX)*modX1}%,${((centerY-y)/maxY)*modY1}%)`;
     //math optimize: (center-current)/2*center = 0.5-(current/max)
     let calcX=0.5-(x/document.body.clientWidth);
