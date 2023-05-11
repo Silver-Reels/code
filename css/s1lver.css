@@ -75,6 +75,7 @@ body {
 }
 
 .software-icon-1,.software-icon-2{
+  padding: 0 1vw 0 0;
   height: 2vw;
   object-fit: cover;
   position: relative;
@@ -379,7 +380,7 @@ a:link,a:visited,::selection {
 .arrowpos5 {left: 61vw;}
 .arrowpos6 {left: 69vw;}
 
-.tapart {
+.tap-to-view{
   pointer-events: none;
   user-select: none;
   display: grid;
@@ -392,16 +393,16 @@ a:link,a:visited,::selection {
   line-height: 2.2vw;
   letter-spacing: 0.4vw;
 }
-.tapart p{padding:0 0 0 0.4vw}
+.tap-to-view p{padding:0 0 0 0.4vw}
 
-.tapartarrow {
+.tap-to-view-arrow{
   pointer-events: none;
   display: grid;
   width: 1vw;
   align-self: center;
   padding: 0.2vw 0 0 0;
 }
-.tapartarrow2{ /*for index.html ie about/intro page*/
+.tap-to-view-arrow-2{ /*for index.html ie about/intro page*/
   transform: rotate(180deg);
 }
 .TopButtonArrow {
@@ -629,10 +630,11 @@ textarea:focus, input:focus{
 }
 .grain{
   pointer-events: none;
-  top:-10px;
+  overflow: hidden;
+  top:  0;
   left: 0;
-  width: 100%;
-  height: 100vw;
+  width: 100vw;
+  height: 100vh;
   z-index: 10;
   position: fixed;
   object-fit: cover;
@@ -642,12 +644,21 @@ textarea:focus, input:focus{
   background-repeat: repeat;
   animation: grain 0.166s step-end infinite;
 }
+/*
 @keyframes grain {
    0%{transform: rotate(0deg)}
   25%{transform: rotate(90deg)}
   50%{transform: rotate(180deg)}
   75%{transform: rotate(270deg)}
 }
+*/
+@keyframes grain{
+  0%{transform: scale(1,1)}
+  25%{transform: scale(-1,1)}
+  50%{transform: scale(-1,-1)}
+  75%{transform: scale(1,-1)}
+}
+
 .mouse-glow{
   pointer-events: none;
   position:fixed;
@@ -719,11 +730,13 @@ textarea:focus, input:focus{
 
 
 @media (orientation:portrait){
+  .mouse-glow{display: none;}
+  .body{width: 100vw;height: fit-content;}
   .about-text{font-size: 4vw;line-height: 4vw;}
   .software-icon-1,.software-icon-2{height: 6vw;}
-  .tapart{font-size:3vw;grid-template-columns:6vw 24vw 6vw;grid-template-rows:3vw;line-height:5vw;padding-bottom:2vw;padding-left: 48.5vw;gap:1vw}
-  .tapart p{padding:0 0 0 0vw;}
-  .tapartarrow{width: 3vw;position: relative;top:0.8vw}
+  .tap-to-view{font-size:3vw;grid-template-columns:6vw 24vw 6vw;grid-template-rows:3vw;line-height:5vw;padding-bottom:2vw;padding-left: 48.5vw;gap:1vw}
+  .tap-to-view p{padding:0 0 0 0vw;}
+  .tap-to-view-arrow{width: 3vw;position: relative;top:0.8vw}
   .introicon{height: 4vw;}
   .country-icon{width: 18vw;left: 60vw;}
   .TopButton{padding: 0vw 1vw 2vw 2vw;left: -4vw;}
@@ -752,10 +765,24 @@ textarea:focus, input:focus{
   .loadingBarBG{top:7vw;height: 0.3vw;}
   .loadingBar{top:6.7vw;height: 0.3vw;}
   .loadingMessage2{top:10vw;font-size: 3vw;}
-  .grain{width: 100vh;height: 100%;}
+  .typeForm{padding: 2vw 18vw 2vw 18vw;grid-template-rows: 12vw 12vw;}
+  .typeInput{height: 12vw;font-size: 6vw;}
+  .typeButton{height: 12vw;font-size: 3.3vw;}
+  .typeButton:active{height: 11.8vw;font-size: 3.2vw;border-bottom: 1px solid #333333;}
+  .typeCounter{bottom:-1vw;left:44.5vw}
+  /*.grain{width: 100vh;height: 100%;}*/
   .viewertext{writing-mode: horizontal-tb;grid-area: 1/2/2/2;justify-self:end;font-size:  5vw;align-self: self-end;line-height: 5.2vw;}
   .viewer{max-height: 83vh;align-self: stretch;}
   .viewerDiv{grid-template-rows: 6vh 90vh 1vh;}
-  .leet-div{position: relative;max-width: fit-content;display: flex;left: 5vw;top:20vh}
+  .leet-div{position: relative;max-width: fit-content;display: flex;left: 60vw;top:0vh}
   .leet-stats{font-size: 4vw;line-height: 4vw;}
+  .non-reel{display: grid;grid-template-columns: 100vw;}
+  .about-container{width: 100vw;}
+  .about-text{width: 100vw;font-size:5vw;line-height:5vw;}
+  .software-icon-1,.software-icon-2{height: 12vw;}
+  .country-icon{width: 24vw;}
+  .parallax-div{position: relative;width: 100vw;height: 100vw;}
+  .parallax-layer-1,.parallax-layer-2,.parallax-layer-3,.parallax-layer-4,.parallax-layer-5{width: 100vw;height: 100vw;}
+  .about-text-query{top:100vw;}
+
 }
