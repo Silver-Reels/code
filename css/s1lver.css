@@ -638,8 +638,8 @@ textarea:focus, input:focus{
   z-index: 10;
   position: fixed;
   object-fit: cover;
-  mix-blend-mode: multiply;
-  opacity: 0.06;
+  mix-blend-mode: overlay;
+  opacity: 0.1;
   background-image: url(/grain-filter.webp);
   background-repeat: repeat;
   animation: grain 0.166s step-end infinite;
