@@ -673,7 +673,7 @@ textarea:focus, input:focus{
 }
 .leet-div{
   position: absolute;
-  top:11.5vw;
+  top:3vw;
   right:4vw;
   max-width: 19vw;
 }
@@ -774,7 +774,7 @@ textarea:focus, input:focus{
   .viewertext{writing-mode: horizontal-tb;grid-area: 1/2/2/2;justify-self:end;font-size:  5vw;align-self: self-end;line-height: 5.2vw;}
   .viewer{max-height: 83vh;align-self: stretch;}
   .viewerDiv{grid-template-rows: 6vh 90vh 1vh;}
-  .leet-div{position: relative;max-width: fit-content;display: flex;left: 60vw;top:0vh}
+  .leet-div{position: relative;max-width: fit-content;display: flex;left: 40%;top:0vh}
   .leet-stats{font-size: 4vw;line-height: 4vw;}
   .non-reel{display: grid;grid-template-columns: 100vw;}
   .about-container{width: 100vw;}

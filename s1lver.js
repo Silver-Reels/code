@@ -11,6 +11,7 @@ function TopButtonFunc(){
 }
 
 function readjustMinHeight(){ //trying to fix issues with body bg being broken on mobile
+  //doing this will correctly increase minHeight dynamically, but in case of resize to smaller won't decrease
   document.body.style.minHeight=`${document.body.scrollHeight}px`;
 }
 //console.log(e);
