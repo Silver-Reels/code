@@ -240,6 +240,7 @@ if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathnam
   const leetTextFun=document.getElementById("leet-fun");
   const leetClass=Array.from(document.getElementsByClassName("leet-stats"));
   const aboutTextQuery=document.querySelector(".about-text-query");
+  const leetLink=document.querySelector(".leet-link");
   
   /*  
   let leetcodeURL=`https://leetcode.com/graphql/`;
@@ -266,7 +267,7 @@ if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathnam
  let leetcodeStats={};
  let leetFetched=false;
  
- introicons[1].onclick = async () => {
+ aboutTextQuery.onclick = async () => {
    if (!leetFetched){
      leetFetched=true;
      try{
@@ -296,6 +297,7 @@ if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathnam
         
         //effect to uncover <p>
         leetClass[0].classList.add("leet-stats-shown");  
+        leetLink.style.pointerEvents=`all`;
       }
       catch(e){console.warn(`${e}`)}
     }

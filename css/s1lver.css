@@ -59,24 +59,37 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+p {
+  color: var(--PrimaryColor);
+  font-family: "silverFuturaN";
+  margin-block-end: 0;
+  margin-block-start: 0;
+  user-select: none;
+  pointer-events: none;
+  text-shadow: 0 0 0.15vw var(--PrimaryColor);
+  filter: blur(0.3px);
+}
 .about-container{
   width: 28vw;
   padding: 2vw 0vw 2vw 4vw;
 }
 .about-text{
-  font-size: 1.5vw;
-  line-height: 2vw;
+  /*font-size: 1.5vw;*/
+  font-size: 2vw;
+  line-height: 2.3vw;
   font-family: "silverFuturaM";
   pointer-events: all;
 }
 .about-text-query{
   filter: blur(0vw) opacity(1);
   transition: all 0.5s;
+  height: 4vw;
+  cursor: pointer;
 }
 
 .software-icon-1,.software-icon-2{
   padding: 0 1vw 0 0;
-  height: 2vw;
+  height: 2.5vw;
   object-fit: cover;
   position: relative;
   left: 4vw;
@@ -348,15 +361,6 @@ a {
   grid-area: 2/3/2/3;
   max-height: 90vh;
   line-height: 1.2vw;
-}
-p {
-  color: var(--PrimaryColor);
-  font-family: "silverFuturaN";
-  margin-block-end: 0;
-  margin-block-start: 0;
-  user-select: none;
-  pointer-events: none;
-  text-shadow: 0 0 0.15vw var(--PrimaryColor);
 }
 a:link,a:visited,::selection {
   color: var(--PrimaryColor);
@@ -686,6 +690,9 @@ textarea:focus, input:focus{
 .leet-stats-shown{
   filter: blur(0) opacity(1);
 }
+a .leet-stats{
+  pointer-events: none;
+}
 
 ::-webkit-scrollbar,
 ::-webkit-scrollbar:horizontal,
@@ -717,6 +724,7 @@ textarea:focus, input:focus{
 }
 .parallax-div{
   width: 36vw;
+  padding-top: 1vw;
 }
 .parallax-layer-1,.parallax-layer-2,.parallax-layer-3,.parallax-layer-4,.parallax-layer-5{
   position: absolute;
@@ -727,6 +735,9 @@ textarea:focus, input:focus{
   transition: transform 0.25s cubic-bezier(0.19,0.69,0.57,0.87);
   pointer-events: none;
 }
+.parallax-layer-5{filter: blur(0.5px);}
+.parallax-layer-4{filter: blur(0.3px);}
+.parallax-layer-2{filter: blur(0.1px);}
 
 
 @media (orientation:portrait){
