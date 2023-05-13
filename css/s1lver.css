@@ -50,7 +50,7 @@ html {
 body {
   background-color: var(--SecondaryColor);
   background-blend-mode: lighten;
-  background: url(/bg.webp), linear-gradient(315deg, rgba(18,18,18,1) 84%, rgba(48,48,48,1) 100%);
+  background: url(/bg.webp), linear-gradient(315deg, rgba(20,18,18,1) 84%, rgba(48,48,48,1) 100%);
   line-height: 0;
   margin-block-start: 0;margin-block-end: 0;
   margin: 0;
@@ -94,6 +94,7 @@ p {
   position: relative;
   left: 4vw;
   top:1vw;
+  filter: blur(0.5px);
 }
 
 .desc {
@@ -376,6 +377,7 @@ a:link,a:visited,::selection {
   bottom:1.1vw;
   z-index: 7;
   transition: all 0.3s cubic-bezier(0.38,-0.34,0.49,1.27);
+  filter: blur(0.5px);
 }
 .arrowpos1 {left: 29vw;}
 .arrowpos2 {left: 37vw;}
@@ -405,6 +407,7 @@ a:link,a:visited,::selection {
   width: 1vw;
   align-self: center;
   padding: 0.2vw 0 0 0;
+  filter: blur(0.3px);
 }
 .tap-to-view-arrow-2{ /*for index.html ie about/intro page*/
   transform: rotate(180deg);
@@ -415,6 +418,7 @@ a:link,a:visited,::selection {
   transform: rotate(180deg);
   align-self: center;
   justify-self: center;
+  filter: blur(0.3px);
 }
 .TopButton {
   position: fixed;
@@ -446,6 +450,7 @@ a:link,a:visited,::selection {
   transform: rotate(180deg);
   align-self: center;
   justify-self: center;
+  filter: blur(0.3px)
 }
 .buttonDiv {
   display: grid;
@@ -568,6 +573,8 @@ button, input {
   background-image: url("/dither.webp");
   background-blend-mode: hard-light;
   user-select: none;
+  filter: blur(0.3px);
+  color:#181818;
   /*line-height is 1.15*/
 }
 textarea:focus, input:focus{
@@ -576,7 +583,8 @@ textarea:focus, input:focus{
 .typeButton:active{
   height: 3.8vw;
   background-color: #AAAAAA;
-  font-size: 1.9vw;
+  font-size: 1.95vw;
+  color:#161616;
   border-bottom: 1px solid #333333;
   /*line-height: 2;*/
   /*transform: skew(-45 deg, 20 deg);*/
@@ -594,8 +602,10 @@ textarea:focus, input:focus{
   left: 76vw; 
 }
 .introicon{
-  height: 2vw;
+  position: relative;
+  height: 3vw;
   object-fit: cover;
+  filter: blur(0.3px);
 }
 .tooltipIcon{
   width: 1.5vw;
@@ -736,8 +746,10 @@ a .leet-stats{
   pointer-events: none;
 }
 .parallax-layer-5{filter: blur(0.5px);}
-.parallax-layer-4{filter: blur(0.3px);}
-.parallax-layer-2{filter: blur(0.1px);}
+.parallax-layer-4{filter: blur(0.4px);}
+.parallax-layer-3{filter: blur(0.3px);}
+.parallax-layer-2{filter: blur(0.2px);}
+.parallax-layer-1{filter: blur(0.1px);}
 
 
 @media (orientation:portrait){
@@ -748,7 +760,7 @@ a .leet-stats{
   .tap-to-view{font-size:3vw;grid-template-columns:6vw 24vw 6vw;grid-template-rows:3vw;line-height:5vw;padding-bottom:2vw;padding-left: 48.5vw;gap:1vw}
   .tap-to-view p{padding:0 0 0 0vw;}
   .tap-to-view-arrow{width: 3vw;position: relative;top:0.8vw}
-  .introicon{height: 4vw;}
+  .introicon{height: 8vw;}
   .country-icon{width: 18vw;left: 60vw;}
   .TopButton{padding: 0vw 1vw 2vw 2vw;left: -4vw;}
   .TopButtonText{font-size: 3vw;}
