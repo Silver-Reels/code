@@ -85,6 +85,7 @@ p {
   transition: all 0.5s;
   height: 4vw;
   cursor: pointer;
+  z-index: 2;
 }
 
 .software-icon-1,.software-icon-2{
