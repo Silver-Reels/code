@@ -169,12 +169,11 @@ p.title-text:hover{
   display: grid;
   gap:4vw;
   grid-template-rows: 4vw;
-  grid-template-columns: repeat(4,4vw);
+  grid-template-columns: repeat(5,4vw);
   z-index: 1;
   align-items: center;
   width: 4vw;
-  /*border-radius: 1.4vw;*/
-  padding: 0 0 1vw 8vw;
+  padding: 0 0 1vw 0vw;
 }
 .Button1,.Button2,.Button3,.Button4,.Button5,.Button6 {
   display: grid;
@@ -767,21 +766,24 @@ a .leet-stats{
   .TopButtonArrow{width: 2.8vw;position: relative;bottom:3vw;right:0.3vw;}
   .TopButtonActive{left: 0vw;}
   .desc{height: 18vw;grid-template-rows: 18vw;grid-template-columns: 24vw 44vw 44vw;}
-  p.title-text{font-size: 4.5vw;line-height: 6vw;align-items: end;letter-spacing: 0.6vw;}
-  .desc-text{font-size: 2vw;position:relative;right: 40vw;line-height: 2vw;}
+  p.title-text{font-size: 4.5vw;line-height: 6vw;align-items: end;letter-spacing: 0.1vw;}
+  p.title-text:hover{letter-spacing: 0.1vw;}
+  .desc-text{font-size: 2vw;position:relative;right: 35vw;line-height: 2vw;}
   .desc-text-b{left: 22vw;bottom:4vw;}
-  .Buttons{grid-template-columns: repeat(4,12vw);grid-template-rows:12vw}
+  .Buttons{grid-template-columns: repeat(5,9vw);grid-template-rows:12vw}
   .icon{width: 12vw;height:12vw;}
+  .icon-blur{width: 12vw;height: 12vw;filter: blur(0.3vw);}
   .ButtonInac{padding: 0 0 4vw 0;}
   .Button1:hover,.Button2:hover,.Button3:hover,.Button4:hover,.Button5:hover,.Button6:hover,
   .Button1:focus,.Button2:focus,.Button3:focus,.Button4:focus,.Button5:focus,.Button6:focus,
   .Button1:active,.Button2:active,.Button3:active,.Button4:active,.Button5:active,.Button6:active{
     padding: 0 0 4vw 0;}
   .arrow{width: 6vw;bottom: 2vw;}
-  .arrowpos2{left: 41vw;}
+  .arrowpos1{left: 31vw;}
+  .arrowpos2{left: 44vw;}
   .arrowpos3{left: 57vw;}
-  .arrowpos4{left: 73vw;}
-  .arrowpos5{left: 89vw;}
+  .arrowpos4{left: 70vw;}
+  .arrowpos5{left: 83vw;}
   .loadingDiv{letter-spacing: 0.1vw;font-size: 1.4vw;}
   .spinreel{width: 28vw;}
   .loadingMessage1{bottom:-5vw;font-size: 3vw;}
