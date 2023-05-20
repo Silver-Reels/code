@@ -687,7 +687,7 @@ textarea:focus, input:focus{
 .leet-div{
   position: absolute;
   top:3vw;
-  right:4vw;
+  right:10vw;
   max-width: 19vw;
 }
 .leet-stats{
