@@ -69,6 +69,14 @@ p {
   text-shadow: 0 0 0.15vw var(--PrimaryColor);
   filter: blur(0.3px);
 }
+.top-strip{
+  position: absolute;
+  width: 100vw;
+  height: 1vw;
+  top: 0;
+  background-color: #AAAAAA;
+}
+
 .about-container{
   width: 28vw;
   padding: 2vw 0vw 2vw 4vw;
@@ -469,10 +477,10 @@ button, input {
   display: grid;
   background: var(--SecondaryColor);
   grid-template-columns: 33.3vw 33.4vw 33.3vw;
-  grid-template-rows:    33.3vh 33.4vh 33.3vh;
+  grid-template-rows:    36.3vh 33.4vh 33.3vh;
   position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 103vh;
   z-index: 5;
   transition: bottom 0.3s cubic-bezier(0.38,-0.34,0.49,1.27), filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92); /*for motion blur*/
   align-items: center;
