@@ -37,6 +37,7 @@ template {display: none;}
 
 @font-face {font-family: "silverFuturaN";   src: url(/font/silverFuturaN.woff2);   font-display: block;}
 @font-face {font-family: "silverFuturaM";   src: url(/font/silverFuturaM.woff2);   font-display: block;}
+@font-face {font-family: "silverFuturaB"; src: url(/font/silverFuturaB.woff2);     font-display: block;}
 @font-face {font-family: "silverFuturaBXI"; src: url(/font/silverFuturaBXI.woff2); font-display: block;}
 
 :root {
@@ -82,10 +83,9 @@ p {
   padding: 2vw 0vw 2vw 4vw;
 }
 .about-text{
-  /*font-size: 1.5vw;*/
   font-size: 2vw;
   line-height: 2.3vw;
-  font-family: "silverFuturaM";
+  font-family: "silverFuturaB";
   pointer-events: all;
 }
 .about-text-query{
@@ -130,7 +130,7 @@ p {
   line-height: 1.56vw;
 }
 .desc-text-b{
-  font-family: "silverFuturaBXI";
+  font-family: "silverFuturaB";
   position: relative;
   transition: left 0.3s cubic-bezier(0.38,-0.34,0.49,1.20),filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92);
   left: 0;
@@ -363,7 +363,7 @@ a {
   writing-mode: vertical-rl;
   justify-self:start;
   align-self: start;
-  font-family: "silverFuturaM";
+  font-family: "silverFuturaB";
   color: #121212;
   text-shadow: 0 0 0.15vw #121212;
   font-size: 2.2vw;
@@ -644,7 +644,7 @@ textarea:focus, input:focus{
 }
 .country-icon{
   position: relative;
-  left: 20vw;
+  left: 15vw;
   width: 8vw;
   object-fit: cover;
   transform: rotate(2deg);
@@ -763,7 +763,7 @@ a .leet-stats{
 @media (orientation:portrait){
   .mouse-glow{display: none;}
   .body{width: 100vw;height: fit-content;}
-  .about-text{font-size: 4vw;line-height: 4vw;}
+  .about-text{width: 100vw;font-size:5vw;line-height:5vw;}
   .software-icon-1,.software-icon-2{height: 6vw;}
   .tap-to-view{font-size:3vw;grid-template-columns:6vw 24vw 6vw;grid-template-rows:3vw;line-height:5vw;padding-bottom:2vw;padding-left: 48.5vw;gap:1vw}
   .tap-to-view p{padding:0 0 0 0vw;}
@@ -812,7 +812,6 @@ a .leet-stats{
   .leet-stats{font-size: 4vw;line-height: 4vw;}
   .non-reel{display: grid;grid-template-columns: 100vw;}
   .about-container{width: 100vw;}
-  .about-text{width: 100vw;font-size:5vw;line-height:5vw;}
   .software-icon-1,.software-icon-2{height: 12vw;}
   .country-icon{width: 24vw;}
   .parallax-div{position: relative;width: 100vw;height: 100vw;}

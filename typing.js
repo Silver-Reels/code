@@ -20,7 +20,7 @@ const charOf=new Map([
   ["x_lower","x"],["y_lower","y"],["z_lower","z"],["zero",   "0"],["one",    "1"],["two",    "2"],["three",  "3"],
   ["four",   "4"],["five",   "5"],["six",    "6"],["seven",  "7"],["eight",  "8"],["nine",   "9"],["excl",   "!"],
   ["quote",  `"`],["amp",    "&"],["apos",  "'"],["par_open","("],["par_close",")"],["comma", ","],["dash",   "-"],
-  ["dot",    `.`],["slash",  "/"],["colon",  ":"],["semi",   ";"],["quest",  "?"],["space",  " "],
+  ["dot",    `.`],["slash",  "/"],["colon",  ":"],["semi",   ";"],["quest",  "?"],["space",  " "]
 ]);
 const nameOf=new Map([
   ["A","a_upper"],["B","b_upper"],["C","c_upper"],["D","d_upper"],["E","e_upper"],["F","f_upper"],["G","g_upper"],
@@ -33,7 +33,7 @@ const nameOf=new Map([
   ["x","x_lower"],["y","y_lower"],["z","z_lower"],["0",   "zero"],["1",    "one"],["2",    "two"],["3",  "three"],
   ["4",   "four"],["5",   "five"],["6",    "six"],["7",  "seven"],["8",  "eight"],["9",   "nine"],["!",   "excl"],
   [`"`,  "quote"],["&",    "amp"],["'",  "apos"],["(","par_open"],[")","par_close"],[",","comma"],["-",   "dash"],
-  [`.`,    "dot"],["/",  "slash"],[":",  "colon"],[";",   "semi"],["?",  "quest"],[" ",  "space"],
+  [`.`,    "dot"],["/",  "slash"],[":",  "colon"],[";",   "semi"],["?",  "quest"],[" ",  "space"]
 ]);
 
 //use: charOf.get("a_upper") --> "A"
@@ -53,7 +53,7 @@ const charWidth=new Map([
   ["x",hVar* 669],["y",hVar* 949],["z",hVar* 900],["0",hVar* 733],["1",hVar* 649],["2",hVar* 856],["3",hVar* 835],
   ["4",hVar* 744],["5",hVar* 889],["6",hVar* 642],["7",hVar* 720],["8",hVar* 842],["9",hVar* 638],["!",hVar* 694],
   [`"`,hVar* 296],["&",hVar* 982],["'",hVar* 176],["(",hVar* 797],[")",hVar* 733],[",",hVar* 215],["-",hVar* 298],
-  [`.`,hVar* 122],["/",hVar* 645],[":",hVar* 294],[";",hVar* 377],["?",hVar* 672],[" ",hVar* 300],
+  [`.`,hVar* 122],["/",hVar* 645],[":",hVar* 294],[";",hVar* 377],["?",hVar* 672],[" ",hVar* 300]
 ]);
 const advWidth=new Map([
   ["A",hVar* 975],["B",hVar*1017],["C",hVar* 719],["D",hVar*1017],["E",hVar* 853],["F",hVar* 877],["G",hVar* 899],
@@ -66,7 +66,7 @@ const advWidth=new Map([
   ["x",hVar* 522],["y",hVar* 532],["z",hVar* 527],["0",hVar* 647],["1",hVar* 400],["2",hVar* 625],["3",hVar* 695],
   ["4",hVar* 686],["5",hVar* 585],["6",hVar* 572],["7",hVar* 543],["8",hVar* 621],["9",hVar* 573],["!",hVar* 601],
   [`"`,hVar* 377],["&",hVar* 897],["'",hVar* 257],["(",hVar* 451],[")",hVar* 638],[",",hVar* 268],["-",hVar* 386],
-  [`.`,hVar* 276],["/",hVar* 491],[":",hVar* 401],[";",hVar* 399],["?",hVar* 657],[" ",hVar* 300],
+  [`.`,hVar* 276],["/",hVar* 491],[":",hVar* 401],[";",hVar* 399],["?",hVar* 657],[" ",hVar* 300]
 ]);
 const lbWidth=new Map([
   ["A",hVar*  66],["B",hVar* 122],["C",hVar* 118],["D",hVar*  73],["E",hVar*  69],["F",hVar* 123],["G",hVar* 119],
@@ -79,7 +79,7 @@ const lbWidth=new Map([
   ["x",hVar*  20],["y",hVar*-279],["z",hVar*-270],["0",hVar* 122],["1",hVar*  32],["2",hVar*  21],["3",hVar*  40],
   ["4",hVar* 148],["5",hVar*  44],["6",hVar*  96],["7",hVar*  85],["8",hVar*  89],["9",hVar* 142],["!",hVar*  85],
   [`"`,hVar* 274],["&",hVar* 102],["'",hVar* 274],["(",hVar* 139],[")",hVar* -34],[",",hVar*  15],["-",hVar*  56],
-  [`.`,hVar*  85],["/",hVar*  48],[":",hVar*  85],[";",hVar*  15],["?",hVar* 117],[" ",hVar*   0],
+  [`.`,hVar*  85],["/",hVar*  48],[":",hVar*  85],[";",hVar*  15],["?",hVar* 117],[" ",hVar*   0]
 ]);
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
