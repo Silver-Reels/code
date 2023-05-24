@@ -201,6 +201,7 @@ p.title-text:hover{
   filter: grayscale(50%);
   padding: 0 0 1vw 0;
 }
+
 .ButtonInac:hover {
   filter: grayscale(0%);
 }
