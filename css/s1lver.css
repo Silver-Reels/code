@@ -139,6 +139,14 @@ p {
 .desc-text-b-gone{
   left: 26vw;
 }
+.desc-text-b-arrow{
+  transform: rotate(-90deg);
+  width: 1vw;
+  position: absolute;
+  top: 4.5vw;
+  right: 20vw;
+}
+
 p.title-text {
   display: grid;
   font-family: "silverFuturaBXI";
