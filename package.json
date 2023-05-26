@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "node-fetch": "^3.3.1"
+    "node-fetch": "^3.3.1",
+    "uglify-js": "^3.17.4"
   },
   "name": "silverreels",
   "version": "1.0.0",
   "main": "s1lver.js",
-  "type":"module",
-  "devDependencies": {},
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

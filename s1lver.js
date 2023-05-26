@@ -25,17 +25,21 @@ function delay(url){setTimeout(function(){window.location=url},300)} //time in m
 }///////////////////////////////////////////used to delay page leaving so animation can play
 
 //LOADING SCREEN/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-const allimages= Array.from(document.getElementsByTagName("img"));        //initial request is a "node list", we need to array-fy this
+let   allimages= Array.from(document.getElementsByTagName("img"));        //initial request is a "node list", we need to array-fy this
 const loadMsg=   document.querySelector(".loadingMessage2");              //part of HTML responsible for displaying loadscreen text (25% etc)
 const loadDiv=   document.querySelector(".loadingDiv");                   //loadingscreen div
 const loadBar=   document.querySelector(".loadingBar");                   //loading progress bar graphic
 const navButtons=Array.from(document.getElementsByClassName("ButtonAc")); //all navbar buttons that are active
 const navArrow= document.querySelector(".arrow");                         //navbar arrow
-const descText=document.querySelector(".desc-text");                       //all description text
-const descTextModular=document.querySelector(".desc-text-b");               //description text part we want to swipe away
+const descText=document.querySelector(".desc-text");                      //all description text
+const descTextModular=document.querySelector(".desc-text-b");             //description text part we want to swipe away
 const reel=document.querySelector(".reel");                               //reel
 const nonreel=document.querySelector(".non-reel");                        //reel alts
 const inacButton=document.querySelector(".ButtonInac")                    //inactive button
+
+//for INKR
+//nothing
+//
 
 const allimageslength=allimages.length;
 //we determine load progress based on how many images the browser has loaded
@@ -351,6 +355,5 @@ document.onmousemove=function(e){
 
 
 /////////////////////////////////////////////////////////////////
-
 
 

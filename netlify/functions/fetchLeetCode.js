@@ -28,3 +28,13 @@ export const handler= async (event,context)=>{
     return {statusCode:500,body:JSON.stringify({error:e})};
   }
 };
+/////////////////////////////////////////////////////////////
+/* RANK
+{
+  "query": "query userPublicProfile($username: String!) {matchedUser(username: $username) {profile{ranking}}}",
+  "variables": {
+      "username": "Silver-Reels"
+  },
+  "operationName": "userPublicProfile"
+}
+*/
