@@ -51,7 +51,7 @@ html {
 body {
   background-color: var(--SecondaryColor);
   background-blend-mode: lighten;
-  background: url(/bg.webp), linear-gradient(315deg, rgba(20,18,18,1) 84%, rgba(48,48,48,1) 100%);
+  background: url(/bg800.webp), linear-gradient(315deg, rgba(20,18,18,1) 84%, rgba(48,48,48,1) 100%);
   line-height: 0;
   margin-block-start: 0;margin-block-end: 0;
   margin: 0;
@@ -487,7 +487,7 @@ button, input {
   background: var(--SecondaryColor);
   grid-template-columns: 33.3vw 33.4vw 33.3vw;
   grid-template-rows:    36.3vh 33.4vh 33.3vh;
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 103vh;
   z-index: 5;
@@ -671,7 +671,7 @@ textarea:focus, input:focus{
   object-fit: cover;
   mix-blend-mode: overlay;
   opacity: 0.1;
-  background-image: url(/grain-filter.webp);
+  background-image: url(/grain-filter-720.webp);
   background-repeat: repeat;
   animation: grain 0.166s step-end infinite;
 }

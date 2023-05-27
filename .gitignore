@@ -2,6 +2,7 @@ node_modules
 bookmarks.js
 play.js
 debug.js
+typing.js
 uglify.js
 notes.txt
 parallaxWork.ai
@@ -11,6 +12,7 @@ TICK.html
 
 css/bookmarks.css
 css/play.css
+css/typing.css
 
 flip
 
