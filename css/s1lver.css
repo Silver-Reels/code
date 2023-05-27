@@ -772,7 +772,7 @@ a .leet-stats{
 @media (orientation:portrait){
   .mouse-glow{display: none;}
   .body{width: 100vw;height: fit-content;}
-  .about-text{width: 100vw;font-size:5vw;line-height:5vw;}
+  .about-text{width: 100vw;font-size:7vw;line-height:7vw;}
   .software-icon-1,.software-icon-2{height: 6vw;}
   .tap-to-view{font-size:3vw;grid-template-columns:6vw 24vw 6vw;grid-template-rows:3vw;line-height:5vw;padding-bottom:2vw;padding-left: 48.5vw;gap:1vw}
   .tap-to-view p{padding:0 0 0 0vw;}
@@ -784,24 +784,24 @@ a .leet-stats{
   .TopButtonArrow{width: 2.8vw;position: relative;bottom:3vw;right:0.3vw;}
   .TopButtonActive{left: 0vw;}
   .desc{height: 18vw;grid-template-rows: 18vw;grid-template-columns: 24vw 44vw 44vw;}
-  p.title-text{font-size: 4.5vw;line-height: 6vw;align-items: end;letter-spacing: 0.1vw;}
+  p.title-text{font-size: 4.5vw;line-height: 6vw;align-items: end;letter-spacing: 0.1vw;display: none;}
   p.title-text:hover{letter-spacing: 0.1vw;}
   .desc-text{font-size: 2vw;position:relative;right: 35vw;line-height: 2vw;}
   .desc-text-b{left: 22vw;bottom:4vw;}
-  .Buttons{grid-template-columns: repeat(5,9vw);grid-template-rows:12vw}
-  .icon{width: 12vw;height:12vw;}
-  .icon-blur{width: 12vw;height: 12vw;filter: blur(0.3vw);}
+  .Buttons{grid-template-columns: repeat(5,12vw);grid-template-rows:12vw;gap: 8vw;}
+  .icon{width: 12vw;height:12vw;border-radius: 3vw;}
+  .icon-blur{width: 12vw;height: 12vw;filter: blur(0.3vw);border-radius: 3vw;}
   .ButtonInac{padding: 0 0 4vw 0;}
   .Button1:hover,.Button2:hover,.Button3:hover,.Button4:hover,.Button5:hover,.Button6:hover,
   .Button1:focus,.Button2:focus,.Button3:focus,.Button4:focus,.Button5:focus,.Button6:focus,
   .Button1:active,.Button2:active,.Button3:active,.Button4:active,.Button5:active,.Button6:active{
     padding: 0 0 4vw 0;}
   .arrow{width: 6vw;bottom: 2vw;}
-  .arrowpos1{left: 31vw;}
-  .arrowpos2{left: 44vw;}
-  .arrowpos3{left: 57vw;}
-  .arrowpos4{left: 70vw;}
-  .arrowpos5{left: 83vw;}
+  .arrowpos1{left: 7vw;}
+  .arrowpos2{left: 27vw;}
+  .arrowpos3{left: 47vw;}
+  .arrowpos4{left: 67vw;}
+  .arrowpos5{left: 87vw;}
   .loadingDiv{letter-spacing: 0.1vw;font-size: 1.4vw;}
   .spinreel{width: 28vw;}
   .loadingMessage1{bottom:-5vw;font-size: 3vw;}
