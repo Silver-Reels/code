@@ -816,8 +816,8 @@ a .leet-stats{
   .typeCounter{bottom:-1vw;left:44.5vw}
   /*.grain{width: 100vh;height: 100%;}*/
   .viewertext{writing-mode: horizontal-tb;grid-area: 1/2/2/2;justify-self:end;font-size:  5vw;align-self: self-end;line-height: 5.2vw;}
-  .viewer{max-height: 83vh;align-self: stretch;}
-  .viewerDiv{grid-template-rows: 6vh 90vh 1vh;}
+  .viewer{max-height: 83vh;/*align-self: stretch;*/}
+  .viewerDiv{grid-template-rows: 15vh 55vh 1vh;}
   .leet-div{position: relative;max-width: fit-content;display: flex;left: 40%;top:0vh}
   .leet-stats{font-size: 4vw;line-height: 4vw;}
   .non-reel{display: grid;grid-template-columns: 100vw;}
