@@ -786,7 +786,7 @@ a .leet-stats{
   .desc{height: 18vw;grid-template-rows: 18vw;grid-template-columns: 24vw 44vw 44vw;}
   p.title-text{font-size: 4.5vw;line-height: 6vw;align-items: end;letter-spacing: 0.1vw;display: none;}
   p.title-text:hover{letter-spacing: 0.1vw;}
-  .desc-text{font-size: 2vw;position:relative;right: 35vw;line-height: 2vw;}
+  .desc-text{font-size: 2vw;position:relative;right: 27vw;line-height: 2vw;}
   .desc-text-b{left: 22vw;bottom:4vw;}
   .Buttons{grid-template-columns: repeat(5,12vw);grid-template-rows:12vw;gap: 8vw;}
   .icon{width: 12vw;height:12vw;border-radius: 3vw;}

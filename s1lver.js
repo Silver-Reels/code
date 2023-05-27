@@ -234,7 +234,6 @@ tooltipIcon.forEach((tooltip)=>{
 
 //INTRO page fixing bs with vestigial reel class
 if (window.location.pathname.toLocaleLowerCase()==`/` || window.location.pathname.toLocaleLowerCase()==`/index.html`){
-  if (reel){reel.style.pointerEvents="none"};
   if (viewerDivParent){viewerDivParent.style.display=`none`};
   
   //INTRO page fetching LeetCode data/////////////////////////////////////////////////////////////////////////////////////
