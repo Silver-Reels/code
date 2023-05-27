@@ -775,7 +775,7 @@ a .leet-stats{
   .body{width: 100vw;height: fit-content;}
   .about-text{width: 100vw;font-size:7vw;line-height:7vw;}
   .software-icon-1,.software-icon-2{height: 6vw;}
-  .tap-to-view{font-size:3vw;grid-template-columns:6vw 24vw 6vw;grid-template-rows:3vw;line-height:5vw;padding-bottom:2vw;padding-left: 48.5vw;gap:1vw}
+  .tap-to-view{font-size:3vw;grid-template-columns:6vw 24vw 6vw;grid-template-rows:3vw;line-height:5vw;padding-bottom:2vw;padding-left: 32.5vw;gap:1vw}
   .tap-to-view p{padding:0 0 0 0vw;}
   .tap-to-view-arrow{width: 3vw;position: relative;top:0.8vw}
   .introicon{height: 8vw;}
@@ -816,8 +816,8 @@ a .leet-stats{
   .typeCounter{bottom:-1vw;left:44.5vw}
   /*.grain{width: 100vh;height: 100%;}*/
   .viewertext{writing-mode: horizontal-tb;grid-area: 1/2/2/2;justify-self:end;font-size:  5vw;align-self: self-end;line-height: 5.2vw;}
-  .viewer{max-height: 83vh;/*align-self: stretch;*/}
-  .viewerDiv{grid-template-rows: 15vh 55vh 1vh;}
+  .viewer{max-height: 83vh;align-self: start;}
+  .viewerDiv{padding-top: 10vh;top: 23vw;height: 67vh;}
   .leet-div{position: relative;max-width: fit-content;display: flex;left: 40%;top:0vh}
   .leet-stats{font-size: 4vw;line-height: 4vw;}
   .non-reel{display: grid;grid-template-columns: 100vw;}
