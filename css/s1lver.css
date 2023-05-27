@@ -47,6 +47,7 @@ template {display: none;}
 }
 html {
   background-color: var(--SecondaryColor);
+  overflow-x: hidden;
 }
 body {
   background-color: var(--SecondaryColor);
