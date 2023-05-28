@@ -36,6 +36,8 @@ const descTextModular=document.querySelector(".desc-text-b");             //desc
 const reel=document.querySelector(".reel");                               //reel
 const nonreel=document.querySelector(".non-reel");                        //reel alts
 const inacButton=document.querySelector(".ButtonInac")                    //inactive button
+let loadingBarSize=window.getComputedStyle(document.querySelector(".loadingBarBG")).getPropertyValue("width");
+loadingBarSize= +(loadingBarSize.slice(0,loadingBarSize.length-2)); //type conversion
 
 //for INKR
 //nothing
@@ -51,7 +53,7 @@ function loadingCalc(){ //function that sets the text of loading screen progress
   loadMsg.innerText=
   `${((imgLoaded/allimageslength)*100).toFixed(0)}%`; //sets text to calc of imgLoaded out of total images. eg: 23%. toFixed is amount of decimals
   loadBar.style.width=                                 //same with progress bar graphic
-  `${((imgLoaded/allimageslength)*33.4)}vw`;         //these will often NOT reach 100%, as small images sometimes load faster than this JS script, so can't be iterated
+  `${((imgLoaded/allimageslength)*loadingBarSize)}px`;         //these will often NOT reach 100%, as small images sometimes load faster than this JS script, so can't be iterated
 }
 
 //DOCUMENT BODY ONLOAD/////////////////////////////////////////////////////////////////////////////////////////////
