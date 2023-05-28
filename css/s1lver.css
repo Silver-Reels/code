@@ -35,10 +35,11 @@ template {display: none;}
 [hidden] {display: none;}
 /*NORMALIZE///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-@font-face {font-family: "silverFuturaN";   src: url(/font/silverFuturaN.woff2);   font-display: block;}
-@font-face {font-family: "silverFuturaM";   src: url(/font/silverFuturaM.woff2);   font-display: block;}
-@font-face {font-family: "silverFuturaB"; src: url(/font/silverFuturaB.woff2);     font-display: block;}
+@font-face {font-family:   "silverFuturaN"; src: url(/font/silverFuturaN.woff2);   font-display: block;}
+@font-face {font-family:   "silverFuturaM"; src: url(/font/silverFuturaM.woff2);   font-display: block;}
+@font-face {font-family:   "silverFuturaB"; src: url(/font/silverFuturaB.woff2);   font-display: block;}
 @font-face {font-family: "silverFuturaBXI"; src: url(/font/silverFuturaBXI.woff2); font-display: block;}
+@font-face {font-family:             "DOS"; src: url(/font/DOS.woff2);             font-display: block;}
 
 :root {
   --PrimaryColor: #D7D7D7;
@@ -71,12 +72,12 @@ p {
   text-shadow: 0 0 0.15vw var(--PrimaryColor);
   filter: blur(0.3px);
 }
-.top-strip{
-  position: absolute;
+.top-strip,.bottom-strip{
+  position: relative;
   width: 100vw;
   height: 1vw;
   top: 0;
-  background-color: #AAAAAA;
+  background-color: #D7D7D7;
 }
 
 .about-container{
@@ -95,6 +96,7 @@ p {
   height: 4vw;
   cursor: pointer;
   z-index: 2;
+  padding-top: 0.7vw;
 }
 
 .software-icon-1,.software-icon-2{
@@ -113,17 +115,17 @@ p {
   position: relative;
   display:grid;
   padding: 0vw 4vw 0vw 4vw;
-  margin: 1vw 0 0 0;
+  margin: 0vw 0 0 0;
   backdrop-filter: blur(0.1vw);
   box-shadow: 0 0 0.4vw #282828;
   align-items: end;
   gap: 0;
   grid-template-rows: 6vw;
-  grid-template-columns: 24vw 44vw 24vw;
+  grid-template-columns: 24vw 40vw 28vw;
 }
 .desc-text {
   display: grid;
-  padding: 0.8vw 0 1vw 4vw;
+  padding: 0.8vw 0 1vw 0vw;
   text-align: left;
   align-self: start;
   text-shadow: 0 0 0.15vw var(--PrimaryColor);
@@ -131,14 +133,17 @@ p {
   line-height: 1.56vw;
 }
 .desc-text-b{
-  font-family: "silverFuturaB";
+  font-family: "DOS";
   position: relative;
   transition: left 0.3s cubic-bezier(0.38,-0.34,0.49,1.20),filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92);
   left: 0;
   filter: blur(0.3vw);
+  font-size: 1.7vw;
+  color:rgb(255,120,14);
+  text-shadow: 0 0 0.2vw rgb(255,120,14);
 }
 .desc-text-b-gone{
-  left: 26vw;
+  left: 32vw;
 }
 .desc-text-b-arrow{
   transform: rotate(-90deg);
@@ -487,15 +492,15 @@ button, input {
   display: grid;
   background: var(--SecondaryColor);
   grid-template-columns: 33.3vw 33.4vw 33.3vw;
-  grid-template-rows:    36.3vh 33.4vh 33.3vh;
+  grid-template-rows:    41.3vh 33.4vh 33.3vh;
   position: absolute;
   width: 100%;
-  height: 103vh;
+  height: 106vh;
   z-index: 5;
   transition: bottom 0.3s cubic-bezier(0.38,-0.34,0.49,1.27), filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92); /*for motion blur*/
   align-items: center;
   justify-items: center;
-  bottom: 0;
+  bottom: 0vw;
   filter: blur(0);
 }
 .loadingDivGone {
@@ -587,12 +592,14 @@ button, input {
   cursor: pointer;
   transition: all 0.25s ease-in-out;
   align-self: end;
-  border-bottom: 5px solid #888888;
+  border-bottom: 5px solid #633C1E;
   background-image: url("/dither.webp");
-  background-blend-mode: hard-light;
+  background-blend-mode: soft-light;
   user-select: none;
   filter: blur(0.3px);
-  color:#181818;
+  color:#D7D7D7;
+  font-family: "silverFuturaB";
+  background-color: #FF780E;
   /*line-height is 1.15*/
 }
 textarea:focus, input:focus{
@@ -600,10 +607,10 @@ textarea:focus, input:focus{
 }
 .typeButton:active{
   height: 3.8vw;
-  background-color: #AAAAAA;
-  font-size: 1.95vw;
-  color:#161616;
-  border-bottom: 1px solid #333333;
+  background-color: rgb(171,83,14);
+  font-size: 1.96vw;
+  color:#999999;
+  border-bottom: 1px solid #633C1E;
   /*line-height: 2;*/
   /*transform: skew(-45 deg, 20 deg);*/
 }
@@ -733,9 +740,10 @@ a .leet-stats{
   background-color: rgb(222, 222, 222) !important;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(222, 222, 222) !important;
+  /*background-color: rgb(222, 222, 222) !important;*/
+  background-color: rgb(255, 120, 14) !important;
   box-shadow: rgb(18, 18, 18) 0px 0px 0px inset !important;
-  border-radius: 2px !important;
+  border-radius: 5px !important;
   border-width: 0px !important;
   border-style: solid !important;
   border-color: rgb(18, 18, 18) !important;
@@ -788,7 +796,7 @@ a .leet-stats{
   p.title-text{font-size: 4.5vw;line-height: 6vw;align-items: end;letter-spacing: 0.1vw;display: none;}
   p.title-text:hover{letter-spacing: 0.1vw;}
   .desc-text{font-size: 2vw;position:relative;right: 27vw;line-height: 2vw;}
-  .desc-text-b{left: 22vw;bottom:4vw;}
+  .desc-text-b{left: 22vw;bottom:4vw;font-size: 3vw;}
   .Buttons{grid-template-columns: repeat(5,12vw);grid-template-rows:12vw;gap: 8vw;}
   .icon{width: 12vw;height:12vw;border-radius: 3vw;}
   .icon-blur{width: 12vw;height: 12vw;filter: blur(0.3vw);border-radius: 3vw;}
@@ -826,6 +834,6 @@ a .leet-stats{
   .country-icon{width: 24vw;}
   .parallax-div{position: relative;width: 100vw;height: 100vw;}
   .parallax-layer-1,.parallax-layer-2,.parallax-layer-3,.parallax-layer-4,.parallax-layer-5{width: 100vw;height: 100vw;}
-  .about-text-query{top:100vw;}
+  .about-text-query{top:100vw;padding-left: 4vw;}
 
 }
