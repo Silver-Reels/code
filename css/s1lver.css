@@ -346,6 +346,7 @@ a {
   left: 0;
   cursor: pointer;
 }
+
 .viewerDiv{
   background: rgba(255,255,255,0.15);
   backdrop-filter: blur(0.9vw);

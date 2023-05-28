@@ -101,6 +101,7 @@ if (reel){reelImg=      Array.from(reel.getElementsByClassName("reel-img"))}; //
 const viewerDivParent=  document.querySelector(".viewerDivParent");
 const viewer=           document.querySelector(".viewer");                    //viewer class, for the image in viewer functionality
 const viewertext=       document.querySelector(".viewertext");
+let htmlTag=document.getElementsByTagName("html")[0];                         //<html>
 let lastImgClicked=""; //this is here so the other functions like "hide viewer" can track 'img'
 
 if (reelImg){
@@ -109,13 +110,14 @@ if (reelImg){
     lastImgClicked=img; //letting 'img' be tracked elsewhere, no need to use this const here tho
     
     document.body.style.overflowY="hidden"; //no scrolling
+    htmlTag.style.overflowY="hidden";
     
     //anims for removing clicked thumbnail from view
     let styleAddress=img.parentElement.style;
     styleAddress.left="98vw";
     styleAddress.zIndex="2";
-      styleAddress.transform="rotate(-5deg)";
-      styleAddress.filter="blur(0.9vw)";
+    styleAddress.transform="rotate(-5deg)";
+    styleAddress.filter="blur(0.9vw)";
       
       viewer.src="";                 //reset viewer image
       //'src' of <img> in class=viewer is (default empty) grabbed from x-vsrc of image clicked in 'reel-img'.
@@ -143,6 +145,7 @@ if (reelImg){
       lastImgClicked.parentElement.style.left="0"; //animations for the thumbnail
       lastImgClicked.parentElement.style.filter="";
       document.body.style.overflowY="auto"; //scrolling is back
+      htmlTag.style.overflowY="auto";
       setTimeout(function(){lastImgClicked.parentElement.style.transform=""},150);
       setTimeout(function(){lastImgClicked.parentElement.style.zIndex=""},500);
     }
