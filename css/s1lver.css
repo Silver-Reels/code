@@ -82,7 +82,10 @@ p {
 
 .about-container{
   width: 25vw;
-  padding: 2vw 3vw 2vw 4vw;
+  padding: 4vw 3vw 2vw 4vw;
+  display: grid;
+  grid-template-columns: 28vw 28vw;
+  gap: 0vw 4vw;
 }
 .about-text{
   font-size: 2vw;
@@ -91,8 +94,15 @@ p {
   pointer-events: all;
 }
 .about-text-2{
+justify-self: flex-start;
+}
+.about-text-3{
+  grid-area: 4;
+}
+.about-text-4{
+  grid-area: 5;
   width: 54vw;
-  padding: 0 0 0 6vw;
+  padding: 8vw 0 2vw 6vw;
 }
 
 .about-text-query{
@@ -101,7 +111,7 @@ p {
   height: 4vw;
   cursor: pointer;
   z-index: 2;
-  padding-top: 10vw;
+  padding-top: 7.4vw;
 }
 
 .software-icon-1,.software-icon-2{
@@ -109,9 +119,13 @@ p {
   height: 2.5vw;
   object-fit: cover;
   position: relative;
-  left: 8vw;
   top:1vw;
   filter: blur(0.5px);
+}
+.software-icon-bundle-1{
+  position: relative;
+  grid-area: 3;
+  left: 10vw;
 }
 
 .desc {
@@ -668,12 +682,12 @@ textarea:focus, input:focus{
 }
 .country-icon{
   position: relative;
-  left: 2vw;
   bottom: 8vw;
   width: 8vw;
   object-fit: cover;
   transform: rotate(2deg);
   pointer-events: none;
+  grid-area: 6;
 }
 .grain{
   pointer-events: none;
@@ -729,6 +743,7 @@ textarea:focus, input:focus{
   font-size: 1.4vw;
   line-height: 1.4vw;
   transition: all 0.5s;
+  padding-top: 1.4vw;
 }
 .leet-stats-shown{
   filter: blur(0) opacity(1);
@@ -768,7 +783,7 @@ a .leet-stats{
 }
 .parallax-div{
   width: 36vw;
-  padding-top: 4vw;
+  padding-top: 10vw;
 }
 .parallax-layer-1,.parallax-layer-2,.parallax-layer-3,.parallax-layer-4,.parallax-layer-5{
   position: absolute;
@@ -788,16 +803,14 @@ a .leet-stats{
 .icon-github{
   height: 2vw;
   position: relative;
-  right: 20vw;
-  top:2.4vw
+  right: 14vw;
+  top:2.4vw;
+  filter: blur(0.5px);
 }
 
 @media (orientation:portrait){
   .mouse-glow{display: none;}
   .body{width: 100vw;height: fit-content;}
-  .about-text{font-size:7vw;line-height:7vw;padding-right: 8vw;padding-top: 4vh;}
-  .about-text-2{width: 92vw;padding: 0 8vw 0 0vw;}
-  .software-icon-1,.software-icon-2{height: 6vw;left: 28vw;}
   .tap-to-view{font-size:3vw;grid-template-columns:6vw 24vw 6vw;grid-template-rows:3vw;line-height:5vw;padding-bottom:2vw;padding-left: 32.5vw;gap:1vw}
   .tap-to-view p{padding:0 0 0 0vw;}
   .tap-to-view-arrow{width: 3vw;position: relative;top:0.8vw}
@@ -820,7 +833,7 @@ a .leet-stats{
   .Button1:hover,.Button2:hover,.Button3:hover,.Button4:hover,.Button5:hover,.Button6:hover,
   .Button1:focus,.Button2:focus,.Button3:focus,.Button4:focus,.Button5:focus,.Button6:focus,
   .Button1:active,.Button2:active,.Button3:active,.Button4:active,.Button5:active,.Button6:active{
-    padding: 0 0 4vw 0;}
+  padding: 0 0 4vw 0;}
   .arrow{width: 6vw;bottom: 2vw;}
   .arrowpos1{left: 7vw;}
   .arrowpos2{left: 27vw;}
@@ -845,11 +858,18 @@ a .leet-stats{
   .leet-div{position: relative;max-width: fit-content;display: flex;left: 40%;top:0vh}
   .leet-stats{font-size: 4vw;line-height: 4vw;}
   .non-reel{display: grid;grid-template-columns: 100vw;}
-  .about-container{width: 100vw;}
+  .about-container{width: 100vw;grid-template-columns: 100vw;gap:0}
+  .about-text{font-size:7vw;line-height:7vw;padding-right: 8vw;padding-top: 4vh;}
+  .about-text-2{width: 92vw;padding: 0 8vw 0 0vw;right:100vw;position:relative;top:40vw;}
+  .about-text-4{grid-area: 6;width: 86vw;}
+  .about-text-5{position:relative;top:25vw}
   .software-icon-1,.software-icon-2{height: 12vw;}
+  .software-icon-bundle-1{padding-top: 25vw;padding-left: 12vw;}
   .country-icon{width: 24vw;}
   .parallax-div{position: relative;width: 100vw;height: 100vw;}
   .parallax-layer-1,.parallax-layer-2,.parallax-layer-3,.parallax-layer-4,.parallax-layer-5{width: 100vw;height: 100vw;}
   .about-text-query{top:100vw;padding-left: 4vw;}
+  button, input{border-radius: 3vw;}
+  .typeButton{width: 18vw;}
 
 }

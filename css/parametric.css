@@ -8,7 +8,7 @@
     clip-path: polygon(35% 0, 100% 0%, 100% 100%, 6% 100%);
 }
 .parametric-text{
-    width: 47.9vw;
+    width: 46vw;
     height: 100vh;
     max-height: 100vh;
     /*border-right: 1px solid #D7D7D7;*/
@@ -18,6 +18,22 @@
     line-height: 2vw;
     font-size: 1.2vw;
 }
+.p-t-2{padding-right: 0.6vw}
+.p-t-3{padding-right: 1.3vw}
+.p-t-4{padding-right: 1.9vw}
+.p-t-5{padding-right: 2.4vw}
+.p-t-6{padding-right: 3vw}
+.p-t-7{padding-right: 3.5vw}
+.p-t-8{padding-right: 4.7vw}
+.p-t-9{padding-right: 5.3vw}
+.p-t-10{padding-right: 5.9vw}
+.p-t-11{padding-right: 6.5vw}
+.p-t-12{padding-right: 7vw}
+.p-t-13{padding-right: 7.6vw}
+.p-t-14{padding-right: 9.3vw}
+.p-t-15{padding-right: 10vw}
+
+
 
 
 .p11{animation: p11_anim 10s ease-in-out infinite alternate}
@@ -422,7 +438,7 @@
 }
 
 @media (orientation:portrait){
-    .parametric{width: auto;height: 100vh;opacity: 0.2;right: -8vw;}
+    .parametric{width: auto;height: 100vh;opacity: 0.2;right: -52vw;}
     .parametric-text{filter:blur(0);width: 80vw;line-height: 4.8vw;font-size: 4vw;}
     .parametric-text p{text-shadow: 0 0 2px #181818;filter: blur(0);}
     .p10,.p11,.p12,.p13,.p14,.p15,.p16,.p17,.p18,.p19,
