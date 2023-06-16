@@ -1,4 +1,7 @@
 node_modules
+flip
+parametric
+
 bookmarks.js
 play.js
 debug.js
@@ -7,19 +10,15 @@ uglify.js
 notes.txt
 parallaxWork.ai
 parallax.svg
-
-TICK.html
+INKRdocumentation.ai
 
 css/bookmarks.css
 css/play.css
 css/typing.css
 
-flip
-
-parametric
-
 bookmarks.html
 jsplay.html
+TICK.html
 
 font/FuturaBXI.ttf
 font/FuturaB.ttf
