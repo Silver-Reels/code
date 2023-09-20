@@ -1,6 +1,5 @@
 import fetch from "node-fetch";
 
-
 let leetcodeQuery=
 {
   "query": "\n    query skillStats($username: String!) {\n  matchedUser(username: $username) {\n    tagProblemCounts {\n      advanced {\n        tagName\n        problemsSolved\n      }\n      intermediate {\n        tagName\n        problemsSolved\n      }\n      fundamental {\n        tagName\n        problemsSolved\n      }\n    }\n  }\n}\n    ",
@@ -13,18 +12,15 @@ let leetcodeQuery=
   body:JSON.stringify(leetcodeQuery)
 };
 
-
 export const handler= async (event,context)=>{
   try{
-    
     
     const response = await fetch(`https://leetcode.com/graphql/`,init);
     const data = await response.json();
     
-    return { statusCode: 200, body: JSON.stringify({data}) };
+    return {statusCode:200,body:JSON.stringify({data})};
   }
   catch (e){
-    
     return {statusCode:500,body:JSON.stringify({error:e})};
   }
 };
