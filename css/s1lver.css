@@ -810,6 +810,14 @@ a .leet-stats{
   filter: blur(0.5px);
   transition: all 0.25s;
 }
+.bosun-text{
+  line-height:4vh;
+  font-size: 1.5vw;
+  align-self: center;
+  justify-self: start;
+  text-align: center;
+  padding: 4vw 3vw 3vw 3vw;
+}
 
 @media (orientation:portrait){
   .mouse-glow{display: none;}
@@ -874,5 +882,7 @@ a .leet-stats{
   .about-text-query{padding-left: 4vw;width: 80vw;font-size: 6vw;height:10vw;padding-left: 10vw;}
   button, input{border-radius: 3vw;}
   .typeButton{width: 18vw;}
+  .bosun-text{line-height: 2.5vh;font-size: 2vh;
+  }
 
 }
