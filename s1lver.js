@@ -36,6 +36,7 @@ const descTextModular=document.querySelector(".desc-text-b");             //desc
 const reel=document.querySelector(".reel");                               //reel
 const nonreel=document.querySelector(".non-reel");                        //reel alts
 const inacButton=document.querySelector(".ButtonInac")                    //inactive button
+const bosunDiv=document.querySelector(".bosun-all");
 let loadingBarSize=window.getComputedStyle(document.querySelector(".loadingBarBG")).getPropertyValue("width");
 loadingBarSize= +(loadingBarSize.slice(0,loadingBarSize.length-2)); //type conversion
 
@@ -64,6 +65,7 @@ document.body.onload=()=>{
   descTextModular.style.filter="blur(0)";                                 //desc-text-b removes blur while swiping in
   if (reel){reel.classList.remove("reel-moving-in")};                     //moves reel in onload
   if (nonreel){nonreel.classList.remove("reel-moving-in")};
+  if (bosunDiv){bosunDiv.style.right="0";bosunDiv.style.filter="blur(0)"};
   loadDiv.style.filter="blur(0.9vw)";                                     //add "motion" blur when loaddiv is to move away
 
   
@@ -92,6 +94,7 @@ button.onclick=function(){
   descTextModular.style.filter="blur(0.3vw)";
   if (reel){reel.classList.add("reel-moving-away");}                      //moves reel style page away
   if (nonreel){nonreel.classList.add("reel-moving-away")};                //moves nonreel style page away
+  if (bosunDiv){bosunDiv.style.right="100vw";bosunDiv.style.filter="blur(0.9vw)"};
   inacButton.classList.remove("ButtonInac");                              //moves the navbar button back down
 }
 )

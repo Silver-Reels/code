@@ -818,6 +818,16 @@ a .leet-stats{
   text-align: center;
   padding: 4vw 3vw 3vw 3vw;
 }
+.bosun-all{
+  width:  fit-content;
+  height: fit-content;
+  position: relative;
+  display: grid;
+  right: -100vw;
+  filter:blur(0.9vw);
+  transition: right 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92);
+};
+
 
 @media (orientation:portrait){
   .mouse-glow{display: none;}
