@@ -175,6 +175,8 @@ justify-self: flex-start;
 .desc-text-b-gone{
   left: 32vw;
 }
+
+/*
 .desc-text-b-arrow{
   transform: rotate(-90deg);
   width: 1vw;
@@ -182,7 +184,8 @@ justify-self: flex-start;
   top: 4.5vw;
   right: 20vw;
 }
-
+ vestigial?
+*/
 p.title-text {
   display: grid;
   font-family: "silverFuturaBXI";
@@ -262,24 +265,28 @@ a {
   grid-template-columns: repeat(3, 28vw);
   padding: 0 0 2vw 0;
   position: relative;
-  right:0vw;
+  /*right:0vw;*/
+  transform:translateX(0%);
   filter: blur(0);
-  transition: right 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92); /*for motion blur*/
+  transition: transform 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92); /*for motion blur*/
 }
 .non-reel{
   position: relative;
   display: flex;
-  right:0vw;
+  /*right:0vw;*/
+  transform:translateX(0%);
   height: 50vh;
   filter: blur(0);
-  transition: right 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92);
+  transition: transform 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92);
 }
 .reel-moving-away{
-  right:100vw;
+  /*right:100vw;*/
+  transform:translateX(-100%);
   filter: blur(0.9vw);
 }
 .reel-moving-in{
-  right: -100vw;
+  /*right: -100vw;*/
+  transform:translateX(100%);
   filter: blur(0.9vw);
 }
 .icon:hover .reel{
@@ -528,14 +535,16 @@ button, input {
   width: 100%;
   height: 106vh;
   z-index: 5;
-  transition: bottom 0.3s cubic-bezier(0.38,-0.34,0.49,1.27), filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92); /*for motion blur*/
+  transition: transform 0.3s cubic-bezier(0.38,-0.34,0.49,1.27), filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92); /*for motion blur*/
   align-items: center;
   justify-items: center;
-  bottom: 0vw;
+  /*bottom: 0vw;*/
+  transform:translateY(0%);
   filter: blur(0);
 }
 .loadingDivGone {
-  bottom: 100vh;
+  /*bottom: 100vh;*/
+  transform:translateY(-100%);
 }
 .loadingDivCenter {
   display: grid;
