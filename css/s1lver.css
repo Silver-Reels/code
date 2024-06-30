@@ -882,7 +882,7 @@ a .leet-stats{
   .non-reel{display: grid;grid-template-columns: 100vw;}
   .about-container{width: 100vw;grid-template-columns: 100vw;gap:0}
   .about-text{font-size:7vw;line-height:7vw;padding-right: 8vw;padding-top: 4vh;}
-  .about-text-2{width: 92vw;padding: 0 8vw 0 0vw;right:100vw;position:relative;top:40vw;}
+  .about-text-2{width: 92vw;padding: 0 8vw 8vh 0vw;right:100vw;position:relative;top:40vw;text-align:right}
   .about-text-4{grid-area: 6;width: 86vw;}
   .about-text-5{position:relative;top:25vw}
   .software-icon-1,.software-icon-2{height: 12vw;}
