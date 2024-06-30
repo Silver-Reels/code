@@ -826,10 +826,11 @@ a .leet-stats{
   right: -100vw;
   filter:blur(0.9vw);
   transition: right 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92);
-};
+}
 
 
 @media (orientation:portrait){
+/*@media (max-width: 680px){*/
   .mouse-glow{display: none;}
   .body{width: 100vw;height: fit-content;}
   .tap-to-view{font-size:3vw;grid-template-columns:6vw 24vw 6vw;grid-template-rows:3vw;line-height:5vw;padding-bottom:2vw;padding-left: 32.5vw;gap:1vw}
@@ -892,7 +893,6 @@ a .leet-stats{
   .about-text-query{padding-left: 4vw;width: 80vw;font-size: 6vw;height:10vw;padding-left: 10vw;}
   button, input{border-radius: 3vw;}
   .typeButton{width: 18vw;}
-  .bosun-text{line-height: 2.5vh;font-size: 2vh;
-  }
+  .bosun-text{line-height: 2.5vh;font-size: 2vh;}
 
 }
