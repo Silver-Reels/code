@@ -266,7 +266,7 @@ a {
   padding: 0 0 2vw 0;
   position: relative;
   /*right:0vw;*/
-  transform:translateX(0%);
+  transform:translateX(0vw);
   filter: blur(0);
   transition: transform 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92); /*for motion blur*/
 }
@@ -274,19 +274,19 @@ a {
   position: relative;
   display: flex;
   /*right:0vw;*/
-  transform:translateX(0%);
+  transform:translateX(0vw);
   height: 50vh;
   filter: blur(0);
   transition: transform 0.3s cubic-bezier(0.38,-0.34,0.49,1.20), filter 0.3s cubic-bezier(0.22,0.37,0.48,0.92);
 }
 .reel-moving-away{
   /*right:100vw;*/
-  transform:translateX(-100%);
+  transform:translateX(100vw);
   filter: blur(0.9vw);
 }
 .reel-moving-in{
   /*right: -100vw;*/
-  transform:translateX(100%);
+  transform:translateX(-100vw);
   filter: blur(0.9vw);
 }
 .icon:hover .reel{
